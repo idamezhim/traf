@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'circular-book';
+    src: url('/fonts/circular-book.woff') format('woff'),
+         url('/fonts/circular-book.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'circular-bold';
+    src: url('/fonts/circular-bold.woff') format('woff'),
+         url('/fonts/circular-bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'circular-heavy';
+    src: url('/fonts/circular-heavy.woff') format('woff'),
+         url('/fonts/circular-heavy.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'avant-garde-gothic';
+    src: url('/fonts/avant-garde-gothic.woff') format('woff'),
+         url('/fonts/avant-garde-gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$book: 'circular-book', sans-serif;
+$bold: 'circular-bold', sans-serif;
+$heavy: 'circular-heavy', sans-serif;
+$display: 'avant-garde-gothic', sans-serif;

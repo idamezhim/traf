@@ -1,0 +1,14 @@
+$black: #000;
+$charcoal: #18191B;
+$dark-grey: #202020;
+$grey: #666;
+$white: #fff;
+$blue: #06f;
+$rose: #e2b6b6;
+$gradient: radial-gradient(circle at 50% 10%, $charcoal, $black);
+
+.black { background: $black; }
+.grey { background: $grey; }
+.white { background: $white; }
+.blue { background: $blue; }
+.rose { background: $rose; }

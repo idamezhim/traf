@@ -21,8 +21,64 @@ body {
   pointer-events: none;
   transition: $ease;
   min-width: 100%;
+  position: fixed;
   @extend .center;
   height: 100%;
+}
+
+
+/*-------------------------------------------------------------------*/
+/* TYPOGRAPHY -------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+p, .p, a {
+  font-weight: normal;
+  line-height: 1.6;
+  color: $white;
+}
+
+h1, .h1 {
+  font-family: $display;
+  letter-spacing: -2px;
+  font-size: 44px;
+}
+
+h2, .h2 {
+  letter-spacing: -1.5px;
+  font-family: $heavy;
+  line-height: 1.6;
+  font-size: 36px;
+}
+
+h3, .h3 {
+  letter-spacing: -1px;
+  font-family: $heavy;
+  font-size: 30px;
+}
+
+h4, .h4 {
+  letter-spacing: -1px;
+  font-family: $bold;
+  font-size: 22px;
+}
+
+p, .p, a {
+  letter-spacing: -0.5px;
+  font-family: $bold;
+  line-height: 1.6;
+  font-size: 18px;
+  color: $white;
+}
+
+@media (max-width: 800px) {
+
+  h1, .h1 { font-size: 40px; }
+  h2, .h2 { font-size: 30px; }
+
 }
 
 /*-------------------------------------------------------------------*/
@@ -41,4 +97,71 @@ body {
   transform: rotate(-2deg);
 }
 
+/*-------------------------------------------------------------------*/
+/* WORD SHIFT -------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+.shift {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.shift.clip span {
+  display: inline-block;
+}
+
+.shift.clip .word-shift {
+  overflow: hidden;
+}
+
+.shift.clip .word-shift:after {
+  background-color: $blue;
+  border-radius: 2px;
+  @extend .center-y;
+  height: 100%;
+  content: '';
+  width: 2px;
+  right: 0;
+}
+
+.shift.clip b {
+  opacity: 0;
+}
+
+.shift.clip b.is-visible {
+  opacity: 1;
+}
+
+.word-shift {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+
+.word-shift b {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  @extend .h1;
+  left: 0;
+  top: 0;
+}
+
+.word-shift b.is-visible { position: relative; }
+.word-shift b { opacity: 0; }
+.word-shift b.is-visible { opacity: 1; }
+
+@media (max-width: 800px) {
+
+  .word-shift b {
+    letter-spacing: -1px;
+    font-size: 22px;
+  }
+
+  .shift.clip .word-shift:after {
+    height: 80%;
+    top: 60%;
+  }
+
+}
 

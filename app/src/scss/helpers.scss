@@ -32,7 +32,8 @@ button { -webkit-appearance: none; appearance: none; cursor: pointer; }
 *::-moz-selection { background-color: $blue; color: white; }
 *::selection { background-color: $blue; color: white; }
 
-input:-webkit-autofill { -webkit-box-shadow: 0 0 0 40px $white inset !important; -webkit-text-fill-color: $black !important; }
+input:-webkit-autofill,
+input:-webkit-autofill:focus { -webkit-box-shadow: 0 0 0 1000px white inset !important; -webkit-text-fill-color: black !important; }
 textarea { resize: none; }
 
 ::-webkit-input-placeholder { color: $white; }

@@ -18,6 +18,25 @@
 <script>
   $(document).ready(function(){
 
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+      // Fade hero contents on scroll
+      $(window).scroll(function(i){
+        var scrollVar = $(window).scrollTop();
+        $('.hero').css({'opacity':( 240-scrollVar )/240});
+      });
+
+    }
+    else {
+
+      // Fade hero contents on scroll
+      $(window).scroll(function(i){
+        var scrollVar = $(window).scrollTop();
+        $('.hero').css({'opacity':( 440-scrollVar )/440});
+      });
+
+    }
+
     // Nav toggle
     $('.nav-toggle').click(function(){
       $(this).toggleClass('toggle');
@@ -33,12 +52,6 @@
 
     // Feather icons
     feather.replace()
-
-    // Fade hero contents on scroll
-    $(window).scroll(function(i){
-      var scrollVar = $(window).scrollTop();
-      $('.hero').css({'opacity':( 440-scrollVar )/440});
-    });
 
     // Page transitions
     $(".animsition").animsition({

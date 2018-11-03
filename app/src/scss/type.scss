@@ -1,0 +1,58 @@
+@import 'reset';
+@import 'colors';
+@import 'fonts';
+@import 'helpers';
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+p, .p, a {
+  font-weight: normal;
+  line-height: 1.6;
+  color: $white;
+}
+
+h1, .h1 {
+  letter-spacing: -1.6px;
+  font-family: $title;
+  font-size: 44px;
+}
+
+h2, .h2 {
+  letter-spacing: -1.5px;
+  font-family: $heavy;
+  line-height: 1.6;
+  font-size: 34px;
+}
+
+h3, .h3 {
+  letter-spacing: -1px;
+  font-family: $heavy;
+  font-size: 24px;
+}
+
+h4, .h4 {
+  font-family: $script;
+  letter-spacing: 0;
+  font-size: 40px;
+}
+
+p, .p, a {
+  letter-spacing: -1px;
+  font-family: $bold;
+  line-height: 1.6;
+  font-size: 18px;
+  color: $white;
+}
+
+@media (max-width: $break-mobile) {
+
+  h1, .h1 { font-size: 36px; }
+
+  h2, .h2 {
+    letter-spacing: -1px;
+    font-size: 24px;
+  }
+
+}

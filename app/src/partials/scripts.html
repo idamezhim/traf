@@ -1,5 +1,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="https://embed.small.chat/T036XP36SG514EQWDB.js" async></script>
+<!-- <script src="https://embed.small.chat/T036XP36SG514EQWDB.js" async></script> -->
 <script src="js/scripts.min.js"></script>
 <script type="text/javascript">
   var _gauges = _gauges || [];
@@ -17,6 +17,25 @@
 </script>
 <script>
   $(document).ready(function(){
+
+    // Nav toggle
+    $('.nav-toggle').click(function(){
+      $(this).toggleClass('toggle');
+      $('.nav').toggleClass('nav-show');
+      $('.nav-links').toggleClass('nav-links-show');
+    });
+
+    // Active nav link
+    $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('nav-active');
+
+    // Feather icons
+    feather.replace()
+
+    // Fade hero contents on scroll
+    $(window).scroll(function(i){
+      var scrollVar = $(window).scrollTop();
+      $('.hero').css({'opacity':( 440-scrollVar )/440});
+    });
 
     // Page transitions
     $(".animsition").animsition({

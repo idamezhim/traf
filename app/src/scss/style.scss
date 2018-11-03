@@ -2,8 +2,10 @@
 /* IMPORT THEME -----------------------------------------------------*/
 /*-------------------------------------------------------------------*/
 
-@import 'theme';
+@import 'reset';
+@import 'helpers';
 @import 'colors';
+@import 'type';
 @import 'fonts';
 
 /*-------------------------------------------------------------------*/
@@ -17,84 +19,18 @@ body {
   color: $white;
 }
 
-.particles {
-  pointer-events: none;
-  transition: $ease;
-  min-width: 100%;
-  position: fixed;
-  @extend .center;
-  height: 100%;
-}
-
-
-/*-------------------------------------------------------------------*/
-/* TYPOGRAPHY -------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-p, .p, a {
-  font-weight: normal;
-  line-height: 1.6;
+.button {
+  box-shadow: 0 20px 30px -10px rgba($black, 0.04);
+  background: rgba($white, 0.1);
+  border-radius: $rounded;
+  padding: 14px 32px;
+  margin-top: 30px;
   color: $white;
-}
-
-h1, .h1 {
-  font-family: $display;
-  letter-spacing: -2px;
-  font-size: 44px;
-}
-
-h2, .h2 {
-  letter-spacing: -1.5px;
-  font-family: $heavy;
-  line-height: 1.6;
-  font-size: 36px;
-}
-
-h3, .h3 {
-  letter-spacing: -1px;
-  font-family: $heavy;
-  font-size: 30px;
-}
-
-h4, .h4 {
-  letter-spacing: -1px;
-  font-family: $bold;
-  font-size: 22px;
-}
-
-p, .p, a {
-  letter-spacing: -0.5px;
-  font-family: $bold;
-  line-height: 1.6;
-  font-size: 18px;
-  color: $white;
-}
-
-@media (max-width: 800px) {
-
-  h1, .h1 { font-size: 40px; }
-  h2, .h2 { font-size: 30px; }
-
-}
-
-/*-------------------------------------------------------------------*/
-/* HERO COMPONENTS --------------------------------------------------*/
-/*-------------------------------------------------------------------*/
-
-.hero {
-  background: $gradient;
-  @extend .flex-center;
-  position: relative;
-  height: 100vh;
-  width: 100%;
-}
-
-.logo {
-  transform: rotate(-2deg);
+  &:hover {
+    box-shadow: 0 20px 30px 0 rgba($black, 0.04);
+    transform: translateY(-4px);
+  }
+  &:active { transform: scale(0.98); }
 }
 
 /*-------------------------------------------------------------------*/
@@ -106,13 +42,8 @@ p, .p, a {
   width: 100% !important;
 }
 
-.shift.clip span {
-  display: inline-block;
-}
-
-.shift.clip .word-shift {
-  overflow: hidden;
-}
+.shift.clip span { display: inline-block; }
+.shift.clip .word-shift { overflow: hidden; }
 
 .shift.clip .word-shift:after {
   background-color: $blue;
@@ -124,13 +55,8 @@ p, .p, a {
   right: 0;
 }
 
-.shift.clip b {
-  opacity: 0;
-}
-
-.shift.clip b.is-visible {
-  opacity: 1;
-}
+.shift.clip b { opacity: 0; }
+.shift.clip b.is-visible { opacity: 1; }
 
 .word-shift {
   display: inline-block;
@@ -151,7 +77,7 @@ p, .p, a {
 .word-shift b { opacity: 0; }
 .word-shift b.is-visible { opacity: 1; }
 
-@media (max-width: 800px) {
+@media (max-width: $break-mobile) {
 
   .word-shift b {
     letter-spacing: -1px;
@@ -164,4 +90,438 @@ p, .p, a {
   }
 
 }
+
+/*-------------------------------------------------------------------*/
+/* NAVIGATION -------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+.nav {
+  justify-content: space-between;
+  align-items: center;
+  transition: $ease;
+  background: none;
+  position: fixed;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  z-index: 3;
+}
+
+.nav-show {
+  box-shadow: 0 20px 60px rgba($black, 0.4);
+  background: $black;
+}
+
+.nav-logo {
+  @extend .flex-center;
+  transition: $bouncy;
+  margin-left: 30px;
+  img { width: 60px; }
+  &:hover { transform: scale(1.06) rotate(-3deg); }
+}
+
+.nav-links {
+  @extend .flex-center;
+  position: relative;
+  transition: $ease;
+  height: 100%;
+  width: 800px;
+  opacity: 0;
+  .nav-link {
+    transform: translateY(-100px);
+    @extend .flex-center;
+    opacity: 0.4;
+    height: 100%;
+    flex: 1;
+    &:nth-child(1) { transition-delay: .2s; }
+    &:nth-child(2) { transition-delay: .15s; }
+    &:nth-child(3) { transition-delay: .1s; }
+    &:nth-child(4) { transition-delay: .05s; }
+    &:nth-child(5) { transition-delay: 0s; }
+    &:hover {
+      transition-delay: 0s !important;
+      opacity: 1;
+    }
+  }
+}
+
+.nav-links-show {
+  opacity: 1;
+  .nav-link {
+    transform: translateY(0);
+    &:nth-child(1) { transition-delay: 0s; }
+    &:nth-child(2) { transition-delay: .05s; }
+    &:nth-child(3) { transition-delay: .1s; }
+    &:nth-child(4) { transition-delay: .15s; }
+    &:nth-child(5) { transition-delay: .2s; }
+  }
+}
+
+.nav-active {
+  opacity: 1 !important;
+  color: $blue;
+}
+
+.nav-toggle {
+  flex-direction: column;
+  @extend .flex-center;
+  background: none;
+  height: 100%;
+  width: 100px;
+  &:hover .line-2 { width: 24px; }
+  .line {
+    border-top: 1px solid $white;
+    transition: $smooth;
+    display: block;
+    width: 24px;
+  }
+  .line-2 {
+    align-self: flex-end;
+    margin-top: 6px;
+    width: 18px;
+  }
+  &.toggle {
+    .line { transition: $ease; }
+    .line-1 { transform: rotate(-45deg); }
+    .line-2 {
+      transform: rotate(45deg);
+      margin-top: -1px;
+      width: 24px;
+    }
+  }
+}
+
+@media (max-width: $break-tablet) {
+
+  .nav-links {
+    flex-direction: column;
+    pointer-events: none;
+    background: $black;
+    transform: none;
+    position: fixed;
+    height: 100vh;
+    z-index: -1;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    .nav-link {
+      height: 60px;
+      width: 100%;
+      flex: none;
+    }
+  }
+
+  .nav-links-show {
+    pointer-events: all;
+    transform: none;
+    opacity: 1;
+  }
+
+  .nav-show {
+    box-shadow: none;
+    background: none;
+  }
+
+}
+
+@media (max-width: $break-mobile) {
+
+  .nav {
+    background: $black;
+    height: 80px;
+  }
+
+  .nav-logo {
+    margin-left: 24px;
+    img { width: 50px; }
+  }
+
+  .nav-toggle { width: 80px; }
+
+}
+
+/*-------------------------------------------------------------------*/
+/* COMPONENTS -------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+.hero {
+  height: calc(100vh - 20px);
+  @extend .flex-center;
+  background: $black;
+  position: fixed;
+  padding: 0 12%;
+  width: 100%;
+  .hero-title.small { width: 300px; }
+  .hero-title { width: 400px; }
+  .hero-title.large { width: 500px; }
+}
+
+.content {
+  box-shadow: 0 0 100px $black;
+  top: calc(100vh - 20px);
+  background: $black;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.content.padded {
+  padding: 140px 0;
+}
+
+.wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+  width: 1100px;
+}
+
+@media (max-width: $break-mobile) {
+
+  .hero { height: calc(60vh - 20px); }
+  .content { top: calc(60vh - 20px); }
+
+}
+
+/*-------------------------------------------------------------------*/
+/* CARDS ------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+.card {
+  background: rgba($white, 0.08);
+  border-radius: $rounded;
+  flex-direction: column;
+  @extend .flex-center;
+  margin: 0 auto 100px;
+  position: relative;
+  transition: $ease;
+  overflow: hidden;
+  padding: 30px;
+  height: 440px;
+  width: 100%;
+}
+
+.card-icon {
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.card-title {
+  transition: $ease;
+  max-width: 90%;
+  width: 500px;
+}
+
+.card-subtitle {
+  margin-top: 4px;
+  font-size: 24px;
+  max-width: 80%;
+  opacity: 0.4;
+}
+
+.card-title-hover {
+  pointer-events: none;
+  margin-top: -100px;
+  transition: $ease;
+  @extend .center;
+  opacity: 0;
+}
+
+.projects {
+  .card-project:hover .card-title {
+    pointer-events: none;
+    margin-top: 100px;
+    opacity: 0;
+  }
+  .card-project:hover .card-title-hover {
+    margin-top: 0;
+    opacity: 1;
+  }
+  .card-title {
+    max-width: 90%;
+    width: 400px;
+  }
+}
+
+a.card:hover { transform: scale(1.02); }
+
+.card-projects { background: url('/images/card-projects.jpg') no-repeat center center; background-size: cover; }
+.card-clients { background: url('/images/card-clients.jpg') no-repeat center center; background-size: cover; }
+.card-moments { background: url('/images/card-moments.jpg') no-repeat center center; background-size: cover; }
+.card-thoughts { background: url('/images/card-thoughts.jpg') no-repeat center center; background-size: cover; }
+.card-deximal { background: url('/images/card-deximal.jpg') no-repeat center center; background-size: cover; }
+.card-finely { background: url('/images/card-finely.jpg') no-repeat center center; background-size: cover; }
+.card-typement { background: url('/images/card-typement.jpg') no-repeat center center; background-size: cover; }
+.card-mobydish { background: url('/images/card-mobydish.jpg') no-repeat center center; background-size: cover; }
+.card-squish { background: url('/images/card-squish.jpg') no-repeat center center; background-size: cover; }
+
+@media (max-width: $break-mobile) {
+
+  .card {
+    margin: 0 auto 30px;
+    height: 260px;
+  }
+
+  .card-icon { margin-bottom: 10px; }
+  .card-subtitle { font-size: 18px; }
+
+}
+
+/*-------------------------------------------------------------------*/
+/* EMAIL CARD -------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+.card-email {
+  background: $gradient-blue;
+  .card-title { width: 500px !important; }
+  .card-subtitle { font-size: 18px; }
+}
+
+.email-form {
+  margin-top: 30px;
+  max-width: 100%;
+  width: 300px;
+}
+
+.email-content {
+  background: rgba($white, 0.1);
+  border-radius: $rounded;
+  @extend .flex-center;
+  transition: $ease;
+  overflow: hidden;
+  width: 100%;
+}
+
+.email-input {
+  text-align: center;
+  background: none;
+  font-size: 16px;
+  padding: 16px;
+  color: $white;
+  width: 100%;
+  @extend .p;
+  &:first-child { border-right: 1px solid rgba($white, 0.1); }
+}
+
+.email-submit {
+  background: url('/images/icon-check.png') no-repeat;
+  background-color: rgba($white, 0.1);
+  border-top-right-radius: $rounded;
+  border-top-left-radius: $rounded;
+  pointer-events: none;
+  transition: $ease;
+  @extend .center-x;
+  cursor: pointer;
+  bottom: -60px;
+  height: 60px;
+  width: 60px;
+  padding: 0;
+  &:hover { background-color: rgba($white, 0.2); }
+}
+
+.email-submit.text {
+  background: rgba($white, 0.1);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 50px;
+  width: 100px;
+  @extend .p;
+  &:hover { background-color: rgba($white, 0.2); }
+}
+
+.email-active .email-submit {
+  pointer-events: all;
+  bottom: 0;
+}
+
+.email-success {
+  flex-direction: column;
+  pointer-events: none;
+  @extend .center-x;
+  transition: $ease;
+  display: flex;
+  width: 100%;
+  opacity: 0;
+}
+
+.email-hide {
+  pointer-events: none;
+  opacity: 0;
+  .email-submit {
+    pointer-events: none;
+    cursor: none;
+  }
+}
+
+.email-show {
+  pointer-events: all;
+  opacity: 1;
+}
+
+@media (max-width: $break-mobile) {
+
+  .card-email {
+    height: 400px;
+    .card-title { font-size: 26px; }
+  }
+
+}
+
+/*-------------------------------------------------------------------*/
+/* FOOTER CARD ------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+.card-footer {
+  justify-content: space-between;
+  padding: 0 40px 0 60px;
+  flex-direction: row;
+  margin-bottom: 60px;
+  align-items: center;
+  display: flex;
+  height: 200px;
+  .card-title { width: auto; }
+  .icons {
+    @extend .flex-center;
+    .icon-title {
+      margin-right: 20px;
+      opacity: 0.4;
+    }
+    a {
+      @extend .flex-center;
+      opacity: 0.4;
+      height: 60px;
+      width: 60px;
+      &:hover { opacity: 1; }
+    }
+  }
+}
+
+.bg-twitter { background: #1da1f2; }
+.bg-insta { background: #405de6; }
+.bg-dribbble { background: #ea4c89; }
+
+.message {
+  padding: 0 10% 60px;
+  opacity: 0.3;
+  width: 100%;
+}
+
+@media (max-width: $break-mobile) {
+
+  .card-footer {
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    .card-title { margin-bottom: 10px; }
+    .icon-title { display: none; }
+  }
+
+}
+
+
+
+
+
+
+
+
 

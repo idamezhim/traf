@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('partials/head.html', {"title": "Projects", "description": "Ideas I've brought to life"})
+
+<body class="animsition projects">
+  @@include('partials/navigation.html')
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1 class="hero-title small">Ideas I've brought to life</h1>
+  </div>
+
+  <!-- CARDS -->
+  <div class="content">
+    <div class="wrapper">
+      <a href="http://deximal.com" target="_blank" class="card card-project card-deximal"><h2 class="card-title">Simplifying website analytics with Deximal</h2><h2 class="card-title-hover">Visit Deximal <i data-feather="arrow-up-right"></i></h2></a>
+      <a href="http://finely.co" target="_blank" class="card card-project card-finely"><h2 class="card-title">Finely crafted websites, designed on-demand</h2><h2 class="card-title-hover">Visit Finely <i data-feather="arrow-up-right"></i></h2></a>
+      <a href="http://typement.com" target="_blank" class="card card-project card-typement"><h2 class="card-title">Typeface inspiration<br/>via Google fonts</h2><h2 class="card-title-hover">Visit Typement <i data-feather="arrow-up-right"></i></h2></a>
+      @@include('partials/cardEmail.html')
+      @@include('partials/cardFooter.html')
+    </div>
+  </div>
+
+  @@include('partials/scripts.html')
+  <script>$(function(){ $(".card-email .card-title").text("Get notified when I'm about to launch something new"); });</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

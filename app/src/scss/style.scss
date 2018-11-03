@@ -439,7 +439,6 @@ a.card:hover { transform: scale(1.02); }
   border-radius: $rounded;
   @extend .flex-center;
   transition: $ease;
-  overflow: hidden;
   width: 100%;
 }
 

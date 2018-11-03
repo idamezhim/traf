@@ -61,7 +61,7 @@ body {
 @media (max-width: $break-mobile) {
 
   .hide-mobile { display: none; }
-  
+
 }
 
 /*-------------------------------------------------------------------*/
@@ -258,6 +258,7 @@ body {
 @media (max-width: $break-mobile) {
 
   .nav {
+    box-shadow: 0 20px 60px rgba($black, 0.4);
     background: $black;
     height: 70px;
   }

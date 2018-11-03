@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38404388-22"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-38404388-22');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Dwelve</title>
+    <meta name="keywords" content="james, traf, james traf, jamestraf, simple, minimal, design, development, photography, ux, ui, montreal">
+    <meta name="description" content="Netflix-Bingeable Sofas">
+    <meta name="author" content="@traf">
+    <meta name="google-site-verification" content="2FKG8hJJwNcZ8zzwEN_JPjHez_mvqJSPiCcAVuiTHPQ" />
+    <link href="/images/favicon.ico" rel="shortcut icon">
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+<body class="animsition clients">
+  <a href="/clients.html" class="close"><i class="icon" data-feather="x"></i></a>
+  <section class="section">
+    <h1 class="card-title">Dwelve</h1>
+    <p class="card-subtitle">Netflix-Bingeable Sofas</p>
+    <i class="down" data-feather="arrow-down"></i>
+    <img src="/images/section-dwelve-1.jpg" class="section-img" alt="dwelve">
+  </section>
+  <section class="section">
+    <img src="/images/section-dwelve-2.jpg" class="section-img" alt="dwelve">
+  </section>
+  <section class="section">
+    <div class="card card-email">
+  <i class="card-icon" data-feather="triangle"></i>
+  <h2 class="card-title">Working on something cool? Need help bringing it to life?</h2>
+  <p class="card-subtitle">Leave your info below and I'll be in touch</p>
+  <form class="email-form" id="contact-form" name="contact" method="POST" netlify>
+    <div class="email-success"><h1>🎈</h1><p>Sent!</p></div>
+    <div class="email-content">
+      <input type="text" class="email-input" name="name" placeholder="Name">
+      <input type="email" class="email-input" name="email" placeholder="Email" required>
+      <button type="submit" class="email-submit text">Send</button>
+    </div>
+  </form>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+  $(function(){
+
+    // On form submit
+    $("#contact-form").submit(function(e) {
+      e.preventDefault();
+      var $form = $(this);
+      $.post($form.attr("action"), $form.serialize()).then(function() {
+        $('.email-content').addClass('email-hide');
+        $('.email-success').addClass('email-show');
+      });
+    });
+
+    // Only show submit button on proper email
+    ;( function( $, window, document, undefined ) {
+        'use strict';
+        var form        = '.email-form',
+            className   = 'email-active',
+            email       = 'input[type="email"]';
+        $( form ).each( function(){
+            var $form   = $( this ),
+                $email  = $form.find( email ),
+                val     = '';
+            $email.on( 'keyup.addClassWhenEmail', function(){
+                val = $email.val();
+                $form.toggleClass( className, val != '' && /^([\w-\.]+@([\w-]+\.)+[\w-]{2,12})?$/.test( val ) );
+            });
+        });
+    })( jQuery, window, document );
+
+  })
+</script>
+  </section>
+  <section class="section">
+    <footer class="card card-footer">
+  <h3 class="card-title">&copy; James Traf</h3>
+  <div class="icons">
+    <h4 class="icon-title">Hit me up</h4>
+    <a class="icon-twitter" href="http://twitter.com/traf" target="_blank"><img src="/images/icon-twitter.svg" alt="twitter"/></a>
+    <a class="icon-insta" href="http://insta.com/traf" target="_blank"><img src="/images/icon-insta.svg" alt="insta"/></a>
+    <a class="icon-dribbble" href="http://dribbble.com/traf" target="_blank"><img src="/images/icon-dribbble.svg" alt="dribbble"/></a>
+    <a class="icon-at" href="mailto:trafj@me.com"><img src="/images/icon-at.svg" alt="email"/></a>
+  </div>
+</footer>
+
+<h4 class="message">Enjoy your <span id="weekday"></span>!</h4>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+    // Twitter icon hover
+    $('.icon-twitter').hover(
+      function() {
+        $('.icon-title').text("Tweetin' facts");
+        $('.card-footer').addClass('bg-twitter');
+      }, function() {
+        $('.icon-title').text("Hit me up");
+        $('.card-footer').removeClass('bg-twitter');
+      }
+    );
+
+    // Instagram icon hover
+    $('.icon-insta').hover(
+      function() {
+        $('.icon-title').text("Capturin' moments");
+        $('.card-footer').addClass('bg-insta');
+      }, function() {
+        $('.icon-title').text("Hit me up");
+        $('.card-footer').removeClass('bg-insta');
+      }
+    );
+
+    // Dribbble icon hover
+    $('.icon-dribbble').hover(
+      function() {
+        $('.icon-title').text("Pushin' pixels");
+        $('.card-footer').addClass('bg-dribbble');
+      }, function() {
+        $('.icon-title').text("Hit me up");
+        $('.card-footer').removeClass('bg-dribbble');
+      }
+    );
+
+    // Email icon hover
+    $('.icon-at').hover(
+      function() {
+        $('.icon-title').text("Say hello");
+      }, function() {
+        $('.icon-title').text("Hit me up");
+      }
+    );
+
+    // Get current day of the week
+    var d = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    var n = weekday[d.getDay()];
+    document.getElementById("weekday").innerHTML = n;
+
+  });
+</script>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<!-- <script src="https://embed.small.chat/T036XP36SG514EQWDB.js" async></script> -->
+<script src="js/scripts.min.js"></script>
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5a24f09e0b35911b5f010af4');
+    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+    t.src = 'https://d2fuc4clr7gvcn.cloudfront.net/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+<script>
+  $(document).ready(function(){
+
+    // Nav toggle
+    $('.nav-toggle').click(function(){
+      $(this).toggleClass('toggle');
+      $('.nav').toggleClass('nav-show');
+      $('.nav-links').toggleClass('nav-links-show');
+    });
+
+    // Active nav link
+    $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('nav-active');
+
+    // Stacked scroll effects
+    $('.section').stack();
+
+    // Feather icons
+    feather.replace()
+
+    // Fade hero contents on scroll
+    $(window).scroll(function(i){
+      var scrollVar = $(window).scrollTop();
+      $('.hero').css({'opacity':( 440-scrollVar )/440});
+    });
+
+    // Page transitions
+    $(".animsition").animsition({
+        linkElement: 'a:not([target="_blank"]):not([href^="#"])',
+        linkElement: '.animsition-link',
+        outDuration: 600,
+        inDuration: 600,
+    });
+
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

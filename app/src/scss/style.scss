@@ -33,6 +33,31 @@ body {
   &:active { transform: scale(0.98); }
 }
 
+.close {
+  background: rgba($black, 0.4);
+  border-radius: $circle;
+  @extend .flex-center;
+  padding-bottom: 1px;
+  padding-right: 1px;
+  transition: $ease;
+  position: fixed;
+  height: 60px;
+  width: 60px;
+  right: 40px;
+  z-index: 4;
+  top: 40px;
+  &:hover {
+    transform: scale(1.04) rotate(90deg);
+    background: rgba($black, 1);
+  }
+}
+
+.down {
+  @extend .center-x;
+  opacity: 0.6;
+  bottom: 40px;
+}
+
 /*-------------------------------------------------------------------*/
 /* WORD SHIFT -------------------------------------------------------*/
 /*-------------------------------------------------------------------*/
@@ -256,6 +281,25 @@ body {
   .hero-title.large { width: 500px; }
 }
 
+.section {
+  flex-direction: column;
+  @extend .flex-center;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  .section-img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    z-index: -1;
+  }
+  .card {
+    border-radius: 0;
+    height: 100%;
+    margin: 0;
+  }
+}
+
 .content {
   box-shadow: 0 0 100px $black;
   top: calc(100vh - 20px);
@@ -351,6 +395,7 @@ a.card:hover { transform: scale(1.02); }
 .card-deximal { background: url('/images/card-deximal.jpg') no-repeat center center; background-size: cover; }
 .card-finely { background: url('/images/card-finely.jpg') no-repeat center center; background-size: cover; }
 .card-typement { background: url('/images/card-typement.jpg') no-repeat center center; background-size: cover; }
+.card-dwelve { background: url('/images/card-clients.jpg') no-repeat center center; background-size: cover; }
 .card-mobydish { background: url('/images/card-mobydish.jpg') no-repeat center center; background-size: cover; }
 .card-squish { background: url('/images/card-squish.jpg') no-repeat center center; background-size: cover; }
 

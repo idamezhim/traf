@@ -35,6 +35,7 @@ body {
 
 .close {
   background: rgba($black, 0.4);
+  z-index: 999999999999999;
   border-radius: $circle;
   @extend .flex-center;
   padding-bottom: 1px;
@@ -44,7 +45,6 @@ body {
   height: 60px;
   width: 60px;
   right: 40px;
-  z-index: 9;
   top: 40px;
   &:hover {
     transform: scale(1.04) rotate(90deg);
@@ -61,6 +61,13 @@ body {
 @media (max-width: $break-mobile) {
 
   .hide-mobile { display: none; }
+
+  .close {
+    height: 50px;
+    width: 50px;
+    right: 20px;
+    top: 20px;
+  }
 
 }
 
@@ -289,22 +296,51 @@ body {
 }
 
 .section {
+  // box-shadow: 0 40px 80px rgba($black, 0.1);
   flex-direction: column;
   @extend .flex-center;
-  overflow: hidden;
-  height: 100vh;
+  position: relative;
+  min-height: 100%;
   width: 100%;
   .section-img {
     position: absolute;
     object-fit: cover;
+    height: 100%;
     width: 100%;
     z-index: -1;
   }
-  .card {
-    border-radius: 0;
-    height: 100%;
-    margin: 0;
+  .section-cards {
+    background-color: $black;
+    @extend .flex-center;
+    padding: 0 6%;
+    display: flex;
+    height: 100vh;
+    width: 100%;
   }
+  .card {
+    margin: 0 40px 0 0;
+    height: 420px;
+    width: 100%;
+    padding: 0;
+    &:nth-child(even) { margin: 0; }
+  }
+  .card-email,
+  .card-footer {
+    height: 68%;
+    width: 100%;
+  }
+  .card-footer {
+    justify-content: center;
+    flex-direction: column;
+    .card-title { margin: -40px auto 20px; }
+    .icon-title {
+      @extend .center-x;
+      margin-top: 70px;
+    }
+  }
+
+  .footer-message { display: none; }
+
 }
 
 .content {
@@ -326,10 +362,39 @@ body {
   width: 1100px;
 }
 
+@media (max-width: $break-tablet) {
+
+  .section {
+    height: 68vh;
+    .section-cards {
+      flex-direction: column;
+      height: 100%;
+      .card {
+        margin: 0 0 30px 0;
+        padding: 30px;
+        height: 40%;
+        &:nth-child(even) { margin: 0; }
+      }
+      .card-email,
+      .card-footer {
+        height: 100%;
+      }
+    }
+  }
+
+}
+
 @media (max-width: $break-mobile) {
 
   .hero { height: calc(68vh - 20px); }
   .content { top: calc(68vh - 20px); }
+
+  .section {
+    .card-footer {
+      .card-title { margin: 0 auto 10px; }
+      .icon-title { position: relative; }
+    }
+  }
 
 }
 
@@ -458,6 +523,8 @@ a.card:hover { transform: scale(1.02); }
   background-color: rgba($white, 0.1);
   border-top-right-radius: $rounded;
   border-top-left-radius: $rounded;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   pointer-events: none;
   transition: $ease;
   @extend .center-x;
@@ -471,8 +538,6 @@ a.card:hover { transform: scale(1.02); }
 
 .email-submit.text {
   background: rgba($white, 0.1);
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
   height: 50px;
   width: 100px;
   @extend .p;
@@ -550,7 +615,7 @@ a.card:hover { transform: scale(1.02); }
 .bg-insta { background: #405de6; }
 .bg-dribbble { background: #ea4c89; }
 
-.message {
+.footer-message {
   padding: 0 10% 60px;
   opacity: 0.3;
   width: 100%;

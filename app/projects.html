@@ -104,7 +104,7 @@
   </div>
 </footer>
 
-<h4 class="message">Enjoy your <span id="weekday"></span>!</h4>
+<h4 class="footer-message">Enjoy your <span id="weekday"></span>!</h4>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script>
@@ -171,7 +171,6 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="https://embed.small.chat/T036XP36SG514EQWDB.js" async></script>
 <script src="js/scripts.min.js"></script>
 <script type="text/javascript">
   var _gauges = _gauges || [];
@@ -207,6 +206,9 @@
         $('.hero').css({'opacity':( 440-scrollVar )/440});
       });
 
+      // Stacked scroll effects
+      $('.section').stack();
+
     }
 
     // Nav toggle
@@ -218,9 +220,6 @@
 
     // Active nav link
     $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('nav-active');
-
-    // Stacked scroll effects
-    $('.section').stack();
 
     // Feather icons
     feather.replace()
@@ -236,6 +235,7 @@
   });
 </script>
 
+  <script src="https://embed.small.chat/T036XP36SG514EQWDB.js" async></script>
   <script>$(function(){ $(".card-email .card-title").text("Get notified when I'm about to launch something new"); });</script>
 
 </body>

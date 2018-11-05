@@ -26,13 +26,24 @@
     <i class="down" data-feather="arrow-down"></i>
     <img src="/images/section-dwelve-1.jpg" class="section-img" alt="dwelve">
   </section>
-  <section class="section">
-    <img src="/images/section-dwelve-2.jpg" class="section-img" alt="dwelve">
-  </section>
-  <section class="section">
-    <div class="card card-email">
-  <i class="card-icon" data-feather="triangle"></i>
-  <h2 class="card-title">Feeling inspired? Let's work together to bring your idea to life.</h2>
+  <section class="section"><img src="/images/section-dwelve-2.jpg" class="section-img" alt="dwelve"></section>
+  <section class="section"><img src="/images/section-dwelve-3.jpg" class="section-img" alt="dwelve"></section>
+  <section class="section"><img src="/images/section-dwelve-4.jpg" class="section-img" alt="dwelve"></section>
+  <section class="section"><img src="/images/section-dwelve-5.jpg" class="section-img" alt="dwelve"></section>
+  <section class="section"><img src="/images/section-dwelve-6.jpg" class="section-img" alt="dwelve"></section>
+  <section class="section"><img src="/images/section-dwelve-7.jpg" class="section-img" alt="dwelve"></section>
+  <section class="section"><img src="/images/section-dwelve-8.jpg" class="section-img" alt="dwelve"></section>
+  <section class="section"><img src="/images/section-dwelve-9.jpg" class="section-img" alt="dwelve"></section>
+  <section class="section"><img src="/images/section-dwelve-10.jpg" class="section-img" alt="dwelve"></section>
+  <section class="section"><div class="section-cards"><a href="/mobydish.html" class="card card-client card-mobydish">
+  <h2 class="card-title">MobyDish</h2>
+  <p class="card-subtitle">Tasteful Catering</p>
+</a> <a href="/squish.html" class="card card-client card-squish">
+  <h2 class="card-title">Squish</h2>
+  <p class="card-subtitle">Gourmet Gummies</p>
+</a></div></section>
+  <section class="section"><div class="section-cards"><div class="card card-email">
+  <h2 class="card-title">Feeling inspired? Let's make something beautiful together.</h2>
   <p class="card-subtitle hide-mobile">Leave your info below and I'll message you within a day.</p>
   <form class="email-form" id="contact-form" name="contact" method="POST" netlify>
     <div class="email-success"><h1>🎈</h1><p>Sent!</p></div>
@@ -77,10 +88,8 @@
     })( jQuery, window, document );
 
   })
-</script>
-  </section>
-  <section class="section">
-    <footer class="card card-footer">
+</script></div></section>
+  <section class="section"><div class="section-cards"><footer class="card card-footer">
   <h3 class="card-title">&copy; James Traf</h3>
   <div class="icons">
     <h4 class="icon-title">Hit me up</h4>
@@ -91,7 +100,7 @@
   </div>
 </footer>
 
-<h4 class="message">Enjoy your <span id="weekday"></span>!</h4>
+<h4 class="footer-message">Enjoy your <span id="weekday"></span>!</h4>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script>
@@ -153,10 +162,8 @@
     document.getElementById("weekday").innerHTML = n;
 
   });
-</script>
-  </section>
+</script></div></section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="https://embed.small.chat/T036XP36SG514EQWDB.js" async></script>
 <script src="js/scripts.min.js"></script>
 <script type="text/javascript">
   var _gauges = _gauges || [];
@@ -192,6 +199,9 @@
         $('.hero').css({'opacity':( 440-scrollVar )/440});
       });
 
+      // Stacked scroll effects
+      $('.section').stack();
+
     }
 
     // Nav toggle
@@ -203,9 +213,6 @@
 
     // Active nav link
     $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('nav-active');
-
-    // Stacked scroll effects
-    $('.section').stack();
 
     // Feather icons
     feather.replace()

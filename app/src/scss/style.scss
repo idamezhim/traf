@@ -19,11 +19,6 @@ body {
   color: $white;
 }
 
-.body-fixed {
-  overflow: hidden;
-  height: 100vh;
-}
-
 .button {
   box-shadow: 0 20px 30px -10px rgba($black, 0.04);
   background: rgba($white, 0.1);
@@ -61,6 +56,10 @@ body {
   @extend .center-x;
   opacity: 0.6;
   bottom: 40px;
+}
+
+.home .hero {
+  padding: 0 10%;
 }
 
 @media (max-width: $break-mobile) {
@@ -336,7 +335,7 @@ body {
 /*-------------------------------------------------------------------*/
 
 .section {
-  box-shadow: 0 40px 80px rgba($black, 0.2);
+  box-shadow: 0 20px 80px rgba($black, 0.2);
   flex-direction: column;
   @extend .flex-center;
   position: relative;
@@ -346,9 +345,8 @@ body {
 }
 
 .section-hero {
-  .card-title {
-    margin: -20px auto 0;
-  }
+  .card-title { margin: -20px auto 0; }
+  .card-subtitle { opacity: 0.6; }
 }
 
 .section-content {
@@ -379,6 +377,18 @@ body {
 .section-mobydish-6 { background: url('/images/section-mobydish-6.jpg') no-repeat center center; background-size: cover; }
 .section-mobydish-7 { background: url('/images/section-mobydish-7.jpg') no-repeat center center; background-size: cover; }
 .section-mobydish-8 { background: url('/images/section-mobydish-8.jpg') no-repeat center center; background-size: cover; }
+
+.section-squish-1 { background: url('/images/section-squish-1.jpg') no-repeat center center; background-size: cover; }
+.section-squish-2 { background: url('/images/section-squish-2.jpg') no-repeat center center; background-size: cover; }
+.section-squish-3 { background: url('/images/section-squish-3.jpg') no-repeat center center; background-size: cover; }
+.section-squish-4 { background: url('/images/section-squish-4.jpg') no-repeat center center; background-size: cover; }
+.section-squish-5 { background: url('/images/section-squish-5.jpg') no-repeat center center; background-size: cover; }
+.section-squish-6 { background: url('/images/section-squish-6.jpg') no-repeat center center; background-size: cover; }
+.section-squish-7 { background: url('/images/section-squish-7.jpg') no-repeat center center; background-size: cover; }
+.section-squish-8 { background: url('/images/section-squish-8.jpg') no-repeat center center; background-size: cover; }
+.section-squish-9 { background: url('/images/section-squish-9.jpg') no-repeat center center; background-size: cover; }
+.section-squish-10 { background: url('/images/section-squish-10.jpg') no-repeat center center; background-size: cover; }
+.section-squish-11 { background: url('/images/section-squish-11.jpg') no-repeat center center; background-size: cover; }
 
 @media (max-width: $break-mobile) {
 

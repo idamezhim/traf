@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38404388-22"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38404388-22"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-38404388-22');
-    </script>
+    </script> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>Dwelve</title>
     <meta name="keywords" content="james, traf, james traf, jamestraf, simple, minimal, design, development, photography, ux, ui, montreal">
     <meta name="description" content="Netflix-Bingeable Sofas">
     <meta name="author" content="@traf">
-    <meta name="google-site-verification" content="2FKG8hJJwNcZ8zzwEN_JPjHez_mvqJSPiCcAVuiTHPQ" />
+    <!-- <meta name="google-site-verification" content="2FKG8hJJwNcZ8zzwEN_JPjHez_mvqJSPiCcAVuiTHPQ" /> -->
     <link href="/images/favicon.ico" rel="shortcut icon">
     <link href="/css/styles.css" rel="stylesheet">
 </head>
 <body class="animsition clients">
   <a href="/clients.html" class="close"><i class="icon" data-feather="x"></i></a>
-  <section class="section">
-    <h1 class="card-title">Dwelve</h1>
-    <p class="card-subtitle">Netflix-Bingeable Sofas</p>
-    <i class="down" data-feather="arrow-down"></i>
-    <img src="/images/section-dwelve-1.jpg" class="section-img" alt="dwelve">
-  </section>
-  <section class="section"><img src="/images/section-dwelve-2.jpg" class="section-img" alt="dwelve"></section>
-  <section class="section"><img src="/images/section-dwelve-3.jpg" class="section-img" alt="dwelve"></section>
-  <section class="section"><img src="/images/section-dwelve-4.jpg" class="section-img" alt="dwelve"></section>
-  <section class="section"><img src="/images/section-dwelve-5.jpg" class="section-img" alt="dwelve"></section>
-  <section class="section"><img src="/images/section-dwelve-6.jpg" class="section-img" alt="dwelve"></section>
-  <section class="section"><img src="/images/section-dwelve-7.jpg" class="section-img" alt="dwelve"></section>
-  <section class="section"><img src="/images/section-dwelve-8.jpg" class="section-img" alt="dwelve"></section>
-  <section class="section"><img src="/images/section-dwelve-9.jpg" class="section-img" alt="dwelve"></section>
-  <section class="section"><img src="/images/section-dwelve-10.jpg" class="section-img" alt="dwelve"></section>
-  <section class="section"><div class="section-cards"><a href="/mobydish.html" class="card card-client card-mobydish">
+  <div id="fullpage">
+    <section class="section section-hero">
+      <h1 class="card-title">Dwelve</h1>
+      <p class="card-subtitle">Netflix-Bingeable Sofas</p>
+      <i class="down" data-feather="arrow-down"></i>
+      <div class="fp-bg section-dwelve-1"></div>
+    </section>
+    <section class="section"><div class="section-dwelve-2 fp-bg"></div></section>
+    <section class="section"><div class="section-dwelve-3 fp-bg"></div></section>
+    <section class="section"><div class="section-dwelve-4 fp-bg"></div></section>
+    <section class="section"><div class="section-dwelve-5 fp-bg"></div></section>
+    <section class="section"><div class="section-dwelve-6 fp-bg"></div></section>
+    <section class="section"><div class="section-dwelve-7 fp-bg"></div></section>
+    <section class="section"><div class="section-dwelve-8 fp-bg"></div></section>
+    <section class="section"><div class="section-dwelve-9 fp-bg"></div></section>
+    <section class="section"><div class="section-dwelve-10 fp-bg"></div></section>
+    <section class="section section-content">
+      <div class="wrapper">
+        <a href="/mobydish.html" class="card card-client card-mobydish">
   <h2 class="card-title">MobyDish</h2>
   <p class="card-subtitle">Tasteful Catering</p>
-</a> <a href="/squish.html" class="card card-client card-squish">
+</a>
+        <a href="/squish.html" class="card card-client card-squish">
   <h2 class="card-title">Squish</h2>
   <p class="card-subtitle">Gourmet Gummies</p>
-</a></div></section>
-  <section class="section"><div class="section-cards"><div class="card card-email">
+</a>
+        <div class="card card-email">
   <h2 class="card-title">Feeling inspired? Let's make something beautiful together.</h2>
   <p class="card-subtitle hide-mobile">Leave your info below and I'll message you within a day.</p>
   <form class="email-form" id="contact-form" name="contact" method="POST" netlify>
@@ -88,8 +92,8 @@
     })( jQuery, window, document );
 
   })
-</script></div></section>
-  <section class="section"><div class="section-cards"><footer class="card card-footer">
+</script>
+        <footer class="card card-footer">
   <h3 class="card-title">&copy; James Traf</h3>
   <div class="icons">
     <h4 class="icon-title">Hit me up</h4>
@@ -162,10 +166,13 @@
     document.getElementById("weekday").innerHTML = n;
 
   });
-</script></div></section>
+</script>
+      </div>
+    </section>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="js/scripts.min.js"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   var _gauges = _gauges || [];
   (function() {
     var t   = document.createElement('script');
@@ -178,7 +185,7 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(t, s);
   })();
-</script>
+</script> -->
 <script>
   $(document).ready(function(){
 
@@ -199,8 +206,14 @@
         $('.hero').css({'opacity':( 440-scrollVar )/440});
       });
 
-      // Stacked scroll effects
-      $('.section').stack();
+      // Fullpage JS
+      $('#fullpage').fullpage({
+        parallaxOptions: {type: 'reveal', percentage: 100 },
+        licenseKey: '36E1197B-89FE4BB2-B2C0B9E9-247C4CFD',
+    		autoScrolling: false,
+        percentage: 100,
+        parallax: true,
+    	});
 
     }
 
@@ -230,18 +243,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

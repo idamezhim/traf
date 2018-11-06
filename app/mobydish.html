@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38404388-22"></script>
     <script>
@@ -11,91 +10,66 @@
     </script> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>Traf</title>
+    <title>MobyDish</title>
     <meta name="keywords" content="james, traf, james traf, jamestraf, simple, minimal, design, development, photography, ux, ui, montreal">
-    <meta name="description" content="New website coming soon">
+    <meta name="description" content="Tasteful Catering">
     <meta name="author" content="@traf">
     <!-- <meta name="google-site-verification" content="2FKG8hJJwNcZ8zzwEN_JPjHez_mvqJSPiCcAVuiTHPQ" /> -->
     <link href="/images/favicon.ico" rel="shortcut icon">
     <link href="/css/styles.css" rel="stylesheet">
 </head>
-
-<body class="animsition">
-  <nav class="nav">
-  <a href="/" class="nav-logo"><img src="/images/logo-traf.png" alt="traf"/></a>
-  <div class="nav-links">
-    <a href="/projects.html" class="nav-link">Projects</a>
-    <a href="/clients.html" class="nav-link">Clients</a>
-    <a href="/moments.html" class="nav-link">Moments</a>
-    <a href="/thoughts.html" class="nav-link">Thoughts</a>
-    <a href="/thoughts.html" class="nav-link">Supply</a>
-  </div>
-  <button class="nav-toggle">
-    <span class="line line-1"></span>
-    <span class="line line-2"></span>
-  </button>
-</nav>
-
-  <!-- HERO -->
-  <div class="hero">
-    <h1 class="shift clip">
-      <span class="word-shift">
-        <b class="is-visible">Experimental design lover&nbsp;</b>
-        <b>Dope website creator</b>
-        <b>Moment capturer</b>
-        <b>Cryptocurrency lover</b>
-        <b>Sweating the details</b>
-        <b>Lifelong learner</b>
-        <b>Montreal living</b>
-        <b>Currently unavailable for hire</b>
-      </span>
-    </h1>
-  </div>
-
-  <!-- CARDS -->
-  <div class="content">
-    <div class="wrapper">
-      <a href="/projects.html" class="card card-projects">
-        <h2 class="card-title">Projects</h2>
-        <p class="card-subtitle">Ideas I've brought to life</p>
-      </a>
-      <a href="/clients.html" class="card card-clients">
-        <h2 class="card-title">Clients</h2>
-        <p class="card-subtitle">Things I've made for others</p>
-      </a>
-      <a href="/moments.html" class="card card-moments">
-        <h2 class="card-title">Moments</h2>
-        <p class="card-subtitle">Life from behind the lens</p>
-      </a>
-      <a href="/moments.html" class="card card-thoughts">
-        <h2 class="card-title">Thoughts</h2>
-        <p class="card-subtitle">Ideas about life &amp; work</p>
-      </a>
-      <div class="card card-email">
-  <i class="card-icon" data-feather="mail"></i>
-  <h2 class="card-title">The dopest content delivered straight to your inbox</h2>
-  <form class="email-form validate" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-    <div class="email-success"><h1>🎈</h1><p>Done!</p></div>
+<body class="animsition clients">
+  <a href="/clients.html" class="close"><i class="icon" data-feather="x"></i></a>
+  <div id="fullpage">
+    <section class="section section-hero">
+      <h1 class="card-title">MobyDish</h1>
+      <p class="card-subtitle">Tasteful Catering</p>
+      <i class="down" data-feather="arrow-down"></i>
+      <div class="fp-bg section-mobydish-1"></div>
+    </section>
+    <section class="section"><div class="section-mobydish-2 fp-bg"></div></section>
+    <section class="section"><div class="section-mobydish-3 fp-bg"></div></section>
+    <section class="section"><div class="section-mobydish-4 fp-bg"></div></section>
+    <section class="section"><div class="section-mobydish-5 fp-bg"></div></section>
+    <section class="section"><div class="section-mobydish-6 fp-bg"></div></section>
+    <section class="section"><div class="section-mobydish-7 fp-bg"></div></section>
+    <section class="section"><div class="section-mobydish-8 fp-bg"></div></section>
+    <section class="section section-content">
+      <div class="wrapper">
+        <a href="/squish.html" class="card card-client card-squish">
+  <h2 class="card-title">Squish</h2>
+  <p class="card-subtitle">Gourmet Gummies</p>
+</a>
+        <a href="/dwelve.html" class="card card-client card-dwelve">
+  <h2 class="card-title">Dwelve</h2>
+  <p class="card-subtitle">Netflix-Bingeable Sofas</p>
+</a>
+        <div class="card card-email">
+  <h2 class="card-title">Feeling inspired? Let's make something beautiful together.</h2>
+  <p class="card-subtitle hide-mobile">Leave your info below and I'll message you within a day.</p>
+  <form class="email-form" id="contact-form" name="contact" method="POST" netlify>
+    <div class="email-success"><h1>🎈</h1><p>Sent!</p></div>
     <div class="email-content">
-      <input type="text" class="email-input" name="FIRSTNAME" placeholder="First Name" id="mce-FIRSTNAME">
-      <input type="email" class="email-input" name="EMAIL" placeholder="Email" id="mce-EMAIL" required>
-      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c7d394da347a779491d645243_6df23362d2" tabindex="-1" value=""></div>
-      <input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="email-submit button">
+      <input type="text" class="email-input" name="name" placeholder="Name">
+      <input type="email" class="email-input" name="email" placeholder="Email" required>
+      <button type="submit" class="email-submit text">Send</button>
     </div>
   </form>
+
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script>
   $(function(){
 
-    // Show balloon after successful email input
-    $('.email-form').ajaxChimp({
-      url: 'https://tr.us8.list-manage.com/subscribe/post?u=c7d394da347a779491d645243&amp;id=6df23362d2',
-      callback: function(response) {
+    // On form submit
+    $("#contact-form").submit(function(e) {
+      e.preventDefault();
+      var $form = $(this);
+      $.post($form.attr("action"), $form.serialize()).then(function() {
         $('.email-content').addClass('email-hide');
         $('.email-success').addClass('email-show');
-      }
+      });
     });
 
     // Only show submit button on proper email
@@ -117,7 +91,7 @@
 
   })
 </script>
-      <footer class="card card-footer">
+        <footer class="card card-footer">
   <h3 class="card-title">&copy; James Traf</h3>
   <div class="icons">
     <h4 class="icon-title">Hit me up</h4>
@@ -191,9 +165,9 @@
 
   });
 </script>
-    </div>
+      </div>
+    </section>
   </div>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="js/scripts.min.js"></script>
 <!-- <script type="text/javascript">
@@ -265,22 +239,5 @@
   });
 </script>
 
-  <script src="https://embed.small.chat/T036XP36SG514EQWDB.js" async></script>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

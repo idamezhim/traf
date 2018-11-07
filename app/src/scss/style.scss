@@ -122,6 +122,22 @@ body {
   padding: 0 10%;
 }
 
+.projects {
+  .card-project:hover .card-title {
+    pointer-events: none;
+    margin-top: 100px;
+    opacity: 0;
+  }
+  .card-project:hover .card-title-hover {
+    margin-top: 0;
+    opacity: 1;
+  }
+  .card-title {
+    max-width: 90%;
+    width: 400px;
+  }
+}
+
 /*-------------------------------------------------------------------*/
 /* WORD SHIFT -------------------------------------------------------*/
 /*-------------------------------------------------------------------*/
@@ -555,22 +571,6 @@ body {
   opacity: 0;
 }
 
-.projects {
-  .card-project:hover .card-title {
-    pointer-events: none;
-    margin-top: 100px;
-    opacity: 0;
-  }
-  .card-project:hover .card-title-hover {
-    margin-top: 0;
-    opacity: 1;
-  }
-  .card-title {
-    max-width: 90%;
-    width: 400px;
-  }
-}
-
 a.card:hover { transform: scale(1.02); }
 
 @media (max-width: $break-mobile) {
@@ -580,7 +580,7 @@ a.card:hover { transform: scale(1.02); }
     height: 260px;
   }
 
-  .card-icon { margin-bottom: 10px; }
+  .card-icon { margin: -10px auto 20px; }
 
   .card-subtitle {
     font-size: 18px;

@@ -18,7 +18,7 @@
     <link href="/images/favicon.ico" rel="shortcut icon">
     <link href="/css/styles.css" rel="stylesheet">
 </head>
-<body class="animsition clients">
+<body class="animsition">
   <a href="/clients.html" class="close"><i class="icon" data-feather="x"></i></a>
   <div id="fullpage">
     <section class="section section-hero">
@@ -206,10 +206,12 @@
 
       // Fullpage JS
       $('#fullpage').fullpage({
-        parallaxOptions: {type: 'reveal', percentage: 100 },
+        parallaxOptions: {property: 'translate', type: 'reveal', percentage: 62 },
         licenseKey: '36E1197B-89FE4BB2-B2C0B9E9-247C4CFD',
         parallaxKey: 'dHIuYWZfMFlVY0dGeVlXeHNZWGc9cjJH',
+        fitToSectionDelay: 600,
     		autoScrolling: false,
+        controlArrows: true,
         percentage: 100,
         parallax: true,
     	});

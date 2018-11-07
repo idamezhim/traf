@@ -23,7 +23,7 @@ $circle: 50%;
 
 a { transition: $smooth; }
 img { pointer-events: none; max-width: 100%; }
-button { -webkit-appearance: none; appearance: none; cursor: pointer; }
+button { -webkit-appearance: none; appearance: none; cursor: pointer; transition: $smooth; }
 
 /* DEFAULT BROWSER STYLES ---------------------------*/
 

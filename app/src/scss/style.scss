@@ -23,24 +23,24 @@ body {
   box-shadow: 0 20px 30px -10px rgba($black, 0.04);
   background: rgba($white, 0.1);
   border-radius: $rounded;
-  padding: 14px 32px;
+  letter-spacing: -0.5px;
+  font-family: $title;
+  padding: 16px 32px;
   margin-top: 30px;
+  font-size: 14px;
   color: $white;
-  &:hover {
-    box-shadow: 0 20px 30px 0 rgba($black, 0.04);
-    transform: translateY(-4px);
-  }
+  z-index: 5;
+  &:hover { box-shadow: 0 20px 30px 0 rgba($black, 0.04); transform: translateY(-4px); }
   &:active { transform: scale(0.98); }
 }
 
 .button.naked {
-  letter-spacing: -0.5px;
-  font-family: $title;
   position: absolute;
   box-shadow: none;
   background: none;
-  font-size: 14px;
+  font-size: 16px;
   padding: 40px;
+  margin: 0;
   bottom: 0;
   right: 0;
 }
@@ -68,6 +68,33 @@ body {
   @extend .center-x;
   opacity: 0.6;
   bottom: 40px;
+}
+
+.fp-controlArrow.fp-prev,
+.fp-controlArrow.fp-next {
+  @extend .flex-center;
+  transition: $ease;
+  opacity: 0.6;
+  border: none;
+  height: 100%;
+  width: 120px;
+  margin: 0;
+  top: 0;
+  &:hover { opacity: 1; }
+}
+
+.fp-controlArrow.fp-prev {
+  background: url('/images/icon-arrow-left.svg') no-repeat;
+  background-position: 50%;
+  left: 0;
+  &:hover { transform: translateX(-6px); }
+}
+
+.fp-controlArrow.fp-next {
+  background: url('/images/icon-arrow-right.svg') no-repeat;
+  background-position: 50%;
+  right: 0;
+  &:hover { transform: translateX(6px); }
 }
 
 @media (max-width: $break-mobile) {
@@ -347,7 +374,51 @@ body {
 }
 
 /*-------------------------------------------------------------------*/
-/* SCTION IMAGES ----------------------------------------------------*/
+/* SECTIONS ---------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+.section {
+  box-shadow: 0 20px 80px rgba($black, 0.2);
+  flex-direction: column;
+  @extend .flex-center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  .wrapper { padding: 120px 0 0; }
+}
+
+.section-hero {
+  .card-title { margin: -20px auto 0; }
+  .card-subtitle { opacity: 0.6; }
+}
+
+.section-content {
+  height: auto !important;
+}
+
+.fp-bg {
+  min-height: 100%;
+  width: 100%;
+}
+
+@media (max-width: $break-mobile) {
+
+  .section {
+    box-shadow: none;
+    height: 60vh;
+    .wrapper { padding: 40px 0 0; }
+  }
+
+  .fp-bg {
+    position: absolute;
+    z-index: -1;
+  }
+
+}
+
+
+/*-------------------------------------------------------------------*/
+/* SECTION BACKGROUNDS ----------------------------------------------*/
 /*-------------------------------------------------------------------*/
 
 .client-dwelve-1 { background: url('/images/client-dwelve-1.jpg') no-repeat center center; background-size: cover; }
@@ -410,48 +481,34 @@ body {
 .moments-places-13 { background: url('/images/moments-places-13.jpg') no-repeat center center; background-size: cover; }
 .moments-places-14 { background: url('/images/moments-places-14.jpg') no-repeat center center; background-size: cover; }
 
-/*-------------------------------------------------------------------*/
-/* SECTIONS ---------------------------------------------------------*/
-/*-------------------------------------------------------------------*/
+.moments-things-1 { background: url('/images/moments-things-1.jpg') no-repeat center center; background-size: cover; }
+.moments-things-2 { background: url('/images/moments-things-2.jpg') no-repeat center center; background-size: cover; }
+.moments-things-3 { background: url('/images/moments-things-3.jpg') no-repeat center center; background-size: cover; }
+.moments-things-4 { background: url('/images/moments-things-4.jpg') no-repeat center center; background-size: cover; }
+.moments-things-5 { background: url('/images/moments-things-5.jpg') no-repeat center center; background-size: cover; }
+.moments-things-6 { background: url('/images/moments-things-6.jpg') no-repeat center center; background-size: cover; }
+.moments-things-7 { background: url('/images/moments-things-7.jpg') no-repeat center center; background-size: cover; }
 
-.section {
-  box-shadow: 0 20px 80px rgba($black, 0.2);
-  flex-direction: column;
-  @extend .flex-center;
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  .wrapper { padding: 120px 0 0; }
-}
+.moments-brands-peel-1 { background: url('/images/moments-brands-peel-1.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-peel-2 { background: url('/images/moments-brands-peel-2.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-peel-3 { background: url('/images/moments-brands-peel-3.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-peel-4 { background: url('/images/moments-brands-peel-4.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-peel-5 { background: url('/images/moments-brands-peel-5.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-peel-6 { background: url('/images/moments-brands-peel-6.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-peel-7 { background: url('/images/moments-brands-peel-7.jpg') no-repeat center center; background-size: cover; }
 
-.section-hero {
-  .card-title { margin: -20px auto 0; }
-  .card-subtitle { opacity: 0.6; }
-}
+.moments-brands-aer-1 { background: url('/images/moments-brands-aer-1.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-aer-2 { background: url('/images/moments-brands-aer-2.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-aer-3 { background: url('/images/moments-brands-aer-3.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-aer-4 { background: url('/images/moments-brands-aer-4.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-aer-5 { background: url('/images/moments-brands-aer-5.jpg') no-repeat center center; background-size: cover; }
 
-.section-content {
-  height: auto !important;
-}
-
-.fp-bg {
-  min-height: 100%;
-  width: 100%;
-}
-
-@media (max-width: $break-mobile) {
-
-  .section {
-    box-shadow: none;
-    height: 60vh;
-    .wrapper { padding: 40px 0 0; }
-  }
-
-  .fp-bg {
-    position: absolute;
-    z-index: -1;
-  }
-
-}
+.moments-brands-photive-1 { background: url('/images/moments-brands-photive-1.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-photive-2 { background: url('/images/moments-brands-photive-2.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-photive-3 { background: url('/images/moments-brands-photive-3.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-photive-4 { background: url('/images/moments-brands-photive-4.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-photive-5 { background: url('/images/moments-brands-photive-5.jpg') no-repeat center center; background-size: cover; }
+.moments-brands-photive-6 { background: url('/images/moments-brands-photive-6.jpg') no-repeat center center; background-size: cover; }
 
 /*-------------------------------------------------------------------*/
 /* CARDS ------------------------------------------------------------*/
@@ -516,6 +573,26 @@ body {
 
 a.card:hover { transform: scale(1.02); }
 
+@media (max-width: $break-mobile) {
+
+  .card {
+    margin: 0 auto 30px;
+    height: 260px;
+  }
+
+  .card-icon { margin-bottom: 10px; }
+
+  .card-subtitle {
+    font-size: 18px;
+    margin: 0;
+  }
+
+}
+
+/*-------------------------------------------------------------------*/
+/* CARD BACKGROUNDS -------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
 .card-projects { background: url('/images/card-projects.jpg') no-repeat center center; background-size: cover; }
 .card-clients { background: url('/images/card-clients.jpg') no-repeat center center; background-size: cover; }
 .card-moments { background: url('/images/card-moments.jpg') no-repeat center center; background-size: cover; }
@@ -534,21 +611,7 @@ a.card:hover { transform: scale(1.02); }
 .card-things { background: url('/images/card-things.jpg') no-repeat center center; background-size: cover; }
 .card-brands { background: url('/images/card-brands.jpg') no-repeat center center; background-size: cover; }
 
-@media (max-width: $break-mobile) {
-
-  .card {
-    margin: 0 auto 30px;
-    height: 260px;
-  }
-
-  .card-icon { margin-bottom: 10px; }
-
-  .card-subtitle {
-    font-size: 18px;
-    margin: 0;
-  }
-
-}
+.card-insta { background: url('/images/card-insta.jpg') no-repeat center center; background-size: cover; }
 
 /*-------------------------------------------------------------------*/
 /* EMAIL CARD -------------------------------------------------------*/
@@ -600,7 +663,11 @@ a.card:hover { transform: scale(1.02); }
   height: 60px;
   width: 60px;
   padding: 0;
-  &:hover { background-color: rgba($white, 0.2); }
+  &:hover {
+    background-color: rgba($white, 0.2);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
 }
 
 .email-submit.text {

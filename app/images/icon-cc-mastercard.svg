@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="24px" viewBox="0 0 38 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>mastercard-outline</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mastercard-outline" fill="#FFFFFF">
+            <path d="M33.25,1.13 C35.3210678,1.13 37,2.80893219 37,4.88 L37,19.13 C37,21.2010678 35.3210678,22.88 33.25,22.88 L4.75,22.88 C2.67893219,22.88 1,21.2010678 1,19.13 L1,4.88 C1,2.80893219 2.67893219,1.13 4.75,1.13 L33.25,1.13 Z M33.25,0.13 L4.75,0.13 C2.12664744,0.13 3.21268032e-16,2.25664744 0,4.88 L0,19.13 C3.21268032e-16,21.7533526 2.12664744,23.88 4.75,23.88 L33.25,23.88 C35.8733526,23.88 38,21.7533526 38,19.13 L38,4.88 C38,2.25664744 35.8733526,0.13 33.25,0.13 Z" id="Shape" fill-rule="nonzero"></path>
+            <path d="M18.11,8.08 C16.1317954,6.72626477 13.4549333,7.05858429 11.8677973,8.85493936 C10.2806612,10.6512944 10.2806612,13.3487056 11.8677973,15.1450606 C13.4549333,16.9414157 16.1317954,17.2737352 18.11,15.92 C16.1271481,13.6827861 16.1271481,10.3172139 18.11,8.08 Z" id="Path"></path>
+            <circle id="Oval" cx="22.56" cy="12" r="4.75"></circle>
+        </g>
+    </g>
+</svg>

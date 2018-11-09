@@ -10,75 +10,83 @@
     </script> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>MobyDish</title>
+    <title>Thoughts</title>
     <meta name="keywords" content="james, traf, james traf, jamestraf, simple, minimal, design, development, photography, ux, ui, montreal">
-    <meta name="description" content="Tasteful Catering">
+    <meta name="description" content="Random ideas about life & work">
     <meta name="author" content="@traf">
     <!-- <meta name="google-site-verification" content="2FKG8hJJwNcZ8zzwEN_JPjHez_mvqJSPiCcAVuiTHPQ" /> -->
     <link href="/images/favicon.ico" rel="shortcut icon">
     <link href="/css/styles.css" rel="stylesheet">
 </head>
-<body class="animsition">
-  <a href="/clients.html" class="close"><i class="icon" data-feather="x"></i></a>
-  <div id="fullpage">
-    <section class="section section-hero">
-      <h1 class="card-title">MobyDish</h1>
-      <p class="card-subtitle">Tasteful Catering</p>
-      <i class="down" data-feather="arrow-down"></i>
-      <div class="client-mobydish-1 fp-bg"></div>
-    </section>
-    <section class="section"><div class="client-mobydish-2 fp-bg"></div></section>
-    <section class="section"><div class="client-mobydish-3 fp-bg"></div></section>
-    <section class="section"><div class="client-mobydish-4 fp-bg"></div></section>
-    <section class="section"><div class="client-mobydish-5 fp-bg"></div></section>
-    <section class="section"><div class="client-mobydish-6 fp-bg"></div></section>
-    <section class="section"><div class="client-mobydish-7 fp-bg"></div></section>
-    <section class="section"><div class="client-mobydish-8 fp-bg"></div></section>
-    <section class="section section-content">
-      <div class="wrapper">
-        <a href="/squish.html" class="card card-squish">
-  <h2 class="card-title">Squish</h2>
-  <p class="card-subtitle">Gourmet Gummies</p>
-</a>
-        <a href="/dwelve.html" class="card card-dwelve">
-  <h2 class="card-title">Dwelve</h2>
-  <p class="card-subtitle">Netflix-Bingeable Sofas</p>
-</a>
-        <div class="card card-email">
-  <h2 class="card-title">Feeling inspired? Let's make something beautiful together.</h2>
-  <p class="card-subtitle">I reply to all emails within a day. See for yourself.</p>
-  <a href="mailto:trafj@me.com" class="button">Email me</a>
-  <p class="copy-email" id="copy-email" data-clipboard-text="trafj@me.com">Or copy email</p>
-  <p class="copied-email">Copied to clipboard</div>
+<body class="animsition thoughts">
+  <nav class="nav">
+  <a href="/" class="nav-logo"><img src="/images/logo-traf.png" alt="traf"/></a>
+  <div class="nav-links">
+    <a href="/projects.html" class="nav-link">Projects</a>
+    <a href="/clients.html" class="nav-link">Clients</a>
+    <a href="/moments.html" class="nav-link">Moments</a>
+    <a href="/thoughts.html" class="nav-link">Thoughts</a>
+    <a href="/supply.html" class="nav-link">Supply</a>
+  </div>
+  <button class="nav-toggle">
+    <span class="line line-1"></span>
+    <span class="line line-2"></span>
+  </button>
+</nav>
+  <div class="hero">
+    <h1 class="hero-title small">Ideas about life & work</h1>
+  </div>
+  <div class="content">
+    <div class="wrapper">
+      <a href="/billionaire.html" class="card card-blue"><h2 class="card-title">3 things I learned from speaking with a billionaire</h2><p class="card-subtitle">4 minute read</p></a>
+      <a href="/habits.html" class="card"><h2 class="card-title">5 daily habits that improved my life &amp; productivity</h2><p class="card-subtitle">2 minute read</p></a>
+      <div class="card card-email">
+  <i class="card-icon" data-feather="mail"></i>
+  <h2 class="card-title">The dopest content delivered straight to your inbox</h2>
+  <form class="email-form validate" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+    <div class="email-success"><h1>🎈</h1><p>Done!</p></div>
+    <div class="email-content">
+      <input type="text" class="email-input" name="FIRSTNAME" placeholder="First Name" id="mce-FIRSTNAME">
+      <input type="email" class="email-input" name="EMAIL" placeholder="Email" id="mce-EMAIL" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c7d394da347a779491d645243_6df23362d2" tabindex="-1" value=""></div>
+      <input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="email-submit button">
+    </div>
+  </form>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
 <script>
   $(function(){
 
-    var email = document.getElementById('copy-email');
-    var clipboard = new ClipboardJS(email);
-    clipboard.on('success', function(e) {
-        $('.notification').addClass('notification-show');
-    });
-    clipboard.on('error', function(e) {
-        console.log(e);
+    // Show balloon after successful email input
+    $('.email-form').ajaxChimp({
+      url: 'https://tr.us8.list-manage.com/subscribe/post?u=c7d394da347a779491d645243&amp;id=6df23362d2',
+      callback: function(response) {
+        $('.email-content').addClass('email-hide');
+        $('.email-success').addClass('email-show');
+      }
     });
 
-    // On form submit
-    // $("#contact-form").submit(function(e) {
-    //   e.preventDefault();
-    //   var $form = $(this);
-    //   $.post($form.attr("action"), $form.serialize()).then(function() {
-    //     $('.email-content').addClass('email-hide');
-    //     $('.email-success').addClass('email-show');
-    //   });
-    // });
+    // Only show submit button on proper email
+    ;( function( $, window, document, undefined ) {
+        'use strict';
+        var form        = '.email-form',
+            className   = 'email-active',
+            email       = 'input[type="email"]';
+        $( form ).each( function(){
+            var $form   = $( this ),
+                $email  = $form.find( email ),
+                val     = '';
+            $email.on( 'keyup.addClassWhenEmail', function(){
+                val = $email.val();
+                $form.toggleClass( className, val != '' && /^([\w-\.]+@([\w-]+\.)+[\w-]{2,12})?$/.test( val ) );
+            });
+        });
+    })( jQuery, window, document );
 
   })
 </script>
-        <footer class="card card-footer">
+      <footer class="card card-footer">
   <h3 class="card-title">&copy; James Traf</h3>
   <div class="icons">
     <h4 class="icon-title">Hit me up</h4>
@@ -152,8 +160,7 @@
 
   });
 </script>
-      </div>
-    </section>
+    </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="js/scripts.min.js"></script>
@@ -249,5 +256,22 @@
   });
 </script>
 
+  <script src="https://embed.small.chat/T036XP36SG514EQWDB.js" async></script>
+  <script>$(function(){ $(".card-email .card-title").text("Get new thoughts & ideas delivered straight to your inbox"); });</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

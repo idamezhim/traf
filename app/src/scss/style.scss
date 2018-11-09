@@ -27,7 +27,7 @@ body {
   font-family: $title;
   padding: 16px 32px;
   margin-top: 30px;
-  font-size: 14px;
+  font-size: 16px;
   color: $white;
   z-index: 5;
   &:hover { box-shadow: 0 20px 30px 0 rgba($black, 0.04); transform: translateY(-4px); }
@@ -38,22 +38,44 @@ body {
   position: absolute;
   box-shadow: none;
   background: none;
-  font-size: 16px;
   padding: 40px;
   margin: 0;
   bottom: 0;
   right: 0;
 }
 
+.button.buy {
+  box-shadow: 0 20px 40px rgba($black, 0.2) !important;
+  background: $black !important;
+  font-family: $bold !important;
+  padding: 10px 30px !important;
+  font-size: 18px  !important;
+  position: fixed !important;
+  color: $white !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  margin: 0 !important;
+}
+
+.gumroad-loading-indicator {
+  box-shadow: 0 20px 40px rgba($black, 0.4) !important;
+  background: #000 !important;
+}
+
+.gumroad-button-logo {
+  margin-right: 10px !important;
+  margin-left: -2px !important;
+}
+
 .close {
-  background: rgba($black, 0.4);
-  z-index: 999999999999999;
+  background: rgba($black, 0.6);
   border-radius: $circle;
   @extend .flex-center;
   padding-bottom: 1px;
   padding-right: 1px;
   transition: $ease;
   position: fixed;
+  z-index: 999;
   height: 60px;
   width: 60px;
   right: 40px;
@@ -75,6 +97,30 @@ body {
   width: 100%;
 }
 
+.slide-title {
+  letter-spacing: -1px;
+  position: absolute;
+  font-size: 24px;
+  z-index: 4;
+  left: 40px;
+  top: 40px;
+}
+
+.progress {
+  background: $blue;
+  position: fixed;
+  height: 2px;
+  z-index: 4;
+  width: 0%;
+  top: 0;
+}
+
+.copy-email,
+.copied-email {
+  @extend .center-x;
+  bottom: 70px;
+}
+
 @media (max-width: $break-mobile) {
 
   .hide-mobile { display: none; }
@@ -90,10 +136,27 @@ body {
     bottom: 30px;
   }
 
-  .button.naked { padding: 30px; }
+  .button.naked { padding: 24px; }
+
+  .button.buy {
+    box-shadow: 0 -10px 40px rgba($black, 0.2);
+    background: $black;
+    padding: 30px 40px;
+    border-radius: 0;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    &:hover, &:active { transform: none; }
+  }
 
   .slide:not(:first-child) {
     display: none;
+  }
+
+  .slide-title {
+    left: 24px;
+    top: 24px;
   }
 
 }
@@ -101,10 +164,6 @@ body {
 /*-------------------------------------------------------------------*/
 /* PAGE SPECIFIC ----------------------------------------------------*/
 /*-------------------------------------------------------------------*/
-
-.home .hero {
-  padding: 0 10%;
-}
 
 .projects {
   .card-project:hover .card-title {
@@ -122,6 +181,59 @@ body {
   }
 }
 
+.supply {
+  .card-title {
+    margin-top: 20px;
+    max-width: 90%;
+    width: 360px;
+  }
+  .card-insta {
+    .card-title {
+      margin: 0 auto;
+    }
+  }
+}
+
+.thoughts {
+  .card-title {
+    max-width: 90%;
+    width: 440px;
+  }
+  .card-subtitle {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+}
+
+.article {
+  .content {
+    background: $gradient-black;
+    text-align: left;
+    .wrapper {
+      padding-top: 100px;
+      max-width: 84%;
+    }
+  }
+  h3, h2, p { line-height: 1.8; }
+  .title { margin: 80px 0 14px; }
+  p, a {
+    letter-spacing: -0.5px;
+    font-family: $book;
+    font-size: 22px;
+    color: $grey;
+  }
+  p {
+    margin-bottom: 20px;
+    .dash {
+      position: absolute;
+      margin-left: -20px;
+    }
+  }
+  a {
+    color: $white;
+    &:hover { color: $blue; }
+  }
+}
 
 .fp-controlArrow.fp-prev,
 .fp-controlArrow.fp-next {
@@ -148,6 +260,25 @@ body {
   background-position: 50%;
   right: 0;
   &:hover { transform: translateX(6px); }
+}
+
+@media (max-width: $break-mobile) {
+
+  .article {
+    .content {
+      .wrapper {
+        padding-top: 50px;
+        h3, h2, p { line-height: 1.6; }
+        h3 { font-size: 22px; }
+        p {
+          font-size: 20px;
+          .dash { margin-left: -14px; }
+        }
+        .title { margin: 40px 0 10px; }
+      }
+    }
+  }
+
 }
 
 /*-------------------------------------------------------------------*/
@@ -372,7 +503,11 @@ body {
   width: 100%;
   .hero-title.small { width: 300px; }
   .hero-title { width: 400px; }
-  .hero-title.large { width: 500px; }
+  .hero-title.large { width: 600px; }
+}
+
+.hero.unpadded {
+  padding: 0 10%;
 }
 
 .content {
@@ -392,6 +527,10 @@ body {
   max-width: 90%;
   margin: 0 auto;
   width: 1100px;
+}
+
+.wrapper.small {
+  width: 800px;
 }
 
 @media (max-width: $break-mobile) {
@@ -418,6 +557,11 @@ body {
 .section-hero {
   .card-title { margin: -20px auto 0; }
   .card-subtitle { opacity: 0.6; }
+  .section-icon {
+    box-shadow: 0 20px 40px rgba($black, 0.2);
+    margin: -60px auto 40px;
+    width: 50px;
+  }
 }
 
 .section-content {
@@ -432,9 +576,17 @@ body {
 @media (max-width: $break-mobile) {
 
   .section {
+    height: 60vh !important;
     box-shadow: none;
-    height: 60vh;
     .wrapper { padding: 40px 0 0; }
+  }
+
+  .section-content {
+    height: auto !important;
+  }
+
+  .fp-tableCell {
+    height: 60vh !important;
   }
 
   .fp-bg {
@@ -459,7 +611,6 @@ body {
 .client-dwelve-8 { background: url('/images/client-dwelve-8.jpg') no-repeat center center; background-size: cover; }
 .client-dwelve-9 { background: url('/images/client-dwelve-9.jpg') no-repeat center center; background-size: cover; }
 .client-dwelve-10 { background: url('/images/client-dwelve-10.jpg') no-repeat center center; background-size: cover; }
-
 .client-mobydish-1 { background: url('/images/client-mobydish-1.jpg') no-repeat center center; background-size: cover; }
 .client-mobydish-2 { background: url('/images/client-mobydish-2.jpg') no-repeat center center; background-size: cover; }
 .client-mobydish-3 { background: url('/images/client-mobydish-3.jpg') no-repeat center center; background-size: cover; }
@@ -468,7 +619,6 @@ body {
 .client-mobydish-6 { background: url('/images/client-mobydish-6.jpg') no-repeat center center; background-size: cover; }
 .client-mobydish-7 { background: url('/images/client-mobydish-7.jpg') no-repeat center center; background-size: cover; }
 .client-mobydish-8 { background: url('/images/client-mobydish-8.jpg') no-repeat center center; background-size: cover; }
-
 .client-squish-1 { background: url('/images/client-squish-1.jpg') no-repeat center center; background-size: cover; }
 .client-squish-2 { background: url('/images/client-squish-2.jpg') no-repeat center center; background-size: cover; }
 .client-squish-3 { background: url('/images/client-squish-3.jpg') no-repeat center center; background-size: cover; }
@@ -493,7 +643,6 @@ body {
 .moments-people-michelle { background: url('/images/moments-people-michelle.jpg') no-repeat center center; background-size: cover; }
 .moments-people-nicole { background: url('/images/moments-people-nicole.jpg') no-repeat center center; background-size: cover; }
 .moments-people-olivia { background: url('/images/moments-people-olivia.jpg') no-repeat center center; background-size: cover; }
-
 .moments-places-1 { background: url('/images/moments-places-1.jpg') no-repeat center center; background-size: cover; }
 .moments-places-2 { background: url('/images/moments-places-2.jpg') no-repeat center center; background-size: cover; }
 .moments-places-3 { background: url('/images/moments-places-3.jpg') no-repeat center center; background-size: cover; }
@@ -508,7 +657,6 @@ body {
 .moments-places-12 { background: url('/images/moments-places-12.jpg') no-repeat center center; background-size: cover; }
 .moments-places-13 { background: url('/images/moments-places-13.jpg') no-repeat center center; background-size: cover; }
 .moments-places-14 { background: url('/images/moments-places-14.jpg') no-repeat center center; background-size: cover; }
-
 .moments-things-1 { background: url('/images/moments-things-1.jpg') no-repeat center center; background-size: cover; }
 .moments-things-2 { background: url('/images/moments-things-2.jpg') no-repeat center center; background-size: cover; }
 .moments-things-3 { background: url('/images/moments-things-3.jpg') no-repeat center center; background-size: cover; }
@@ -516,7 +664,6 @@ body {
 .moments-things-5 { background: url('/images/moments-things-5.jpg') no-repeat center center; background-size: cover; }
 .moments-things-6 { background: url('/images/moments-things-6.jpg') no-repeat center center; background-size: cover; }
 .moments-things-7 { background: url('/images/moments-things-7.jpg') no-repeat center center; background-size: cover; }
-
 .moments-brands-peel-1 { background: url('/images/moments-brands-peel-1.jpg') no-repeat center center; background-size: cover; }
 .moments-brands-peel-2 { background: url('/images/moments-brands-peel-2.jpg') no-repeat center center; background-size: cover; }
 .moments-brands-peel-3 { background: url('/images/moments-brands-peel-3.jpg') no-repeat center center; background-size: cover; }
@@ -524,19 +671,81 @@ body {
 .moments-brands-peel-5 { background: url('/images/moments-brands-peel-5.jpg') no-repeat center center; background-size: cover; }
 .moments-brands-peel-6 { background: url('/images/moments-brands-peel-6.jpg') no-repeat center center; background-size: cover; }
 .moments-brands-peel-7 { background: url('/images/moments-brands-peel-7.jpg') no-repeat center center; background-size: cover; }
-
 .moments-brands-aer-1 { background: url('/images/moments-brands-aer-1.jpg') no-repeat center center; background-size: cover; }
 .moments-brands-aer-2 { background: url('/images/moments-brands-aer-2.jpg') no-repeat center center; background-size: cover; }
 .moments-brands-aer-3 { background: url('/images/moments-brands-aer-3.jpg') no-repeat center center; background-size: cover; }
 .moments-brands-aer-4 { background: url('/images/moments-brands-aer-4.jpg') no-repeat center center; background-size: cover; }
 .moments-brands-aer-5 { background: url('/images/moments-brands-aer-5.jpg') no-repeat center center; background-size: cover; }
-
 .moments-brands-photive-1 { background: url('/images/moments-brands-photive-1.jpg') no-repeat center center; background-size: cover; }
 .moments-brands-photive-2 { background: url('/images/moments-brands-photive-2.jpg') no-repeat center center; background-size: cover; }
 .moments-brands-photive-3 { background: url('/images/moments-brands-photive-3.jpg') no-repeat center center; background-size: cover; }
 .moments-brands-photive-4 { background: url('/images/moments-brands-photive-4.jpg') no-repeat center center; background-size: cover; }
 .moments-brands-photive-5 { background: url('/images/moments-brands-photive-5.jpg') no-repeat center center; background-size: cover; }
 .moments-brands-photive-6 { background: url('/images/moments-brands-photive-6.jpg') no-repeat center center; background-size: cover; }
+
+.supply-elemental-hero { background: url('/images/supply-elemental-hero.jpg') no-repeat center center; background-size: cover; }
+.supply-elemental-fire-before { background: url('/images/supply-elemental-fire-before.jpg') no-repeat center center; background-size: cover; }
+.supply-elemental-fire-after { background: url('/images/supply-elemental-fire-after.jpg') no-repeat center center; background-size: cover; }
+.supply-elemental-water-before { background: url('/images/supply-elemental-water-before.jpg') no-repeat center center; background-size: cover; }
+.supply-elemental-water-after { background: url('/images/supply-elemental-water-after.jpg') no-repeat center center; background-size: cover; }
+.supply-elemental-earth-before { background: url('/images/supply-elemental-earth-before.jpg') no-repeat center center; background-size: cover; }
+.supply-elemental-earth-after { background: url('/images/supply-elemental-earth-after.jpg') no-repeat center center; background-size: cover; }
+.supply-elemental-wind-before { background: url('/images/supply-elemental-wind-before.jpg') no-repeat center center; background-size: cover; }
+.supply-elemental-wind-after { background: url('/images/supply-elemental-wind-after.jpg') no-repeat center center; background-size: cover; }
+
+/*-------------------------------------------------------------------*/
+/* COMPARISON SLIDER ------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+.slider-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+// .slider-wrapper:hover { cursor: none; }
+
+.before-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+.before-wrapper:before {
+  display: block;
+  height: 100%;
+  width: 100%;
+  content: '';
+}
+
+.after-wrapper {
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.after-image {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: relative;
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+.comparison-slider {
+  background: $blue;
+  @extend .center;
+  height: 100%;
+  width: 2px;
+}
 
 /*-------------------------------------------------------------------*/
 /* CARDS ------------------------------------------------------------*/
@@ -548,6 +757,7 @@ body {
   flex-direction: column;
   @extend .flex-center;
   margin: 0 auto 100px;
+  text-align: center;
   position: relative;
   transition: $ease;
   overflow: hidden;
@@ -596,7 +806,7 @@ a.card:hover { transform: scale(1.02); }
 
   .card-subtitle {
     font-size: 18px;
-    margin: 0;
+    margin: 0 auto;
   }
 
 }
@@ -605,10 +815,14 @@ a.card:hover { transform: scale(1.02); }
 /* CARD BACKGROUNDS -------------------------------------------------*/
 /*-------------------------------------------------------------------*/
 
+.card-blue { background: $gradient-blue; }
+.card-insta { background: url('/images/card-insta.jpg') no-repeat center center; background-size: cover; }
+
 .card-projects { background: url('/images/card-projects.jpg') no-repeat center center; background-size: cover; }
 .card-clients { background: url('/images/card-clients.jpg') no-repeat center center; background-size: cover; }
 .card-moments { background: url('/images/card-moments.jpg') no-repeat center center; background-size: cover; }
 .card-thoughts { background: url('/images/card-thoughts.jpg') no-repeat center center; background-size: cover; }
+.card-supply { background: url('/images/card-presets.jpg') no-repeat center center; background-size: cover; }
 
 .card-deximal { background: url('/images/card-deximal.jpg') no-repeat center center; background-size: cover; }
 .card-finely { background: url('/images/card-finely.jpg') no-repeat center center; background-size: cover; }
@@ -622,8 +836,6 @@ a.card:hover { transform: scale(1.02); }
 .card-places { background: url('/images/card-places.jpg') no-repeat center center; background-size: cover; }
 .card-things { background: url('/images/card-things.jpg') no-repeat center center; background-size: cover; }
 .card-brands { background: url('/images/card-brands.jpg') no-repeat center center; background-size: cover; }
-
-.card-insta { background: url('/images/card-insta.jpg') no-repeat center center; background-size: cover; }
 
 /*-------------------------------------------------------------------*/
 /* EMAIL CARD -------------------------------------------------------*/
@@ -766,6 +978,7 @@ a.card:hover { transform: scale(1.02); }
 
 .footer-message {
   padding: 0 10% 60px;
+  text-align: center;
   opacity: 0.3;
   width: 100%;
 }

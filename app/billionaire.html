@@ -10,7 +10,7 @@
     </script> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>Traf</title>
+    <title>3 things I learned from speaking with a billionaire</title>
     <meta name="keywords" content="james, traf, james traf, jamestraf, simple, minimal, design, development, photography, ux, ui, montreal">
     <meta name="description" content="">
     <meta name="author" content="@traf">
@@ -18,57 +18,42 @@
     <link href="/images/favicon.ico" rel="shortcut icon">
     <link href="/css/styles.css" rel="stylesheet">
 </head>
-<body class="animsition">
-  <nav class="nav">
-  <a href="/" class="nav-logo"><img src="/images/logo-traf.png" alt="traf"/></a>
-  <div class="nav-links">
-    <a href="/projects.html" class="nav-link">Projects</a>
-    <a href="/clients.html" class="nav-link">Clients</a>
-    <a href="/moments.html" class="nav-link">Moments</a>
-    <a href="/thoughts.html" class="nav-link">Thoughts</a>
-    <a href="/supply.html" class="nav-link">Supply</a>
-  </div>
-  <button class="nav-toggle">
-    <span class="line line-1"></span>
-    <span class="line line-2"></span>
-  </button>
-</nav>
-  <div class="hero unpadded">
-    <h1 class="shift clip">
-      <span class="word-shift">
-        <b class="is-visible">Experimental design lover&nbsp;</b>
-        <b>Dope website creator</b>
-        <b>Moment capturer</b>
-        <b>Cryptocurrency lover</b>
-        <b>Sweating the details</b>
-        <b>Lifelong learner</b>
-        <b>Montreal living</b>
-        <b>Currently unavailable for hire</b>
-      </span>
-    </h1>
+<body class="animsition article">
+  <a href="/thoughts.html" class="close"><i class="icon" data-feather="x"></i></a>
+  <div class="progress" id="progressBar"></div>
+
+<script>
+  window.onscroll = function() {myFunction()};
+  function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+  }
+</script>
+  <div class="hero">
+    <h1 class="hero-title large">3 things I learned from speaking with a billionaire</h1>
+    <i class="down" data-feather="arrow-down"></i>
   </div>
   <div class="content">
+    <div class="wrapper small">
+      <h3>A few years back, I had the pleasure of speaking with Joe Gebbia. Joe is a designer, entrepreneur, and most notably, the co-founder of Airbnb. He was a partner at Y Combinator who provided seed funding for my startup at the time, so although the meeting was firstly about my business, I picked up on a few things from our conversation that I thought I'd share with you.</h3>
+      <h2 class="title">1. Life is still hard as a billionaire</h2>
+      <p>Many people have this idea that once you achieve monetary success, you'll be free of all things that typically causes you to stress. Adversities are still present, and problems are still problems, they're just different ones. You may not have the stress of worrying about money (or the lack of it), but managing a global company and having over 3000 employees depending on you  to steer it is no walk in the park.</p>
+      <p>One thing I've learned over the years from reading & listening to people who've achieved wild success is that it's crucial to make your happiness and state of mind independent of your income. No amount of success will improve your internal state.</p>
+      <h2 class="title">2. There's no secret to making it big</h2>
+      <p>Everyone wants to know the secret to success. People are always looking for shortcuts in life, and very few are willing to play the long game that successful entrepreneurs have endured. Success will come differently for everyone, but it's usually a lot of hard work, a lot of persistence, some good timing, and a little bit of luck. But the harder you work and the more persistent you are, the luckier you'll be.</p>
+      <p>Joe spoke about how Airbnb would never have grown to what it is today without the housing market crash in 2008. People were uncomfortable with the idea of letting strangers sleep on their couch, but after that event, people were more open to it as they needed the extra source of income that it would provide.</p>
+      <p>On another note, when Joe and his partner Brian were running out of money and racked up $20,000 in credit card debt, they created a limited collection of breakfast cereals (Obama O's & Cap'n McCain's) based on the 2008 presidential elections. They sold them at $40 per box and made $30,000 after expenses. There were countless road blocks along the way for them, but with a bit of grit, luck, and persistence, they made it happen.</p>
+      <h2 class="title">3. The best times are making it happen</h2>
+      <p>You ever catch yourself having a huge smile on your face while thinking about a specific time in your life that brought you joy? I caught Joe experiencing that when telling stories of the early days of Airbnb. There's no doubt that anyone who got to the top is glad they got there, after all they worked incredibly hard to get there, but that doesn't change the fact that when you're in the early days of building a company, it's just you, the work, and the customer, and spoken by experience, it's incredibly fulfilling. Seeing the direct impact your actions have on your customers isn't something you experience at all stages of the company. In most cases, the higher you climb up the entrepreneurial ladder, the further you get from your customer. Not to sound cliché, but remember to be present in your journey. Not everything should be done exclusively for the outcome, sometimes just doing it is the reward.</p>
+      <h2 class="title">Some fun facts</h2>
+      <p><span class="dash">-</span>We held our meeting in the famous <a href="https://goo.gl/17LHws" target="_blank">Airstream</a> at the Airbnb HQ in San Francisco.</p>
+      <p><span class="dash">-</span>Airbnb's original name was AirBed & Breakfast. They shortened it later on when they provided something other than air mattresses and breakfast the morning after.</p>
+      <p><span class="dash">-</span>There are Airbnb's in almost 98% of countries on earth.</p>
+      <p><span class="dash">-</span>The business Joe was advising us on and Y Combinator invested in was called Spoil, and I'm currently writing a post about what it was &amp; why it failed.</p>
+    </div>
     <div class="wrapper">
-      <a href="/projects.html" class="card card-projects">
-        <h2 class="card-title">Projects</h2>
-        <p class="card-subtitle">Ideas I've brought to life</p>
-      </a>
-      <a href="/clients.html" class="card card-clients">
-        <h2 class="card-title">Clients</h2>
-        <p class="card-subtitle">Things I've made for others</p>
-      </a>
-      <a href="/moments.html" class="card card-moments">
-        <h2 class="card-title">Moments</h2>
-        <p class="card-subtitle">Life behind the lens</p>
-      </a>
-      <a href="/thoughts.html" class="card card-thoughts">
-        <h2 class="card-title">Thoughts</h2>
-        <p class="card-subtitle">Ideas about life &amp; work</p>
-      </a>
-      <a href="/supply.html" class="card card-supply">
-        <h2 class="card-title">Supply</h2>
-        <p class="card-subtitle">Presets, wallpapers &amp; more</p>
-      </a>
       <div class="card card-email">
   <i class="card-icon" data-feather="mail"></i>
   <h2 class="card-title">The dopest content delivered straight to your inbox</h2>
@@ -285,9 +270,21 @@
   });
 </script>
 
-  <script src="https://embed.small.chat/T036XP36SG514EQWDB.js" async></script>
+  <script>$(function(){ $(".card-email .card-title").text("Get new thoughts & ideas delivered straight to your inbox"); });</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

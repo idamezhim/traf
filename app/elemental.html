@@ -10,74 +10,69 @@
     </script> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>MobyDish</title>
+    <title>Elements Lightroom Preset Pack</title>
     <meta name="keywords" content="james, traf, james traf, jamestraf, simple, minimal, design, development, photography, ux, ui, montreal">
-    <meta name="description" content="Tasteful Catering">
+    <meta name="description" content="">
     <meta name="author" content="@traf">
     <!-- <meta name="google-site-verification" content="2FKG8hJJwNcZ8zzwEN_JPjHez_mvqJSPiCcAVuiTHPQ" /> -->
     <link href="/images/favicon.ico" rel="shortcut icon">
     <link href="/css/styles.css" rel="stylesheet">
 </head>
 <body class="animsition">
-  <a href="/clients.html" class="close"><i class="icon" data-feather="x"></i></a>
+  <a href="/supply.html" class="close"><i class="icon" data-feather="x"></i></a>
   <div id="fullpage">
+    <script src="https://gumroad.com/js/gumroad.js"></script>
+    <a href="https://gum.co/elemental-presets" target="_blank" class="button buy gumroad-button">$16</a>
     <section class="section section-hero">
-      <h1 class="card-title">MobyDish</h1>
-      <p class="card-subtitle">Tasteful Catering</p>
+      <img src="/images/icon-lightroom.png" class="section-icon" alt="lightroom"/>
+      <h1 class="card-title">Elemental Presets</h1>
+      <p class="card-subtitle">4 styles, endless possibilities.</p>
       <i class="down" data-feather="arrow-down"></i>
-      <div class="client-mobydish-1 fp-bg"></div>
+      <div class="supply-elemental-hero fp-bg"></div>
     </section>
-    <section class="section"><div class="client-mobydish-2 fp-bg"></div></section>
-    <section class="section"><div class="client-mobydish-3 fp-bg"></div></section>
-    <section class="section"><div class="client-mobydish-4 fp-bg"></div></section>
-    <section class="section"><div class="client-mobydish-5 fp-bg"></div></section>
-    <section class="section"><div class="client-mobydish-6 fp-bg"></div></section>
-    <section class="section"><div class="client-mobydish-7 fp-bg"></div></section>
-    <section class="section"><div class="client-mobydish-8 fp-bg"></div></section>
+    <section class="section supply-elemental-fire-before">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Fire 🔥</h2>
+        <div class="before-wrapper supply-elemental-fire-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-fire-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Water 💧</h2>
+        <div class="before-wrapper supply-elemental-water-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-water-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Earth 🌿</h2>
+        <div class="before-wrapper supply-elemental-earth-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-earth-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Wind 💨</h2>
+        <div class="before-wrapper supply-elemental-wind-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-wind-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
     <section class="section section-content">
       <div class="wrapper">
-        <a href="/squish.html" class="card card-squish">
-  <h2 class="card-title">Squish</h2>
-  <p class="card-subtitle">Gourmet Gummies</p>
+        <a href="http://instagram.com/traf" target="_blank" class="card card-insta">
+  <i class="card-icon" data-feather="instagram"></i>
+  <h2 class="card-title">I share my best highlights &amp; moments on Instagram</h2>
+  <button class="button hide-mobile">Join me</button>
 </a>
-        <a href="/dwelve.html" class="card card-dwelve">
-  <h2 class="card-title">Dwelve</h2>
-  <p class="card-subtitle">Netflix-Bingeable Sofas</p>
-</a>
-        <div class="card card-email">
-  <h2 class="card-title">Feeling inspired? Let's make something beautiful together.</h2>
-  <p class="card-subtitle">I reply to all emails within a day. See for yourself.</p>
-  <a href="mailto:trafj@me.com" class="button">Email me</a>
-  <p class="copy-email" id="copy-email" data-clipboard-text="trafj@me.com">Or copy email</p>
-  <p class="copied-email">Copied to clipboard</div>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
-<script>
-  $(function(){
-
-    var email = document.getElementById('copy-email');
-    var clipboard = new ClipboardJS(email);
-    clipboard.on('success', function(e) {
-        $('.notification').addClass('notification-show');
-    });
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
-
-    // On form submit
-    // $("#contact-form").submit(function(e) {
-    //   e.preventDefault();
-    //   var $form = $(this);
-    //   $.post($form.attr("action"), $form.serialize()).then(function() {
-    //     $('.email-content').addClass('email-hide');
-    //     $('.email-success').addClass('email-show');
-    //   });
-    // });
-
-  })
-</script>
         <footer class="card card-footer">
   <h3 class="card-title">&copy; James Traf</h3>
   <div class="icons">
@@ -249,5 +244,7 @@
   });
 </script>
 
+  <script>$(function(){ $(".card-insta .card-title").text("See these presets in action throughout my Instagram feed"); $(".card-insta .button").text("Check em' out");  });</script>
 </body>
 </html>
+

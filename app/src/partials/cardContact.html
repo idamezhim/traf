@@ -1,47 +1,34 @@
 <div class="card card-email">
   <h2 class="card-title">Feeling inspired? Let's make something beautiful together.</h2>
-  <p class="card-subtitle hide-mobile">Leave your info below and I'll message you within a day.</p>
-  <form class="email-form" id="contact-form" name="contact" method="POST" netlify>
-    <div class="email-success"><h1>🎈</h1><p>Sent!</p></div>
-    <div class="email-content">
-      <input type="text" class="email-input" name="name" placeholder="Name">
-      <input type="email" class="email-input" name="email" placeholder="Email" required>
-      <button type="submit" class="email-submit text">Send</button>
-    </div>
-  </form>
-
+  <p class="card-subtitle">I reply to all emails within a day. See for yourself.</p>
+  <a href="mailto:trafj@me.com" class="button">Email me</a>
+  <p class="copy-email" id="copy-email" data-clipboard-text="trafj@me.com">Or copy email</p>
+  <p class="copied-email">Copied to clipboard</div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
 <script>
   $(function(){
 
-    // On form submit
-    $("#contact-form").submit(function(e) {
-      e.preventDefault();
-      var $form = $(this);
-      $.post($form.attr("action"), $form.serialize()).then(function() {
-        $('.email-content').addClass('email-hide');
-        $('.email-success').addClass('email-show');
-      });
+    var email = document.getElementById('copy-email');
+    var clipboard = new ClipboardJS(email);
+    clipboard.on('success', function(e) {
+        $('.notification').addClass('notification-show');
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
     });
 
-    // Only show submit button on proper email
-    ;( function( $, window, document, undefined ) {
-        'use strict';
-        var form        = '.email-form',
-            className   = 'email-active',
-            email       = 'input[type="email"]';
-        $( form ).each( function(){
-            var $form   = $( this ),
-                $email  = $form.find( email ),
-                val     = '';
-            $email.on( 'keyup.addClassWhenEmail', function(){
-                val = $email.val();
-                $form.toggleClass( className, val != '' && /^([\w-\.]+@([\w-]+\.)+[\w-]{2,12})?$/.test( val ) );
-            });
-        });
-    })( jQuery, window, document );
+    // On form submit
+    // $("#contact-form").submit(function(e) {
+    //   e.preventDefault();
+    //   var $form = $(this);
+    //   $.post($form.attr("action"), $form.serialize()).then(function() {
+    //     $('.email-content').addClass('email-hide');
+    //     $('.email-success').addClass('email-show');
+    //   });
+    // });
 
   })
 </script>

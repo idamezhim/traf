@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>Clients</title>
     <meta name="keywords" content="james, traf, james traf, jamestraf, simple, minimal, design, development, photography, ux, ui, montreal">
-    <meta name="description" content="Ideas I've brought to life for others">
+    <meta name="description" content="Ideas I've brought to life with others">
     <meta name="author" content="@traf">
     <!-- <meta name="google-site-verification" content="2FKG8hJJwNcZ8zzwEN_JPjHez_mvqJSPiCcAVuiTHPQ" /> -->
     <link href="/images/favicon.ico" rel="shortcut icon">
@@ -26,7 +26,7 @@
     <a href="/clients.html" class="nav-link">Clients</a>
     <a href="/moments.html" class="nav-link">Moments</a>
     <a href="/thoughts.html" class="nav-link">Thoughts</a>
-    <a href="/thoughts.html" class="nav-link">Supply</a>
+    <a href="/supply.html" class="nav-link">Supply</a>
   </div>
   <button class="nav-toggle">
     <span class="line line-1"></span>
@@ -34,7 +34,7 @@
   </button>
 </nav>
   <div class="hero">
-    <h1 class="hero-title">Ideas I've brought to life for others</h1>
+    <h1 class="hero-title">Ideas I've brought to life with others</h1>
   </div>
   <div class="content">
     <div class="wrapper">
@@ -52,48 +52,35 @@
 </a>
       <div class="card card-email">
   <h2 class="card-title">Feeling inspired? Let's make something beautiful together.</h2>
-  <p class="card-subtitle hide-mobile">Leave your info below and I'll message you within a day.</p>
-  <form class="email-form" id="contact-form" name="contact" method="POST" netlify>
-    <div class="email-success"><h1>🎈</h1><p>Sent!</p></div>
-    <div class="email-content">
-      <input type="text" class="email-input" name="name" placeholder="Name">
-      <input type="email" class="email-input" name="email" placeholder="Email" required>
-      <button type="submit" class="email-submit text">Send</button>
-    </div>
-  </form>
-
+  <p class="card-subtitle">I reply to all emails within a day. See for yourself.</p>
+  <a href="mailto:trafj@me.com" class="button">Email me</a>
+  <p class="copy-email" id="copy-email" data-clipboard-text="trafj@me.com">Or copy email</p>
+  <p class="copied-email">Copied to clipboard</div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
 <script>
   $(function(){
 
-    // On form submit
-    $("#contact-form").submit(function(e) {
-      e.preventDefault();
-      var $form = $(this);
-      $.post($form.attr("action"), $form.serialize()).then(function() {
-        $('.email-content').addClass('email-hide');
-        $('.email-success').addClass('email-show');
-      });
+    var email = document.getElementById('copy-email');
+    var clipboard = new ClipboardJS(email);
+    clipboard.on('success', function(e) {
+        $('.notification').addClass('notification-show');
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
     });
 
-    // Only show submit button on proper email
-    ;( function( $, window, document, undefined ) {
-        'use strict';
-        var form        = '.email-form',
-            className   = 'email-active',
-            email       = 'input[type="email"]';
-        $( form ).each( function(){
-            var $form   = $( this ),
-                $email  = $form.find( email ),
-                val     = '';
-            $email.on( 'keyup.addClassWhenEmail', function(){
-                val = $email.val();
-                $form.toggleClass( className, val != '' && /^([\w-\.]+@([\w-]+\.)+[\w-]{2,12})?$/.test( val ) );
-            });
-        });
-    })( jQuery, window, document );
+    // On form submit
+    // $("#contact-form").submit(function(e) {
+    //   e.preventDefault();
+    //   var $form = $(this);
+    //   $.post($form.attr("action"), $form.serialize()).then(function() {
+    //     $('.email-content').addClass('email-hide');
+    //     $('.email-success').addClass('email-show');
+    //   });
+    // });
 
   })
 </script>
@@ -211,7 +198,7 @@
 
       // Fullpage JS
       $('#fullpage').fullpage({
-        parallaxOptions: {property: 'translate', type: 'reveal', percentage: 62 },
+        parallaxOptions: { property: 'translate', type: 'reveal', percentage: 62 },
         licenseKey: '36E1197B-89FE4BB2-B2C0B9E9-247C4CFD',
         parallaxKey: 'dHIuYWZfMFlVY0dGeVlXeHNZWGc9cjJH',
         fitToSectionDelay: 600,
@@ -222,6 +209,26 @@
     	});
 
     }
+
+    // Comparison Slider
+    $('.before-wrapper').on( "mousemove", function(e) {
+      var offsets = $(this).offset();
+      var fullWidth = $(this).width();
+      var mouseX = e.pageX - offsets.left;
+      if (mouseX < 0) { mouseX = 0; }
+      else if (mouseX > fullWidth) { mouseX = fullWidth }
+      $(this).parent().find('.comparison-slider').css({ left: mouseX, transition: 'none' });
+      $(this).find('.after-wrapper').css({ transform: 'translateX(' + (mouseX) + 'px)', transition: 'none' });
+      $(this).find('.after-image').css({ transform: 'translateX(' + (-1*mouseX) + 'px)', transition: 'none' });
+    });
+    $('.slider-wrapper').on( "mouseleave", function() {
+      $(this).parent().find('.comparison-slider').css({
+        left: '50%', transition: 'all .3s' });
+      $(this).find('.after-wrapper').css({
+        transform: 'translateX(50%)', transition: 'all .3s' });
+      $(this).find('.after-image').css({
+        transform: 'translateX(-50%)', transition: 'all .3s' });
+    });
 
     // Nav toggle
     $('.nav-toggle').click(function(){

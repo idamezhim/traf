@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('partials/head.html', {"title": "Elements Lightroom Preset Pack", "description": ""})
+<body class="animsition">
+  @@include('partials/closeSupply.html')
+  <div id="fullpage">
+    <script src="https://gumroad.com/js/gumroad.js"></script>
+    <a href="https://gum.co/elemental-presets" target="_blank" class="button buy gumroad-button">$16</a>
+    <section class="section section-hero">
+      <img src="/images/icon-lightroom.png" class="section-icon" alt="lightroom"/>
+      <h1 class="card-title">Elemental Presets</h1>
+      <p class="card-subtitle">4 styles, endless possibilities.</p>
+      @@include('partials/down.html')
+      <div class="supply-elemental-hero fp-bg"></div>
+    </section>
+    <section class="section supply-elemental-fire-before">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Fire 🔥</h2>
+        <div class="before-wrapper supply-elemental-fire-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-fire-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Water 💧</h2>
+        <div class="before-wrapper supply-elemental-water-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-water-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Earth 🌿</h2>
+        <div class="before-wrapper supply-elemental-earth-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-earth-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Wind 💨</h2>
+        <div class="before-wrapper supply-elemental-wind-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-wind-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section section-content">
+      <div class="wrapper">
+        @@include('partials/cardInsta.html')
+        @@include('partials/cardFooter.html')
+      </div>
+    </section>
+  </div>
+  @@include('partials/scripts.html')
+  <script>$(function(){ $(".card-insta .card-title").text("See these presets in action throughout my Instagram feed"); $(".card-insta .button").text("Check em' out");  });</script>
+</body>
+</html>
+

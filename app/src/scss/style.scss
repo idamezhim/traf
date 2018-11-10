@@ -45,16 +45,21 @@ body {
 }
 
 .button.buy {
-  box-shadow: 0 20px 40px rgba($black, 0.2) !important;
-  background: $black !important;
+  box-shadow: 0 20px 40px rgba($black, 0.4) !important;
+  background-position: 50% 0 !important;
+  background-color: $black !important;
   font-family: $bold !important;
   padding: 10px 30px !important;
-  font-size: 18px  !important;
-  position: fixed !important;
   color: $white !important;
-  bottom: 20px !important;
-  right: 20px !important;
-  margin: 0 !important;
+  font-size: 18px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  margin: 0;
+}
+
+.gumroad-embed {
+  margin-bottom: 80px;
 }
 
 .gumroad-loading-indicator {
@@ -117,8 +122,37 @@ body {
 
 .copy-email,
 .copied-email {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: $ease;
   @extend .center-x;
-  bottom: 70px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.copy-email {
+  pointer-events: all;
+  opacity: 0.6;
+  bottom: 80px;
+  &:hover { opacity: 1; }
+}
+
+.copy-email.hide {
+  pointer-events: none;
+  bottom: 60px;
+  opacity: 0;
+}
+
+.copied-email {
+  pointer-events: none;
+  bottom: 100px;
+  opacity: 0;
+}
+
+.copied-email.show {
+  pointer-events: all;
+  bottom: 78px;
+  opacity: 1;
 }
 
 @media (max-width: $break-mobile) {
@@ -196,7 +230,8 @@ body {
 
 .thoughts {
   .card-title {
-    max-width: 90%;
+    margin-top: 10px;
+    max-width: 80%;
     width: 440px;
   }
   .card-subtitle {
@@ -263,6 +298,10 @@ body {
 }
 
 @media (max-width: $break-mobile) {
+
+  .thoughts {
+    .card-subtitle { margin-top: 6px; }
+  }
 
   .article {
     .content {
@@ -502,7 +541,7 @@ body {
   padding: 0 20%;
   width: 100%;
   .hero-title.small { width: 300px; }
-  .hero-title { width: 400px; }
+  .hero-title { width: 420px; }
   .hero-title.large { width: 600px; }
 }
 
@@ -535,7 +574,11 @@ body {
 
 @media (max-width: $break-mobile) {
 
-  .hero { height: calc(68vh - 20px); }
+  .hero {
+    height: calc(68vh - 20px);
+    .hero-title.small { width: 200px; }
+  }
+
   .content { top: calc(68vh - 20px); }
 
 }
@@ -806,7 +849,6 @@ a.card:hover { transform: scale(1.02); }
 
   .card-subtitle {
     font-size: 18px;
-    margin: 0 auto;
   }
 
 }
@@ -843,7 +885,10 @@ a.card:hover { transform: scale(1.02); }
 
 .card-email {
   background: $gradient-blue;
-  .card-title { width: 500px !important; }
+  .card-title {
+    width: 500px !important;
+    margin: 0;
+  }
   .card-subtitle { font-size: 18px; }
 }
 

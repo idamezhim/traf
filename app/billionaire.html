@@ -58,7 +58,7 @@
   <i class="card-icon" data-feather="mail"></i>
   <h2 class="card-title">The dopest content delivered straight to your inbox</h2>
   <form class="email-form validate" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-    <div class="email-success"><h1>🎈</h1><p>Done!</p></div>
+    <div class="email-success"><h1>🎉</h1><p>Done!</p></div>
     <div class="email-content">
       <input type="text" class="email-input" name="FIRSTNAME" placeholder="First Name" id="mce-FIRSTNAME">
       <input type="email" class="email-input" name="EMAIL" placeholder="Email" id="mce-EMAIL" required>
@@ -72,7 +72,7 @@
 <script>
   $(function(){
 
-    // Show balloon after successful email input
+    // Show emoji after successful email input
     $('.email-form').ajaxChimp({
       url: 'https://tr.us8.list-manage.com/subscribe/post?u=c7d394da347a779491d645243&amp;id=6df23362d2',
       callback: function(response) {
@@ -195,7 +195,7 @@
 <script>
   $(document).ready(function(){
 
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    if($(window).width() < 600){
 
       // Fade hero contents on scroll
       $(window).scroll(function(i){

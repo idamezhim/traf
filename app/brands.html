@@ -165,7 +165,7 @@
 <script>
   $(document).ready(function(){
 
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    if($(window).width() < 600){
 
       // Fade hero contents on scroll
       $(window).scroll(function(i){

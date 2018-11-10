@@ -47,36 +47,35 @@
   <p class="card-subtitle">Gourmet Gummies</p>
 </a>
         <div class="card card-email">
-  <h2 class="card-title">Feeling inspired? Let's make something beautiful together.</h2>
+  <h2 class="card-title">Feel<span class="hide-mobile">ing</span> inspired? Let's make something beautiful together.</h2>
   <p class="card-subtitle">I reply to all emails within a day. See for yourself.</p>
   <a href="mailto:trafj@me.com" class="button">Email me</a>
-  <p class="copy-email" id="copy-email" data-clipboard-text="trafj@me.com">Or copy email</p>
-  <p class="copied-email">Copied to clipboard</div>
+  <div class="hide-mobile">
+    <p class="copy-email" id="copy-email" data-clipboard-text="trafj@me.com">Or copy email</p>
+    <p class="copied-email">Copied 🎉</p>
+  </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
 <script>
   $(function(){
 
-    var email = document.getElementById('copy-email');
-    var clipboard = new ClipboardJS(email);
-    clipboard.on('success', function(e) {
-        $('.notification').addClass('notification-show');
-    });
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
+    if($(window).width() > 600){
 
-    // On form submit
-    // $("#contact-form").submit(function(e) {
-    //   e.preventDefault();
-    //   var $form = $(this);
-    //   $.post($form.attr("action"), $form.serialize()).then(function() {
-    //     $('.email-content').addClass('email-hide');
-    //     $('.email-success').addClass('email-show');
-    //   });
-    // });
+      // Copy email to clipboard
+      var email = document.getElementById('copy-email');
+      var clipboard = new ClipboardJS(email);
+      clipboard.on('success', function(e) {
+        $('.copy-email').addClass('hide');
+        $('.copied-email').addClass('show');
+      });
+      $('.copied-email').click(function(){
+        console.log('hello');
+        $(this).removeClass('show');
+        $('.copy-email').removeClass('hide');
+      });
+
+    }
 
   })
 </script>
@@ -176,7 +175,7 @@
 <script>
   $(document).ready(function(){
 
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    if($(window).width() < 600){
 
       // Fade hero contents on scroll
       $(window).scroll(function(i){

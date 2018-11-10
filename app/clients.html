@@ -11,10 +11,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>Clients</title>
-    <meta name="keywords" content="james, traf, james traf, jamestraf, simple, minimal, design, development, photography, ux, ui, montreal">
+    <meta name="keywords" content="james, traf, james traf, simple, minimal, design, ux, ui, development, photography, montreal, instagram, dribbble">
     <meta name="description" content="Ideas I've brought to life for others">
     <meta name="author" content="@traf">
-    <!-- <meta name="google-site-verification" content="2FKG8hJJwNcZ8zzwEN_JPjHez_mvqJSPiCcAVuiTHPQ" /> -->
     <link href="/images/favicon.ico" rel="shortcut icon">
     <link href="/css/styles.css" rel="stylesheet">
 </head>
@@ -208,26 +207,6 @@
     	});
 
     }
-
-    // Comparison Slider
-    $('.before-wrapper').on( "mousemove", function(e) {
-      var offsets = $(this).offset();
-      var fullWidth = $(this).width();
-      var mouseX = e.pageX - offsets.left;
-      if (mouseX < 0) { mouseX = 0; }
-      else if (mouseX > fullWidth) { mouseX = fullWidth }
-      $(this).parent().find('.comparison-slider').css({ left: mouseX, transition: 'none' });
-      $(this).find('.after-wrapper').css({ transform: 'translateX(' + (mouseX) + 'px)', transition: 'none' });
-      $(this).find('.after-image').css({ transform: 'translateX(' + (-1*mouseX) + 'px)', transition: 'none' });
-    });
-    $('.slider-wrapper').on( "mouseleave", function() {
-      $(this).parent().find('.comparison-slider').css({
-        left: '50%', transition: 'all .3s' });
-      $(this).find('.after-wrapper').css({
-        transform: 'translateX(50%)', transition: 'all .3s' });
-      $(this).find('.after-image').css({
-        transform: 'translateX(-50%)', transition: 'all .3s' });
-    });
 
     // Nav toggle
     $('.nav-toggle').click(function(){

@@ -205,6 +205,7 @@ body {
     margin-top: 100px;
     opacity: 0;
   }
+  .card-project:hover .card-subtitle { opacity: 0; }
   .card-project:hover .card-title-hover {
     margin-top: 0;
     opacity: 1;
@@ -822,7 +823,9 @@ body {
 }
 
 .card-subtitle {
+  letter-spacing: -1px;
   margin: 4px auto 0;
+  transition: $ease;
   font-size: 24px;
   max-width: 80%;
   opacity: 0.4;
@@ -837,6 +840,7 @@ body {
 }
 
 a.card:hover { transform: scale(1.02); }
+a.card:active { transform: scale(1); transition: all .1s ease; }
 
 @media (max-width: $break-mobile) {
 
@@ -864,7 +868,6 @@ a.card:hover { transform: scale(1.02); }
 .card-clients { background: url('/images/card-clients.jpg') no-repeat center center; background-size: cover; }
 .card-moments { background: url('/images/card-moments.jpg') no-repeat center center; background-size: cover; }
 .card-thoughts { background: url('/images/card-thoughts.jpg') no-repeat center center; background-size: cover; }
-.card-supply { background: url('/images/card-presets.jpg') no-repeat center center; background-size: cover; }
 
 .card-deximal { background: url('/images/card-deximal.jpg') no-repeat center center; background-size: cover; }
 .card-finely { background: url('/images/card-finely.jpg') no-repeat center center; background-size: cover; }
@@ -878,6 +881,9 @@ a.card:hover { transform: scale(1.02); }
 .card-places { background: url('/images/card-places.jpg') no-repeat center center; background-size: cover; }
 .card-things { background: url('/images/card-things.jpg') no-repeat center center; background-size: cover; }
 .card-brands { background: url('/images/card-brands.jpg') no-repeat center center; background-size: cover; }
+
+.card-presets { background: url('/images/card-presets.jpg') no-repeat center center; background-size: cover; }
+.card-wallpapers { background: url('/images/card-wallpapers.jpg') no-repeat center center; background-size: cover; }
 
 /*-------------------------------------------------------------------*/
 /* EMAIL CARD -------------------------------------------------------*/

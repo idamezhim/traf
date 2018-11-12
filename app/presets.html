@@ -10,9 +10,9 @@
     </script> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>Elements Lightroom Preset Pack</title>
+    <title>Elemental Presets</title>
     <meta name="keywords" content="james, traf, james traf, simple, minimal, design, ux, ui, development, photography, montreal, instagram, dribbble">
-    <meta name="description" content="">
+    <meta name="description" content="4 styles, endless possibilities">
     <meta name="author" content="@traf">
     <link href="/images/favicon.ico" rel="shortcut icon">
     <link href="/css/styles.css" rel="stylesheet">
@@ -21,7 +21,7 @@
   <a href="/supply.html" class="close"><i class="icon" data-feather="x"></i></a>
   <div id="fullpage">
     <script src="https://gumroad.com/js/gumroad.js"></script>
-    <a href="https://gum.co/elemental-presets" target="_blank" class="button buy gumroad-button">$16</a>
+    <a href="https://gum.co/elemental-presets" target="_blank" class="button buy gumroad-button" data-gumroad-single-product="true">$16</a>
     <section class="section section-hero">
       <img src="/images/icon-lightroom.png" class="section-icon" alt="lightroom"/>
       <h1 class="card-title">Elemental Presets</h1>
@@ -201,9 +201,23 @@
         parallax: true,
     	});
 
+      $(document).easteregg({
+        sequence : [84, 82, 65, 70],
+        callback : function () {
+          alert('Traf!');
+        }
+      });
+
+      // Nav toggle on hover
+      $('.nav-toggle').mouseover(function(){
+        $(this).addClass('toggle');
+        $('.nav').addClass('nav-show');
+        $('.nav-links').addClass('nav-links-show');
+      });
+
     }
 
-    // Nav toggle
+    // Nav toggle on click
     $('.nav-toggle').click(function(){
       $(this).toggleClass('toggle');
       $('.nav').toggleClass('nav-show');

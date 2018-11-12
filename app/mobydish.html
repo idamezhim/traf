@@ -201,9 +201,23 @@
         parallax: true,
     	});
 
+      $(document).easteregg({
+        sequence : [84, 82, 65, 70],
+        callback : function () {
+          alert('Traf!');
+        }
+      });
+
+      // Nav toggle on hover
+      $('.nav-toggle').mouseover(function(){
+        $(this).addClass('toggle');
+        $('.nav').addClass('nav-show');
+        $('.nav-links').addClass('nav-links-show');
+      });
+
     }
 
-    // Nav toggle
+    // Nav toggle on click
     $('.nav-toggle').click(function(){
       $(this).toggleClass('toggle');
       $('.nav').toggleClass('nav-show');

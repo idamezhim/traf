@@ -12,6 +12,35 @@
 /* MISC -------------------------------------------------------------*/
 /*-------------------------------------------------------------------*/
 
+#video-compare-container {
+  display: inline-block;
+  position: relative;
+  line-height: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#video-compare-container > img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+#video-clipper {
+  position: absolute;
+  overflow: hidden;
+  width: 50%;
+  bottom: 0;
+  top: 0;
+}
+
+#video-clipper img {
+  position: absolute;
+  height: 100%;
+  width: 200%;
+}
+
 body {
   background-color: $black;
   font-family: $bold;

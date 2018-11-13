@@ -174,11 +174,11 @@ body {
 
   .button.buy {
     box-shadow: 0 -10px 40px rgba($black, 0.2);
+    padding: 30px 40px 40px;
     background: $black;
-    padding: 30px 40px;
     border-radius: 0;
+    bottom: -2px;
     width: 100%;
-    bottom: 0;
     right: 0;
     left: 0;
     &:hover, &:active { transform: none; }

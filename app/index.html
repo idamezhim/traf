@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38404388-22"></script>
     <script>
@@ -9,40 +8,206 @@
       gtag('js', new Date());
       gtag('config', 'UA-38404388-22');
     </script>
+
+    <!-- Primary Meta Tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>Traf</title>
-    <meta name="keywords" content="james, traf, james traf, jamestraf, simple, minimal, design, development, photography, ux, ui, montreal">
-    <meta name="description" content="New website coming soon">
+    <meta name="keywords" content="james, traf, james traf, simple, minimal, design, ux, ui, development, photography, montreal, instagram, dribbble">
+    <meta name="description" content="Experimental design lover.">
     <meta name="author" content="@traf">
-    <meta name="google-site-verification" content="2FKG8hJJwNcZ8zzwEN_JPjHez_mvqJSPiCcAVuiTHPQ" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tr.af/">
+    <meta property="og:title" content="Traf">
+    <meta property="og:description" content="Experimental design lover">
+    <meta property="og:image" content="/images/social.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="/images/social.jpg">
+    <meta property="twitter:url" content="https://tr.af/">
+    <meta property="twitter:title" content="Traf">
+    <meta property="twitter:description" content="Experimental design lover">
+    <meta property="twitter:image" content="/images/social.jpg">
+
     <link href="/images/favicon.ico" rel="shortcut icon">
     <link href="/css/styles.css" rel="stylesheet">
 </head>
-
 <body class="animsition">
-  <section class="hero section">
-    <div class="hero-content">
-      <img class="logo" src="/images/logo-traf.png" width="70" alt="traf"/>
-      <!-- <h1 class="shift clip">
-        <span class="word-shift">
-          <b class="is-visible">Experimental design lover&nbsp;</b>
-          <b>Dope website creator</b>
-          <b>Moment capturer</b>
-          <b>Cryptocurrency lover</b>
-          <b>Sweating the details</b>
-          <b>Lifelong learner</b>
-          <b>Montreal living</b>
-          <b>Currently <span class="faded">unavailable</span> for hire</b>
-        </span>
-      </h1> -->
+  <nav class="nav">
+  <a href="/" class="nav-logo"><img src="/images/logo-traf.png" alt="traf"/></a>
+  <div class="nav-links">
+    <a href="/projects.html" class="nav-link">Projects</a>
+    <a href="/clients.html" class="nav-link">Clients</a>
+    <a href="/moments.html" class="nav-link">Moments</a>
+    <a href="/thoughts.html" class="nav-link">Thoughts</a>
+    <a href="/supply.html" class="nav-link">Supply</a>
+  </div>
+  <button class="nav-toggle">
+    <span class="line line-1"></span>
+    <span class="line line-2"></span>
+  </button>
+</nav>
+  <div class="hero unpadded">
+    <h1 class="shift clip">
+      <span class="word-shift">
+        <b class="is-visible">Experimental design lover&nbsp;</b>
+        <b>Dope website creator</b>
+        <b>Moment capturer</b>
+        <b>Cryptocurrency lover</b>
+        <b>Sweating the details</b>
+        <b>Lifelong learner</b>
+        <b>Montreal living</b>
+        <b>Available for hire</b>
+      </span>
+    </h1>
+  </div>
+  <div class="content">
+    <div class="wrapper">
+      <a href="/projects.html" class="card card-projects">
+        <h2 class="card-title">Projects</h2>
+        <p class="card-subtitle">Ideas I've brought to life</p>
+      </a>
+      <a href="/clients.html" class="card card-clients">
+        <h2 class="card-title">Clients</h2>
+        <p class="card-subtitle">Things I've made for others</p>
+      </a>
+      <a href="/moments.html" class="card card-moments">
+        <h2 class="card-title">Moments</h2>
+        <p class="card-subtitle">Life behind the lens</p>
+      </a>
+      <a href="/thoughts.html" class="card card-thoughts">
+        <h2 class="card-title">Thoughts</h2>
+        <p class="card-subtitle">Ideas about life &amp; work</p>
+      </a>
+      <a href="/supply.html" class="card card-presets">
+        <h2 class="card-title">Supply</h2>
+        <p class="card-subtitle">Shop digital goods, freebies &amp; more</p>
+      </a>
+      <div class="card card-email">
+  <i class="card-icon" data-feather="mail"></i>
+  <h2 class="card-title">The dopest content delivered straight to your inbox</h2>
+  <form class="email-form validate" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+    <div class="email-success"><h1>🎉</h1><p>Done!</p></div>
+    <div class="email-content">
+      <input type="text" class="email-input" name="FIRSTNAME" placeholder="First Name" id="mce-FIRSTNAME">
+      <input type="email" class="email-input" name="EMAIL" placeholder="Email" id="mce-EMAIL" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c7d394da347a779491d645243_6df23362d2" tabindex="-1" value=""></div>
+      <input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="email-submit button">
     </div>
-    <div class="particles" id="particles"></div>
+  </form>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script>$(function(){ particlesJS.load('particles', '/data/particles.json'); })</script>
-  </section>
+<script>
+  $(function(){
+
+    // Show emoji after successful email input
+    $('.email-form').ajaxChimp({
+      url: 'https://tr.us8.list-manage.com/subscribe/post?u=c7d394da347a779491d645243&amp;id=6df23362d2',
+      callback: function(response) {
+        $('.email-content').addClass('email-hide');
+        $('.email-success').addClass('email-show');
+      }
+    });
+
+    // Only show submit button on proper email
+    ;( function( $, window, document, undefined ) {
+        'use strict';
+        var form        = '.email-form',
+            className   = 'email-active',
+            email       = 'input[type="email"]';
+        $( form ).each( function(){
+            var $form   = $( this ),
+                $email  = $form.find( email ),
+                val     = '';
+            $email.on( 'keyup.addClassWhenEmail', function(){
+                val = $email.val();
+                $form.toggleClass( className, val != '' && /^([\w-\.]+@([\w-]+\.)+[\w-]{2,12})?$/.test( val ) );
+            });
+        });
+    })( jQuery, window, document );
+
+  })
+</script>
+      <footer class="card card-footer">
+  <h3 class="card-title">&copy; James Traf</h3>
+  <div class="icons">
+    <h4 class="icon-title">Hit me up</h4>
+    <a class="icon-twitter" href="http://twitter.com/traf" target="_blank"><img src="/images/icon-twitter.svg" alt="twitter"/></a>
+    <a class="icon-insta" href="http://instagram.com/traf" target="_blank"><img src="/images/icon-insta.svg" alt="insta"/></a>
+    <a class="icon-dribbble" href="http://dribbble.com/traf" target="_blank"><img src="/images/icon-dribbble.svg" alt="dribbble"/></a>
+    <a class="icon-at" href="mailto:trafj@me.com"><img src="/images/icon-at.svg" alt="email"/></a>
+  </div>
+</footer>
+
+<h4 class="footer-message">Enjoy your <span id="weekday"></span>!</h4>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+    // Twitter icon hover
+    $('.icon-twitter').hover(
+      function() {
+        $('.icon-title').text("Tweetin' facts");
+        $('.card-footer').addClass('bg-twitter');
+      }, function() {
+        $('.icon-title').text("Hit me up");
+        $('.card-footer').removeClass('bg-twitter');
+      }
+    );
+
+    // Instagram icon hover
+    $('.icon-insta').hover(
+      function() {
+        $('.icon-title').text("Capturin' moments");
+        $('.card-footer').addClass('bg-insta');
+      }, function() {
+        $('.icon-title').text("Hit me up");
+        $('.card-footer').removeClass('bg-insta');
+      }
+    );
+
+    // Dribbble icon hover
+    $('.icon-dribbble').hover(
+      function() {
+        $('.icon-title').text("Pushin' pixels");
+        $('.card-footer').addClass('bg-dribbble');
+      }, function() {
+        $('.icon-title').text("Hit me up");
+        $('.card-footer').removeClass('bg-dribbble');
+      }
+    );
+
+    // Email icon hover
+    $('.icon-at').hover(
+      function() {
+        $('.icon-title').text("Say hello");
+      }, function() {
+        $('.icon-title').text("Hit me up");
+      }
+    );
+
+    // Get current day of the week
+    var d = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    var n = weekday[d.getDay()];
+    document.getElementById("weekday").innerHTML = n;
+
+  });
+</script>
+    </div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="https://embed.small.chat/T036XP36SG514EQWDB.js" async></script>
 <script src="js/scripts.min.js"></script>
 <script type="text/javascript">
   var _gauges = _gauges || [];
@@ -61,6 +226,57 @@
 <script>
   $(document).ready(function(){
 
+    if($(window).width() < 600){
+
+      // Fade hero contents on scroll
+      $(window).scroll(function(i){
+        var scrollVar = $(window).scrollTop();
+        $('.hero').css({'opacity':( 300-scrollVar )/300});
+      });
+
+    }
+    else {
+
+      // Fade hero contents on scroll
+      $(window).scroll(function(i){
+        var scrollVar = $(window).scrollTop();
+        $('.hero').css({'opacity':( 440-scrollVar )/440});
+      });
+
+      // Fullpage JS
+      $('#fullpage').fullpage({
+        parallaxOptions: { property: 'translate', type: 'reveal', percentage: 62 },
+        licenseKey: '36E1197B-89FE4BB2-B2C0B9E9-247C4CFD',
+        parallaxKey: 'dHIuYWZfMFlVY0dGeVlXeHNZWGc9cjJH',
+        fitToSectionDelay: 400,
+    		autoScrolling: false,
+        controlArrows: true,
+        percentage: 100,
+        parallax: true,
+    	});
+
+      // $(document).easteregg({
+      //   sequence : [84, 82, 65, 70],
+      //   callback : function () {
+      //     alert('Traf!');
+      //   }
+      // });
+
+    }
+
+    // Nav toggle
+    $('.nav-toggle').click(function(){
+      $(this).toggleClass('toggle');
+      $('.nav').toggleClass('nav-show');
+      $('.nav-links').toggleClass('nav-links-show');
+    });
+
+    // Active nav link
+    $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('nav-active');
+
+    // Feather icons
+    feather.replace()
+
     // Page transitions
     $(".animsition").animsition({
         linkElement: 'a:not([target="_blank"]):not([href^="#"])',
@@ -72,20 +288,9 @@
   });
 </script>
 
+  <script src="https://embed.small.chat/T036XP36SG514EQWDB.js" async></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

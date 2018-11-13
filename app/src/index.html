@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-@@include('partials/head.html', {"title": "Traf", "description": "New website coming soon"})
-
+@@include('partials/head.html', {"title": "Traf", "description": "Experimental design lover."})
 <body class="animsition">
-  <section class="hero section">
-    <div class="hero-content">
-      <img class="logo" src="/images/logo-traf.png" width="70" alt="traf"/>
-      <!-- <h1 class="shift clip">
-        <span class="word-shift">
-          <b class="is-visible">Experimental design lover&nbsp;</b>
-          <b>Dope website creator</b>
-          <b>Moment capturer</b>
-          <b>Cryptocurrency lover</b>
-          <b>Sweating the details</b>
-          <b>Lifelong learner</b>
-          <b>Montreal living</b>
-          <b>Currently <span class="faded">unavailable</span> for hire</b>
-        </span>
-      </h1> -->
+  @@include('partials/navigation.html')
+  <div class="hero unpadded">
+    <h1 class="shift clip">
+      <span class="word-shift">
+        <b class="is-visible">Experimental design lover&nbsp;</b>
+        <b>Dope website creator</b>
+        <b>Moment capturer</b>
+        <b>Cryptocurrency lover</b>
+        <b>Sweating the details</b>
+        <b>Lifelong learner</b>
+        <b>Montreal living</b>
+        <b>Available for hire</b>
+      </span>
+    </h1>
+  </div>
+  <div class="content">
+    <div class="wrapper">
+      <a href="/projects.html" class="card card-projects">
+        <h2 class="card-title">Projects</h2>
+        <p class="card-subtitle">Ideas I've brought to life</p>
+      </a>
+      <a href="/clients.html" class="card card-clients">
+        <h2 class="card-title">Clients</h2>
+        <p class="card-subtitle">Things I've made for others</p>
+      </a>
+      <a href="/moments.html" class="card card-moments">
+        <h2 class="card-title">Moments</h2>
+        <p class="card-subtitle">Life behind the lens</p>
+      </a>
+      <a href="/thoughts.html" class="card card-thoughts">
+        <h2 class="card-title">Thoughts</h2>
+        <p class="card-subtitle">Ideas about life &amp; work</p>
+      </a>
+      <a href="/supply.html" class="card card-presets">
+        <h2 class="card-title">Supply</h2>
+        <p class="card-subtitle">Shop digital goods, freebies &amp; more</p>
+      </a>
+      @@include('partials/cardEmail.html')
+      @@include('partials/cardFooter.html')
     </div>
-    @@include('partials/particles.html')
-  </section>
+  </div>
   @@include('partials/scripts.html')
+  @@include('partials/smallchat.html')
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

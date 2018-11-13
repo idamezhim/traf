@@ -1,5 +1,4 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="https://embed.small.chat/T036XP36SG514EQWDB.js" async></script>
 <script src="js/scripts.min.js"></script>
 <script type="text/javascript">
   var _gauges = _gauges || [];
@@ -17,6 +16,57 @@
 </script>
 <script>
   $(document).ready(function(){
+
+    if($(window).width() < 600){
+
+      // Fade hero contents on scroll
+      $(window).scroll(function(i){
+        var scrollVar = $(window).scrollTop();
+        $('.hero').css({'opacity':( 300-scrollVar )/300});
+      });
+
+    }
+    else {
+
+      // Fade hero contents on scroll
+      $(window).scroll(function(i){
+        var scrollVar = $(window).scrollTop();
+        $('.hero').css({'opacity':( 440-scrollVar )/440});
+      });
+
+      // Fullpage JS
+      $('#fullpage').fullpage({
+        parallaxOptions: { property: 'translate', type: 'reveal', percentage: 62 },
+        licenseKey: '36E1197B-89FE4BB2-B2C0B9E9-247C4CFD',
+        parallaxKey: 'dHIuYWZfMFlVY0dGeVlXeHNZWGc9cjJH',
+        fitToSectionDelay: 400,
+    		autoScrolling: false,
+        controlArrows: true,
+        percentage: 100,
+        parallax: true,
+    	});
+
+      // $(document).easteregg({
+      //   sequence : [84, 82, 65, 70],
+      //   callback : function () {
+      //     alert('Traf!');
+      //   }
+      // });
+
+    }
+
+    // Nav toggle
+    $('.nav-toggle').click(function(){
+      $(this).toggleClass('toggle');
+      $('.nav').toggleClass('nav-show');
+      $('.nav-links').toggleClass('nav-links-show');
+    });
+
+    // Active nav link
+    $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('nav-active');
+
+    // Feather icons
+    feather.replace()
 
     // Page transitions
     $(".animsition").animsition({

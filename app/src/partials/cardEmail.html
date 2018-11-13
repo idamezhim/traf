@@ -1,0 +1,46 @@
+<div class="card card-email">
+  <i class="card-icon" data-feather="mail"></i>
+  <h2 class="card-title">The dopest content delivered straight to your inbox</h2>
+  <form class="email-form validate" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+    <div class="email-success"><h1>🎉</h1><p>Done!</p></div>
+    <div class="email-content">
+      <input type="text" class="email-input" name="FIRSTNAME" placeholder="First Name" id="mce-FIRSTNAME">
+      <input type="email" class="email-input" name="EMAIL" placeholder="Email" id="mce-EMAIL" required>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c7d394da347a779491d645243_6df23362d2" tabindex="-1" value=""></div>
+      <input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="email-submit button">
+    </div>
+  </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+  $(function(){
+
+    // Show emoji after successful email input
+    $('.email-form').ajaxChimp({
+      url: 'https://tr.us8.list-manage.com/subscribe/post?u=c7d394da347a779491d645243&amp;id=6df23362d2',
+      callback: function(response) {
+        $('.email-content').addClass('email-hide');
+        $('.email-success').addClass('email-show');
+      }
+    });
+
+    // Only show submit button on proper email
+    ;( function( $, window, document, undefined ) {
+        'use strict';
+        var form        = '.email-form',
+            className   = 'email-active',
+            email       = 'input[type="email"]';
+        $( form ).each( function(){
+            var $form   = $( this ),
+                $email  = $form.find( email ),
+                val     = '';
+            $email.on( 'keyup.addClassWhenEmail', function(){
+                val = $email.val();
+                $form.toggleClass( className, val != '' && /^([\w-\.]+@([\w-]+\.)+[\w-]{2,12})?$/.test( val ) );
+            });
+        });
+    })( jQuery, window, document );
+
+  })
+</script>

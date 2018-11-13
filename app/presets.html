@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38404388-22"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-38404388-22');
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <meta charset="utf-8">
+    <title>Elemental Presets</title>
+    <meta name="keywords" content="james, traf, james traf, simple, minimal, design, ux, ui, development, photography, montreal, instagram, dribbble">
+    <meta name="description" content="4 styles, endless possibilities">
+    <meta name="author" content="@traf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tr.af/">
+    <meta property="og:title" content="Traf">
+    <meta property="og:description" content="Experimental design lover">
+    <meta property="og:image" content="/images/social.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="/images/social.jpg">
+    <meta property="twitter:url" content="https://tr.af/">
+    <meta property="twitter:title" content="Traf">
+    <meta property="twitter:description" content="Experimental design lover">
+    <meta property="twitter:image" content="/images/social.jpg">
+
+    <link href="/images/favicon.ico" rel="shortcut icon">
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+<body class="animsition">
+  <a href="/supply.html" class="close"><i class="icon" data-feather="x"></i></a>
+  <div id="fullpage">
+    <script src="https://gumroad.com/js/gumroad.js"></script>
+    <a href="https://gum.co/elemental-presets" target="_blank" class="button buy gumroad-button" data-gumroad-single-product="true">$16</a>
+    <section class="section section-hero">
+      <img src="/images/icon-lightroom.png" class="section-icon" alt="lightroom"/>
+      <h1 class="card-title">Elemental Presets</h1>
+      <p class="card-subtitle">4 styles, endless possibilities.</p>
+      <i class="down" data-feather="arrow-down"></i>
+      <div class="supply-elemental-hero fp-bg"></div>
+    </section>
+    <section class="section supply-elemental-fire-before">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Preset 1 - Fire</h2>
+        <div class="before-wrapper supply-elemental-fire-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-fire-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Preset 2 - Water</h2>
+        <div class="before-wrapper supply-elemental-water-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-water-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Preset 3 - Earth</h2>
+        <div class="before-wrapper supply-elemental-earth-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-earth-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Preset 4 - Wind</h2>
+        <div class="before-wrapper supply-elemental-wind-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-wind-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section section-content">
+      <div class="wrapper">
+        <div class="gumroad-embed">
+          <script src="https://gumroad.com/js/gumroad-embed.js"></script>
+          <div class="gumroad-product-embed" data-gumroad-product-id="elemental-presets"><a href="https://gumroad.com/l/elemental-presets">Loading...</a></div>
+        </div>
+        <a href="http://instagram.com/traf" target="_blank" class="card card-insta">
+  <i class="card-icon" data-feather="instagram"></i>
+  <h2 class="card-title">I share my best highlights &amp; moments on Instagram</h2>
+  <button class="button hide-mobile">Join me</button>
+</a>
+        <footer class="card card-footer">
+  <h3 class="card-title">&copy; James Traf</h3>
+  <div class="icons">
+    <h4 class="icon-title">Hit me up</h4>
+    <a class="icon-twitter" href="http://twitter.com/traf" target="_blank"><img src="/images/icon-twitter.svg" alt="twitter"/></a>
+    <a class="icon-insta" href="http://instagram.com/traf" target="_blank"><img src="/images/icon-insta.svg" alt="insta"/></a>
+    <a class="icon-dribbble" href="http://dribbble.com/traf" target="_blank"><img src="/images/icon-dribbble.svg" alt="dribbble"/></a>
+    <a class="icon-at" href="mailto:trafj@me.com"><img src="/images/icon-at.svg" alt="email"/></a>
+  </div>
+</footer>
+
+<h4 class="footer-message">Enjoy your <span id="weekday"></span>!</h4>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+    // Twitter icon hover
+    $('.icon-twitter').hover(
+      function() {
+        $('.icon-title').text("Tweetin' facts");
+        $('.card-footer').addClass('bg-twitter');
+      }, function() {
+        $('.icon-title').text("Hit me up");
+        $('.card-footer').removeClass('bg-twitter');
+      }
+    );
+
+    // Instagram icon hover
+    $('.icon-insta').hover(
+      function() {
+        $('.icon-title').text("Capturin' moments");
+        $('.card-footer').addClass('bg-insta');
+      }, function() {
+        $('.icon-title').text("Hit me up");
+        $('.card-footer').removeClass('bg-insta');
+      }
+    );
+
+    // Dribbble icon hover
+    $('.icon-dribbble').hover(
+      function() {
+        $('.icon-title').text("Pushin' pixels");
+        $('.card-footer').addClass('bg-dribbble');
+      }, function() {
+        $('.icon-title').text("Hit me up");
+        $('.card-footer').removeClass('bg-dribbble');
+      }
+    );
+
+    // Email icon hover
+    $('.icon-at').hover(
+      function() {
+        $('.icon-title').text("Say hello");
+      }, function() {
+        $('.icon-title').text("Hit me up");
+      }
+    );
+
+    // Get current day of the week
+    var d = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    var n = weekday[d.getDay()];
+    document.getElementById("weekday").innerHTML = n;
+
+  });
+</script>
+      </div>
+    </section>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="js/scripts.min.js"></script>
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5a24f09e0b35911b5f010af4');
+    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+    t.src = 'https://d2fuc4clr7gvcn.cloudfront.net/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+<script>
+  $(document).ready(function(){
+
+    if($(window).width() < 600){
+
+      // Fade hero contents on scroll
+      $(window).scroll(function(i){
+        var scrollVar = $(window).scrollTop();
+        $('.hero').css({'opacity':( 300-scrollVar )/300});
+      });
+
+    }
+    else {
+
+      // Fade hero contents on scroll
+      $(window).scroll(function(i){
+        var scrollVar = $(window).scrollTop();
+        $('.hero').css({'opacity':( 440-scrollVar )/440});
+      });
+
+      // Fullpage JS
+      $('#fullpage').fullpage({
+        parallaxOptions: { property: 'translate', type: 'reveal', percentage: 62 },
+        licenseKey: '36E1197B-89FE4BB2-B2C0B9E9-247C4CFD',
+        parallaxKey: 'dHIuYWZfMFlVY0dGeVlXeHNZWGc9cjJH',
+        fitToSectionDelay: 400,
+    		autoScrolling: false,
+        controlArrows: true,
+        percentage: 100,
+        parallax: true,
+    	});
+
+      // $(document).easteregg({
+      //   sequence : [84, 82, 65, 70],
+      //   callback : function () {
+      //     alert('Traf!');
+      //   }
+      // });
+
+    }
+
+    // Nav toggle
+    $('.nav-toggle').click(function(){
+      $(this).toggleClass('toggle');
+      $('.nav').toggleClass('nav-show');
+      $('.nav-links').toggleClass('nav-links-show');
+    });
+
+    // Active nav link
+    $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('nav-active');
+
+    // Feather icons
+    feather.replace()
+
+    // Page transitions
+    $(".animsition").animsition({
+        linkElement: 'a:not([target="_blank"]):not([href^="#"])',
+        linkElement: '.animsition-link',
+        outDuration: 600,
+        inDuration: 600,
+    });
+
+  });
+</script>
+
+  <script>
+    $(function(){
+
+      // Change text on Insta card title
+      $(".card-insta .card-title").text("See these presets in action throughout my Instagram feed");
+      $(".card-insta .button").text("Check em' out");
+
+      // Comparison Slider
+      $('.before-wrapper').on( "mousemove", function(e) {
+        var offsets = $(this).offset();
+        var fullWidth = $(this).width();
+        var mouseX = e.pageX - offsets.left;
+        if (mouseX < 0) { mouseX = 0; }
+        else if (mouseX > fullWidth) { mouseX = fullWidth }
+        $(this).parent().find('.comparison-slider').css({ left: mouseX, transition: 'none' });
+        $(this).find('.after-wrapper').css({ transform: 'translateX(' + (mouseX) + 'px)', transition: 'none' });
+        $(this).find('.after-image').css({ transform: 'translateX(' + (-1*mouseX) + 'px)', transition: 'none' });
+      });
+      $('.slider-wrapper').on( "mouseleave", function() {
+        $(this).parent().find('.comparison-slider').css({
+          left: '50%', transition: 'all .3s' });
+        $(this).find('.after-wrapper').css({
+          transform: 'translateX(50%)', transition: 'all .3s' });
+        $(this).find('.after-image').css({
+          transform: 'translateX(-50%)', transition: 'all .3s' });
+      });
+
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38404388-22"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-38404388-22');
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <meta charset="utf-8">
+    <title>Dwelve</title>
+    <meta name="keywords" content="james, traf, james traf, simple, minimal, design, ux, ui, development, photography, montreal, instagram, dribbble">
+    <meta name="description" content="Netflix-Bingeable Sofas">
+    <meta name="author" content="@traf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tr.af/">
+    <meta property="og:title" content="Traf">
+    <meta property="og:description" content="Experimental design lover">
+    <meta property="og:image" content="/images/social.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="/images/social.jpg">
+    <meta property="twitter:url" content="https://tr.af/">
+    <meta property="twitter:title" content="Traf">
+    <meta property="twitter:description" content="Experimental design lover">
+    <meta property="twitter:image" content="/images/social.jpg">
+
+    <link href="/images/favicon.ico" rel="shortcut icon">
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+<body class="animsition">
+  <a href="/clients.html" class="close"><i class="icon" data-feather="x"></i></a>
+  <div id="fullpage">
+    <section class="section section-hero">
+      <h1 class="card-title">Dwelve</h1>
+      <p class="card-subtitle">Netflix-Bingeable Sofas</p>
+      <i class="down" data-feather="arrow-down"></i>
+      <div class="client-dwelve-1 fp-bg"></div>
+    </section>
+    <section class="section"><div class="client-dwelve-2 fp-bg"></div></section>
+    <section class="section"><div class="client-dwelve-3 fp-bg"></div></section>
+    <section class="section"><div class="client-dwelve-4 fp-bg"></div></section>
+    <section class="section"><div class="client-dwelve-5 fp-bg"></div></section>
+    <section class="section"><div class="client-dwelve-6 fp-bg"></div></section>
+    <section class="section"><div class="client-dwelve-7 fp-bg"></div></section>
+    <section class="section"><div class="client-dwelve-8 fp-bg"></div></section>
+    <section class="section"><div class="client-dwelve-9 fp-bg"></div></section>
+    <section class="section"><div class="client-dwelve-10 fp-bg"></div></section>
+    <section class="section section-content">
+      <div class="wrapper">
+        <a href="/mobydish.html" class="card card-mobydish">
+  <h2 class="card-title">MobyDish</h2>
+  <p class="card-subtitle">Tasteful Catering</p>
+</a>
+        <a href="/squish.html" class="card card-squish">
+  <h2 class="card-title">Squish</h2>
+  <p class="card-subtitle">Gourmet Gummies</p>
+</a>
+        <div class="card card-email">
+  <h2 class="card-title">Feel<span class="hide-mobile">ing</span> inspired? Let's make something beautiful together.</h2>
+  <p class="card-subtitle">I reply to all emails within a day. See for yourself.</p>
+  <a href="mailto:trafj@me.com" class="button">Email me</a>
+  <div class="hide-mobile">
+    <p class="copy-email" id="copy-email" data-clipboard-text="trafj@me.com">Or copy email</p>
+    <p class="copied-email">Copied 🎉</p>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+  $(function(){
+
+    if($(window).width() > 600){
+
+      // Copy email to clipboard
+      var email = document.getElementById('copy-email');
+      var clipboard = new ClipboardJS(email);
+      clipboard.on('success', function(e) {
+        $('.copy-email').addClass('hide');
+        $('.copied-email').addClass('show');
+      });
+      $('.copied-email').click(function(){
+        console.log('hello');
+        $(this).removeClass('show');
+        $('.copy-email').removeClass('hide');
+      });
+
+    }
+
+  })
+</script>
+        <footer class="card card-footer">
+  <h3 class="card-title">&copy; James Traf</h3>
+  <div class="icons">
+    <h4 class="icon-title">Hit me up</h4>
+    <a class="icon-twitter" href="http://twitter.com/traf" target="_blank"><img src="/images/icon-twitter.svg" alt="twitter"/></a>
+    <a class="icon-insta" href="http://instagram.com/traf" target="_blank"><img src="/images/icon-insta.svg" alt="insta"/></a>
+    <a class="icon-dribbble" href="http://dribbble.com/traf" target="_blank"><img src="/images/icon-dribbble.svg" alt="dribbble"/></a>
+    <a class="icon-at" href="mailto:trafj@me.com"><img src="/images/icon-at.svg" alt="email"/></a>
+  </div>
+</footer>
+
+<h4 class="footer-message">Enjoy your <span id="weekday"></span>!</h4>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+    // Twitter icon hover
+    $('.icon-twitter').hover(
+      function() {
+        $('.icon-title').text("Tweetin' facts");
+        $('.card-footer').addClass('bg-twitter');
+      }, function() {
+        $('.icon-title').text("Hit me up");
+        $('.card-footer').removeClass('bg-twitter');
+      }
+    );
+
+    // Instagram icon hover
+    $('.icon-insta').hover(
+      function() {
+        $('.icon-title').text("Capturin' moments");
+        $('.card-footer').addClass('bg-insta');
+      }, function() {
+        $('.icon-title').text("Hit me up");
+        $('.card-footer').removeClass('bg-insta');
+      }
+    );
+
+    // Dribbble icon hover
+    $('.icon-dribbble').hover(
+      function() {
+        $('.icon-title').text("Pushin' pixels");
+        $('.card-footer').addClass('bg-dribbble');
+      }, function() {
+        $('.icon-title').text("Hit me up");
+        $('.card-footer').removeClass('bg-dribbble');
+      }
+    );
+
+    // Email icon hover
+    $('.icon-at').hover(
+      function() {
+        $('.icon-title').text("Say hello");
+      }, function() {
+        $('.icon-title').text("Hit me up");
+      }
+    );
+
+    // Get current day of the week
+    var d = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    var n = weekday[d.getDay()];
+    document.getElementById("weekday").innerHTML = n;
+
+  });
+</script>
+      </div>
+    </section>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="js/scripts.min.js"></script>
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '5a24f09e0b35911b5f010af4');
+    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+    t.src = 'https://d2fuc4clr7gvcn.cloudfront.net/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+<script>
+  $(document).ready(function(){
+
+    if($(window).width() < 600){
+
+      // Fade hero contents on scroll
+      $(window).scroll(function(i){
+        var scrollVar = $(window).scrollTop();
+        $('.hero').css({'opacity':( 300-scrollVar )/300});
+      });
+
+    }
+    else {
+
+      // Fade hero contents on scroll
+      $(window).scroll(function(i){
+        var scrollVar = $(window).scrollTop();
+        $('.hero').css({'opacity':( 440-scrollVar )/440});
+      });
+
+      // Fullpage JS
+      $('#fullpage').fullpage({
+        parallaxOptions: { property: 'translate', type: 'reveal', percentage: 62 },
+        licenseKey: '36E1197B-89FE4BB2-B2C0B9E9-247C4CFD',
+        parallaxKey: 'dHIuYWZfMFlVY0dGeVlXeHNZWGc9cjJH',
+        fitToSectionDelay: 400,
+    		autoScrolling: false,
+        controlArrows: true,
+        percentage: 100,
+        parallax: true,
+    	});
+
+      // $(document).easteregg({
+      //   sequence : [84, 82, 65, 70],
+      //   callback : function () {
+      //     alert('Traf!');
+      //   }
+      // });
+
+    }
+
+    // Nav toggle
+    $('.nav-toggle').click(function(){
+      $(this).toggleClass('toggle');
+      $('.nav').toggleClass('nav-show');
+      $('.nav-links').toggleClass('nav-links-show');
+    });
+
+    // Active nav link
+    $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('nav-active');
+
+    // Feather icons
+    feather.replace()
+
+    // Page transitions
+    $(".animsition").animsition({
+        linkElement: 'a:not([target="_blank"]):not([href^="#"])',
+        linkElement: '.animsition-link',
+        outDuration: 600,
+        inDuration: 600,
+    });
+
+  });
+</script>
+
+</body>
+</html>

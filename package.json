@@ -6,7 +6,7 @@
   "author": "@traf",
   "private": true,
   "repository": {
-    "url": "http://tr.af"
+    "url": "https://tr.af"
   },
   "devDependencies": {
     "browser-sync": "^2.12.12",

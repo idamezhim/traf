@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('partials/head.html', {"title": "Thoughts", "description": "Random ideas about life & work"})
+<body class="animsition thoughts">
+  @@include('partials/navigation.html')
+  <div class="hero">
+    <h1 class="hero-title small">Ideas about life & work</h1>
+  </div>
+  <div class="content">
+    <div class="wrapper">
+      <a href="/billionaire.html" class="card card-blue"><h2 class="card-title">3 things I learned from speaking with a billionaire</h2><p class="card-subtitle">4 minute read</p></a>
+      <div class="card"><h2 class="card-title">5 daily habits that improved my life &amp; productivity</h2><p class="card-subtitle">In progress</p></div>
+      <div class="card"><h2 class="card-title">Everything I knew about reading was wrong</h2><p class="card-subtitle">In progress</p></div>
+      @@include('partials/cardEmail.html')
+      @@include('partials/cardFooter.html')
+    </div>
+  </div>
+  @@include('partials/scripts.html')
+  @@include('partials/smallchat.html')
+  <script>
+    $(function(){
+      if($(window).width() < 600){ $(".card-email .card-title").text("Get new ideas delivered straight to your inbox"); }
+      else { $(".card-email .card-title").text("Get new thoughts & ideas delivered straight to your inbox"); }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

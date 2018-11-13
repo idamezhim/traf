@@ -30,7 +30,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'script';
+    src: url('/fonts/script.woff') format('woff'),
+         url('/fonts/script.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $book: 'circular-book', sans-serif;
 $bold: 'circular-bold', sans-serif;
 $heavy: 'circular-heavy', sans-serif;
-$display: 'avant-garde-gothic', sans-serif;
+$title: 'avant-garde-gothic', sans-serif;
+$script: 'script', script;
+
+

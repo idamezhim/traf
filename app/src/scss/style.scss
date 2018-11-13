@@ -44,6 +44,10 @@ body {
   right: 0;
 }
 
+.button.blue {
+  background: $blue;
+}
+
 .button.buy {
   box-shadow: 0 20px 40px rgba($black, 0.4) !important;
   background-position: 50% 0 !important;
@@ -298,6 +302,19 @@ body {
   &:hover { transform: translateX(6px); }
 }
 
+.oops {
+  .hero {
+    h1 {
+      letter-spacing: -3px;
+      font-size: 60px;
+    }
+    .button {
+      padding: 12px 24px;
+      font-size: 14px;
+    }
+  }
+}
+
 @media (max-width: $break-mobile) {
 
   .thoughts {
@@ -536,6 +553,7 @@ body {
 
 .hero {
   height: calc(100vh - 20px);
+  flex-direction: column;
   @extend .flex-center;
   background: $black;
   position: fixed;

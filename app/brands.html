@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38404388-22"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38404388-22"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-38404388-22');
-    </script> -->
+    </script>
+
+    <!-- Primary Meta Tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>Brands</title>
     <meta name="keywords" content="james, traf, james traf, simple, minimal, design, ux, ui, development, photography, montreal, instagram, dribbble">
     <meta name="description" content="Some collaborations with dope brands">
     <meta name="author" content="@traf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tr.af/">
+    <meta property="og:title" content="Traf">
+    <meta property="og:description" content="Experimental design lover">
+    <meta property="og:image" content="/images/social.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="/images/social.jpg">
+    <meta property="twitter:url" content="https://tr.af/">
+    <meta property="twitter:title" content="Traf">
+    <meta property="twitter:description" content="Experimental design lover">
+    <meta property="twitter:image" content="/images/social.jpg">
+
     <link href="/images/favicon.ico" rel="shortcut icon">
     <link href="/css/styles.css" rel="stylesheet">
 </head>
@@ -147,7 +164,7 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="js/scripts.min.js"></script>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
   var _gauges = _gauges || [];
   (function() {
     var t   = document.createElement('script');
@@ -160,7 +177,7 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(t, s);
   })();
-</script> -->
+</script>
 <script>
   $(document).ready(function(){
 
@@ -193,23 +210,16 @@
         parallax: true,
     	});
 
-      $(document).easteregg({
-        sequence : [84, 82, 65, 70],
-        callback : function () {
-          alert('Traf!');
-        }
-      });
-
-      // Nav toggle on hover
-      $('.nav-toggle').mouseover(function(){
-        $(this).addClass('toggle');
-        $('.nav').addClass('nav-show');
-        $('.nav-links').addClass('nav-links-show');
-      });
+      // $(document).easteregg({
+      //   sequence : [84, 82, 65, 70],
+      //   callback : function () {
+      //     alert('Traf!');
+      //   }
+      // });
 
     }
 
-    // Nav toggle on click
+    // Nav toggle
     $('.nav-toggle').click(function(){
       $(this).toggleClass('toggle');
       $('.nav').toggleClass('nav-show');

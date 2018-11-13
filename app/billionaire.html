@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38404388-22"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38404388-22"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-38404388-22');
-    </script> -->
+    </script>
+
+    <!-- Primary Meta Tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>3 things I learned from speaking with a billionaire</title>
     <meta name="keywords" content="james, traf, james traf, simple, minimal, design, ux, ui, development, photography, montreal, instagram, dribbble">
     <meta name="description" content="">
     <meta name="author" content="@traf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tr.af/">
+    <meta property="og:title" content="Traf">
+    <meta property="og:description" content="Experimental design lover">
+    <meta property="og:image" content="/images/social.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="/images/social.jpg">
+    <meta property="twitter:url" content="https://tr.af/">
+    <meta property="twitter:title" content="Traf">
+    <meta property="twitter:description" content="Experimental design lover">
+    <meta property="twitter:image" content="/images/social.jpg">
+
     <link href="/images/favicon.ico" rel="shortcut icon">
     <link href="/css/styles.css" rel="stylesheet">
 </head>
@@ -49,7 +66,7 @@
       <p>There's no doubt that anyone who got to the top is glad they got there, but that doesn't change the fact that when you're in the early days of building a company, it's just you, the work, the customer, and it's incredibly fulfilling. Seeing the direct impact your actions have on your customers isn't something you experience at all stages of the company. In most cases, the higher you climb up the entrepreneurial ladder, the further you get from your customer. Not to sound cliché, but remember to be present in your journey. Not everything should be done exclusively for the outcome, sometimes just doing it is the reward.</p>
       <h2 class="title">Some fun facts</h2>
       <p><span class="dash">-</span>We held our meeting in the famous <a href="https://goo.gl/17LHws" target="_blank">Airstream</a> at the Airbnb HQ in San Francisco.</p>
-      <p><span class="dash">-</span>Airbnb's original name was AirBed & Breakfast. They shortened it later on when they provided something other than air mattresses and breakfast the morning after.</p>
+      <p><span class="dash">-</span>Airbnb's original name was AirBed & Breakfast.</p>
       <p><span class="dash">-</span>There are Airbnb's in almost 98% of countries on earth.</p>
       <p><span class="dash">-</span>The business Joe was advising us on and Y Combinator invested in was called Spoil, and I'm currently writing a post about what it was &amp; why it failed.</p>
     </div>
@@ -178,7 +195,7 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="js/scripts.min.js"></script>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
   var _gauges = _gauges || [];
   (function() {
     var t   = document.createElement('script');
@@ -191,7 +208,7 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(t, s);
   })();
-</script> -->
+</script>
 <script>
   $(document).ready(function(){
 
@@ -224,23 +241,16 @@
         parallax: true,
     	});
 
-      $(document).easteregg({
-        sequence : [84, 82, 65, 70],
-        callback : function () {
-          alert('Traf!');
-        }
-      });
-
-      // Nav toggle on hover
-      $('.nav-toggle').mouseover(function(){
-        $(this).addClass('toggle');
-        $('.nav').addClass('nav-show');
-        $('.nav-links').addClass('nav-links-show');
-      });
+      // $(document).easteregg({
+      //   sequence : [84, 82, 65, 70],
+      //   callback : function () {
+      //     alert('Traf!');
+      //   }
+      // });
 
     }
 
-    // Nav toggle on click
+    // Nav toggle
     $('.nav-toggle').click(function(){
       $(this).toggleClass('toggle');
       $('.nav').toggleClass('nav-show');

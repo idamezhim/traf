@@ -12,35 +12,6 @@
 /* MISC -------------------------------------------------------------*/
 /*-------------------------------------------------------------------*/
 
-#video-compare-container {
-  display: inline-block;
-  position: relative;
-  line-height: 0;
-  height: 100%;
-  width: 100%;
-}
-
-#video-compare-container > img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-}
-
-#video-clipper {
-  position: absolute;
-  overflow: hidden;
-  width: 50%;
-  bottom: 0;
-  top: 0;
-}
-
-#video-clipper img {
-  position: absolute;
-  height: 100%;
-  width: 200%;
-}
-
 body {
   background-color: $black;
   font-family: $bold;
@@ -231,7 +202,7 @@ body {
 .projects {
   .card-project:hover .card-title {
     pointer-events: none;
-    margin-top: 100px;
+    margin-top: 200px;
     opacity: 0;
   }
   .card-project:hover .card-subtitle { opacity: 0; }
@@ -869,7 +840,7 @@ body {
 }
 
 a.card:hover { transform: scale(1.02); }
-a.card:active { transform: scale(1); transition: all .1s ease; }
+a.card:active { transform: scale(1); transition: all .2s ease; }
 
 @media (max-width: $break-mobile) {
 

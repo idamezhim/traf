@@ -559,9 +559,9 @@ body {
   position: fixed;
   padding: 0 20%;
   width: 100%;
-  .hero-title.small { width: 300px; }
-  .hero-title { width: 420px; }
-  .hero-title.large { width: 600px; }
+  .hero-title.small { width: 300px; max-width: 100%; }
+  .hero-title { width: 420px; max-width: 100%; }
+  .hero-title.large { width: 600px; max-width: 100%; }
 }
 
 .hero.unpadded {

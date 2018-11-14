@@ -557,7 +557,7 @@ body {
   @extend .flex-center;
   background: $black;
   position: fixed;
-  padding: 0 20%;
+  padding: 0 14%;
   width: 100%;
   .hero-title.small { width: 300px; max-width: 100%; }
   .hero-title { width: 420px; max-width: 100%; }
@@ -814,6 +814,8 @@ body {
 /*-------------------------------------------------------------------*/
 
 .card {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   background: rgba($white, 0.08);
   border-radius: $rounded;
   flex-direction: column;

@@ -33,7 +33,12 @@
     </div>
   </div>
   @@include('partials/scripts.html')
-  <script>$(function(){ $(".card-email .card-title").text("Get new thoughts & ideas delivered straight to your inbox"); });</script>
+  <script>
+    $(function(){
+      if($(window).width() < 600){ $(".card-email .card-title").text("Get new ideas delivered straight to your inbox"); }
+      else { $(".card-email .card-title").text("Get new thoughts & ideas delivered straight to your inbox"); }
+    });
+  </script>
 </body>
 </html>
 

@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <title>Beats</title>
     <meta name="keywords" content="james, traf, james traf, simple, minimal, design, ux, ui, development, photography, montreal, instagram, dribbble">
-    <meta name="description" content="Lofi music">
+    <meta name="description" content="A constant flow of lofi music">
     <meta name="author" content="@traf">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
@@ -53,10 +53,10 @@
     <div class="music-player" data-video="hHW1oY26kxQ" data-autoplay="0" data-loop="1" id="youtube-audio"></div>
     <svg class="music-bar" viewBox="0 0 20 20">
       <defs><rect id="def-rect" y="18" width="1" height="20" fill="#06f"/></defs>
-      <use class="bar" xlink:href="#def-rect" x="0" />
-      <use class="bar" xlink:href="#def-rect" x="5" />
-      <use class="bar" xlink:href="#def-rect" x="10" />
-      <use class="bar" xlink:href="#def-rect" x="15" />
+      <use class="bar" xlink:href="#def-rect" x="0"/>
+      <use class="bar" xlink:href="#def-rect" x="5"/>
+      <use class="bar" xlink:href="#def-rect" x="10"/>
+      <use class="bar" xlink:href="#def-rect" x="15"/>
     </svg>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -131,6 +131,8 @@
   <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 <script>
+
+  // Youtube audio
   var player;
   function onYouTubeIframeAPIReady() {
     var ctrlq = document.getElementById("youtube-audio");

@@ -59,4 +59,27 @@
       );
     }
 
+    // Adblocking
+    // var adBlockEnabled = false;
+    // var testAd = document.createElement('div');
+    // testAd.innerHTML = '&nbsp;';
+    // testAd.className = 'adsbox';
+    // document.body.appendChild(testAd);
+    // window.setTimeout(function() {
+    //   if (testAd.offsetHeight === 0) {
+    //     adBlockEnabled = true;
+    //   }
+    //   testAd.remove();
+    //   console.log('AdBlock Enabled? ', adBlockEnabled)
+    // }, 100);
+    function appendMessage(argument) {
+      var div = $('<div>').attr('id', 'message').text('Ad block is installed and active. Please support us by disabling it.');
+      var add = $('body').append(div);
+    }
+    setTimeout(function(){
+      if($("img").css('display') == "none") {
+        appendMessage();
+      }
+    }, 500);
+
 </script>

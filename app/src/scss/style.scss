@@ -169,11 +169,12 @@ body {
 }
 
 .music-bar {
+  padding-left: 10px;
   @extend .center-x;
   overflow: hidden;
-  bottom: -20px;
   height: 60px;
-  width: 100px;
+  width: 60px;
+  bottom: 0;
 }
 
 @media (max-width: $break-mobile) {
@@ -435,11 +436,12 @@ body {
 }
 
 .nav-logo {
+  transform: rotate(-2deg);
   @extend .flex-center;
   transition: $bouncy;
   margin-left: 30px;
   img { width: 60px; }
-  &:hover { transform: scale(1.06) rotate(-3deg); }
+  &:hover { transform: scale(1.06) rotate(-4deg); }
 }
 
 .nav-links {
@@ -579,6 +581,10 @@ body {
   .hero-title.small { width: 300px; max-width: 100%; }
   .hero-title { width: 420px; max-width: 100%; }
   .hero-title.large { width: 600px; max-width: 100%; }
+}
+
+.hero-full {
+  height: 100vh !important;
 }
 
 .hero.unpadded {

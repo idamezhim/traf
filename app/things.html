@@ -141,6 +141,21 @@
       </div>
     </section>
   </div>
+  <script>
+  $(function(){
+    $('#fullpage').fullpage({
+      parallaxOptions: { property: 'translate', type: 'reveal', percentage: 62 },
+      licenseKey: '36E1197B-89FE4BB2-B2C0B9E9-247C4CFD',
+      parallaxKey: 'dHIuYWZfMFlVY0dGeVlXeHNZWGc9cjJH',
+      fitToSectionDelay: 400,
+      autoScrolling: false,
+      controlArrows: true,
+      percentage: 100,
+      parallax: true,
+    });
+  });
+</script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="js/scripts.min.js"></script>
 <script type="text/javascript">
@@ -176,18 +191,6 @@
         var scrollVar = $(window).scrollTop();
         $('.hero').css({'opacity':( 440-scrollVar )/440});
       });
-
-      // Fullpage JS
-      $('#fullpage').fullpage({
-        parallaxOptions: { property: 'translate', type: 'reveal', percentage: 62 },
-        licenseKey: '36E1197B-89FE4BB2-B2C0B9E9-247C4CFD',
-        parallaxKey: 'dHIuYWZfMFlVY0dGeVlXeHNZWGc9cjJH',
-        fitToSectionDelay: 400,
-    		autoScrolling: false,
-        controlArrows: true,
-        percentage: 100,
-        parallax: true,
-    	});
 
       // $(document).easteregg({
       //   sequence : [84, 82, 65, 70],

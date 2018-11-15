@@ -11,9 +11,9 @@
 
     <!-- Primary Meta Tags -->
     <meta charset="utf-8">
-    <title>Lofi</title>
+    <title>Beats</title>
     <meta name="keywords" content="james, traf, james traf, simple, minimal, design, ux, ui, development, photography, montreal, instagram, dribbble">
-    <meta name="description" content="Beats">
+    <meta name="description" content="Lofi music">
     <meta name="author" content="@traf">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
@@ -34,7 +34,7 @@
     <link href="/images/favicon.ico" rel="shortcut icon">
     <link href="/css/styles.css" rel="stylesheet">
 </head>
-<body class="animsition oops">
+<body class="animsition">
   <nav class="nav">
   <a href="/" class="nav-logo"><img src="/images/logo-traf.png" alt="traf"/></a>
   <div class="nav-links">
@@ -49,7 +49,7 @@
     <span class="line line-2"></span>
   </button>
 </nav>
-  <div class="hero">
+  <div class="hero hero-full">
     <div class="music-player" data-video="hHW1oY26kxQ" data-autoplay="0" data-loop="1" id="youtube-audio"></div>
     <svg class="music-bar" viewBox="0 0 20 20">
       <defs><rect id="def-rect" y="18" width="1" height="20" fill="#06f"/></defs>
@@ -94,18 +94,6 @@
         var scrollVar = $(window).scrollTop();
         $('.hero').css({'opacity':( 440-scrollVar )/440});
       });
-
-      // Fullpage JS
-      $('#fullpage').fullpage({
-        parallaxOptions: { property: 'translate', type: 'reveal', percentage: 62 },
-        licenseKey: '36E1197B-89FE4BB2-B2C0B9E9-247C4CFD',
-        parallaxKey: 'dHIuYWZfMFlVY0dGeVlXeHNZWGc9cjJH',
-        fitToSectionDelay: 400,
-    		autoScrolling: false,
-        controlArrows: true,
-        percentage: 100,
-        parallax: true,
-    	});
 
       // $(document).easteregg({
       //   sequence : [84, 82, 65, 70],
@@ -179,9 +167,9 @@
     }
   }
 
-  // Music bar
+  // Music bar by Bruno Torrinha
   var bars = $('.music-bar .bar');
-    var tl = (new TimelineMax()).staggerTo(bars, .3, {
+    var tl = (new TimelineMax()).staggerTo(bars, .4, {
       y: -10,
       repeat: -1,
       paused: false,

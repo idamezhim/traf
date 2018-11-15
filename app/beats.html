@@ -34,7 +34,7 @@
     <link href="/images/favicon.ico" rel="shortcut icon">
     <link href="/css/styles.css" rel="stylesheet">
 </head>
-<body class="animsition">
+<body class="animsition music">
   <nav class="nav">
   <a href="/" class="nav-logo"><img src="/images/logo-traf.png" alt="traf"/></a>
   <div class="nav-links">
@@ -58,7 +58,7 @@
       <use class="bar" xlink:href="#def-rect" x="10"/>
       <use class="bar" xlink:href="#def-rect" x="15"/>
     </svg>
-    <p class="adsbox">HELLO</p>
+    <p class="message">This page may not load if you're blocking ads. Click to dismiss.</p>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="js/scripts.min.js"></script>
@@ -133,6 +133,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 <script>
 
+  // Dismiss music message
+  $('.music .message').click(function(){
+    $(this).hide();
+  })
+
   // Youtube audio
   var player;
   function onYouTubeIframeAPIReady() {
@@ -189,20 +194,6 @@
         ease: Quad.easeOut}
       );
     }
-
-    // Adblocking
-    var adBlockEnabled = false;
-    var testAd = document.createElement('div');
-    testAd.innerHTML = '&nbsp;';
-    testAd.className = 'adsbox';
-    document.body.appendChild(testAd);
-    window.setTimeout(function() {
-      if (testAd.offsetHeight === 0) {
-        adBlockEnabled = true;
-      }
-      testAd.remove();
-      console.log('AdBlock Enabled? ', adBlockEnabled)
-    }, 100);
 
 </script>
 </body>

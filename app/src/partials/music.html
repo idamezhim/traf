@@ -2,6 +2,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 <script>
 
+  // Dismiss music message
+  $('.music .message').click(function(){
+    $(this).hide();
+  })
+
   // Youtube audio
   var player;
   function onYouTubeIframeAPIReady() {
@@ -58,19 +63,5 @@
         ease: Quad.easeOut}
       );
     }
-
-    // Adblocking
-    var adBlockEnabled = false;
-    var testAd = document.createElement('div');
-    testAd.innerHTML = '&nbsp;';
-    testAd.className = 'adsbox';
-    document.body.appendChild(testAd);
-    window.setTimeout(function() {
-      if (testAd.offsetHeight === 0) {
-        adBlockEnabled = true;
-      }
-      testAd.remove();
-      console.log('AdBlock Enabled? ', adBlockEnabled)
-    }, 100);
 
 </script>

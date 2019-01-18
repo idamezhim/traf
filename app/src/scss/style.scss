@@ -107,12 +107,14 @@ body {
 }
 
 .slide-title {
-  letter-spacing: -1px;
+  text-shadow: 0 10px 40px rgba($black, 0.4);
+  font-family: $script;
   position: absolute;
-  font-size: 24px;
+  letter-spacing: 0;
+  font-size: 40px;
   z-index: 4;
-  left: 40px;
-  top: 40px;
+  left: 30px;
+  top: 20px;
 }
 
 .progress {
@@ -253,11 +255,12 @@ body {
   .card-title {
     margin-top: 20px;
     max-width: 90%;
-    width: 360px;
+    width: 340px;
   }
   .card-insta {
     .card-title {
       margin: 0 auto;
+      width: 420px;
     }
   }
 }
@@ -789,6 +792,16 @@ body {
 .supply-elemental-wind-before { background: url('/images/supply-elemental-wind-before.jpg') no-repeat center center; background-size: cover; }
 .supply-elemental-wind-after { background: url('/images/supply-elemental-wind-after.jpg') no-repeat center center; background-size: cover; }
 
+.supply-urban-hero { background: url('/images/supply-urban-hero.jpg') no-repeat center center; background-size: cover; }
+.supply-urban-mtl-before { background: url('/images/supply-urban-mtl-before.jpg') no-repeat center center; background-size: cover; }
+.supply-urban-mtl-after { background: url('/images/supply-urban-mtl-after.jpg') no-repeat center center; background-size: cover; }
+.supply-urban-sf-before { background: url('/images/supply-urban-sf-before.jpg') no-repeat center center; background-size: cover; }
+.supply-urban-sf-after { background: url('/images/supply-urban-sf-after.jpg') no-repeat center center; background-size: cover; }
+.supply-urban-nyc-before { background: url('/images/supply-urban-nyc-before.jpg') no-repeat center center; background-size: cover; }
+.supply-urban-nyc-after { background: url('/images/supply-urban-nyc-after.jpg') no-repeat center center; background-size: cover; }
+.supply-urban-mia-before { background: url('/images/supply-urban-mia-before.jpg') no-repeat center center; background-size: cover; }
+.supply-urban-mia-after { background: url('/images/supply-urban-mia-after.jpg') no-repeat center center; background-size: cover; }
+
 /*-------------------------------------------------------------------*/
 /* COMPARISON SLIDER ------------------------------------------------*/
 /*-------------------------------------------------------------------*/
@@ -939,7 +952,8 @@ a.card:active { transform: scale(1); transition: all .2s ease; }
 .card-things { background: url('/images/card-things.jpg') no-repeat center center; background-size: cover; }
 .card-brands { background: url('/images/card-brands.jpg') no-repeat center center; background-size: cover; }
 
-.card-presets { background: url('/images/card-presets.jpg') no-repeat center center; background-size: cover; }
+.card-urban { background: url('/images/card-urban.jpg') no-repeat center center; background-size: cover; }
+.card-elemental { background: url('/images/card-elemental.jpg') no-repeat center center; background-size: cover; }
 .card-wallpapers { background: url('/images/card-wallpapers.jpg') no-repeat center center; background-size: cover; }
 
 /*-------------------------------------------------------------------*/

@@ -11,9 +11,9 @@
 
     <!-- Primary Meta Tags -->
     <meta charset="utf-8">
-    <title>Presets</title>
+    <title>Elemental Presets</title>
     <meta name="keywords" content="james, traf, james traf, simple, minimal, design, ux, ui, development, photography, montreal, instagram, dribbble">
-    <meta name="description" content="Shop Lightroom Presets">
+    <meta name="description" content="4 styles, endless possibilities">
     <meta name="author" content="@traf">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
@@ -35,39 +35,69 @@
     <link href="/css/styles.css" rel="stylesheet">
 </head>
 <body class="animsition supply">
-  <nav class="nav">
-  <a href="/" class="nav-logo"><img src="/images/logo-traf.png" alt="traf"/></a>
-  <div class="nav-links">
-    <a href="/projects.html" class="nav-link">Projects</a>
-    <a href="/clients.html" class="nav-link">Clients</a>
-    <a href="/moments.html" class="nav-link">Moments</a>
-    <a href="/thoughts.html" class="nav-link">Thoughts</a>
-    <a href="/supply.html" class="nav-link">Supply</a>
-  </div>
-  <button class="nav-toggle">
-    <span class="line line-1"></span>
-    <span class="line line-2"></span>
-  </button>
-</nav>
-  <div class="hero">
-    <h1 class="hero-title">Shop Premium Lightroom Presets</h1>
-  </div>
-  <div class="content">
-    <div class="wrapper">
-      <a href="/urban-presets.html" class="card card-urban">
-  <h2 class="card-title">Urban Lightroom preset pack</h2>
-  <p class="card-subtitle">$16</p>
-</a>
-      <a href="/elemental-presets.html" class="card card-elemental">
-  <h2 class="card-title">Elemental Lightroom preset pack</h2>
-  <p class="card-subtitle">$16</p>
-</a>
-      <a href="http://instagram.com/traf" target="_blank" class="card card-insta">
+  <a href="/supply.html" class="close"><i class="icon" data-feather="x"></i></a>
+  <div id="fullpage">
+    <script src="https://gumroad.com/js/gumroad.js"></script>
+    <a href="https://gum.co/elemental-presets" target="_blank" class="button buy gumroad-button" data-gumroad-single-product="true">$16</a>
+    <section class="section section-hero">
+      <img src="/images/icon-lightroom.png" class="section-icon" alt="lightroom"/>
+      <h1>Elemental Presets</h1>
+      <p class="card-subtitle">4 styles, endless possibilities.</p>
+      <i class="down" data-feather="arrow-down"></i>
+      <div class="supply-elemental-hero fp-bg"></div>
+    </section>
+    <section class="section supply-elemental-fire-before">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Fire</h2>
+        <div class="before-wrapper supply-elemental-fire-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-fire-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Water</h2>
+        <div class="before-wrapper supply-elemental-water-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-water-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Earth</h2>
+        <div class="before-wrapper supply-elemental-earth-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-earth-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="slider-wrapper">
+        <h2 class="slide-title">Wind</h2>
+        <div class="before-wrapper supply-elemental-wind-before">
+          <div class="after-wrapper"><div class="after-image supply-elemental-wind-after"></div></div>
+        </div>
+        <div class="comparison-slider"></div>
+      </div>
+    </section>
+    <section class="section section-content">
+      <div class="wrapper">
+        <div class="gumroad-embed">
+          <script src="https://gumroad.com/js/gumroad-embed.js"></script>
+          <div class="gumroad-product-embed" data-gumroad-product-id="elemental-presets"><a href="https://gumroad.com/l/elemental-presets">Loading...</a></div>
+        </div>
+        <a href="http://instagram.com/traf" target="_blank" class="card card-insta">
   <i class="card-icon" data-feather="instagram"></i>
   <h2 class="card-title">I share my best highlights &amp; moments on Instagram</h2>
   <button class="button hide-mobile">Join me</button>
 </a>
-      <footer class="card card-footer">
+        <a href="/urban-presets.html" class="card card-urban">
+  <h2 class="card-title">Urban Lightroom preset pack</h2>
+  <p class="card-subtitle">$16</p>
+</a>
+        <footer class="card card-footer">
   <h3 class="card-title">&copy; James Traf</h3>
   <div class="icons">
     <h4 class="icon-title">Hit me up</h4>
@@ -141,8 +171,24 @@
 
   });
 </script>
-    </div>
+      </div>
+    </section>
   </div>
+  <script>
+  $(function(){
+    $('#fullpage').fullpage({
+      parallaxOptions: { property: 'translate', type: 'reveal', percentage: 62 },
+      licenseKey: '36E1197B-89FE4BB2-B2C0B9E9-247C4CFD',
+      parallaxKey: 'dHIuYWZfMFlVY0dGeVlXeHNZWGc9cjJH',
+      fitToSectionDelay: 400,
+      autoScrolling: false,
+      controlArrows: true,
+      percentage: 100,
+      parallax: true,
+    });
+  });
+</script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="js/scripts.min.js"></script>
 <script type="text/javascript">
@@ -212,6 +258,35 @@
   });
 </script>
 
-  <script src="https://embed.small.chat/T036XP36SG514EQWDB.js" async></script>
+  <script>
+    $(function(){
+
+      // Change text on Insta card title
+      $(".card-insta .card-title").text("See these presets in action on my Instagram feed");
+      $(".card-insta .button").text("Check em' out");
+
+      // Comparison Slider
+      $('.before-wrapper').on( "mousemove", function(e) {
+        var offsets = $(this).offset();
+        var fullWidth = $(this).width();
+        var mouseX = e.pageX - offsets.left;
+        if (mouseX < 0) { mouseX = 0; }
+        else if (mouseX > fullWidth) { mouseX = fullWidth }
+        $(this).parent().find('.comparison-slider').css({ left: mouseX, transition: 'none' });
+        $(this).find('.after-wrapper').css({ transform: 'translateX(' + (mouseX) + 'px)', transition: 'none' });
+        $(this).find('.after-image').css({ transform: 'translateX(' + (-1*mouseX) + 'px)', transition: 'none' });
+      });
+      $('.slider-wrapper').on( "mouseleave", function() {
+        $(this).parent().find('.comparison-slider').css({
+          left: '50%', transition: 'all .3s' });
+        $(this).find('.after-wrapper').css({
+          transform: 'translateX(50%)', transition: 'all .3s' });
+        $(this).find('.after-image').css({
+          transform: 'translateX(-50%)', transition: 'all .3s' });
+      });
+
+    });
+  </script>
 </body>
 </html>
+

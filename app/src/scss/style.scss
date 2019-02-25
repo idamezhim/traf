@@ -507,6 +507,12 @@ body {
   height: 100%;
   width: 100px;
   &:hover .line-2 { width: 24px; }
+  .lines {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 24px;
+  }
   .line {
     border-top: 1px solid $white;
     transition: $smooth;

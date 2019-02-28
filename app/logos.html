@@ -11,9 +11,9 @@
 
     <!-- Primary Meta Tags -->
     <meta charset="utf-8">
-    <title>Clients</title>
+    <title>Logos</title>
     <meta name="keywords" content="james, traf, james traf, simple, minimal, design, ux, ui, development, photography, montreal, instagram, dribbble">
-    <meta name="description" content="Ideas I've brought to life for others">
+    <meta name="description" content="A collection of logo & word marks">
     <meta name="author" content="@traf">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
@@ -35,44 +35,34 @@
     <link href="/css/styles.css" rel="stylesheet">
 </head>
 <body class="animsition">
-  <nav class="nav">
-  <a href="/" class="nav-logo"><img src="/images/logo-traf.png" alt="traf"/></a>
-  <div class="nav-links">
-    <a href="/projects.html" class="nav-link">Projects</a>
-    <a href="/clients.html" class="nav-link">Clients</a>
-    <a href="/moments.html" class="nav-link">Moments</a>
-    <a href="/thoughts.html" class="nav-link">Thoughts</a>
-    <a href="/supply.html" class="nav-link">Supply</a>
-  </div>
-  <button class="nav-toggle">
-    <div class="lines">
-      <span class="line line-1"></span>
-      <span class="line line-2"></span>
-    </div>
-  </button>
-</nav>
-  <div class="hero">
-    <h1 class="hero-title">Ideas I've brought to life for others</h1>
-  </div>
-  <div class="content">
-    <div class="wrapper">
-      <a href="/dwelve.html" class="card card-dwelve">
+  <a href="/clients.html" class="close"><i class="icon" data-feather="x"></i></a>
+  <div id="fullpage">
+    <section class="section section-hero">
+      <h1 class="card-title">Logos</h1>
+      <p class="card-subtitle">A collection of logo &amp; word marks</p>
+      <i class="down" data-feather="arrow-down"></i>
+    </section>
+    <section class="section"><div class="logo-ryanrose fp-bg"></div></section>
+    <section class="section"><div class="logo-swysh fp-bg"></div></section>
+    <section class="section"><div class="logo-hex fp-bg"></div></section>
+    <section class="section"><div class="logo-castupon fp-bg"></div></section>
+    <section class="section"><div class="logo-deximal fp-bg"></div></section>
+    <section class="section"><div class="logo-spoil fp-bg"></div></section>
+    <section class="section section-content">
+      <div class="wrapper">
+        <a href="/dwelve.html" class="card card-dwelve">
   <h2 class="card-title">Dwelve</h2>
   <p class="card-subtitle">Netflix-Bingeable Sofas</p>
 </a>
-      <a href="/mobydish.html" class="card card-mobydish">
+        <a href="/mobydish.html" class="card card-mobydish">
   <h2 class="card-title">MobyDish</h2>
   <p class="card-subtitle">Tasteful Catering</p>
 </a>
-      <a href="/squish.html" class="card card-squish">
+        <a href="/squish.html" class="card card-squish">
   <h2 class="card-title">Squish</h2>
   <p class="card-subtitle">Gourmet Gummies</p>
 </a>
-      <a href="/logos.html" class="card card-logos">
-  <h2 class="card-title">Logo Collection</h2>
-  <p class="card-subtitle">Volume I</p>
-</a>
-      <div class="card card-email">
+        <div class="card card-email">
   <h2 class="card-title">Feel<span class="hide-mobile">ing</span> inspired? Let's make something beautiful together.</h2>
   <p class="card-subtitle">I reply to all emails within a day. See for yourself.</p>
   <a href="mailto:trafj@me.com" class="button">Email me</a>
@@ -105,7 +95,7 @@
 
   })
 </script>
-      <footer class="card card-footer">
+        <footer class="card card-footer">
   <h3 class="card-title">&copy; James Traf</h3>
   <div class="icons">
     <h4 class="icon-title">Hit me up</h4>
@@ -179,8 +169,24 @@
 
   });
 </script>
-    </div>
+      </div>
+    </section>
   </div>
+  <script>
+  $(function(){
+    $('#fullpage').fullpage({
+      parallaxOptions: { property: 'translate', type: 'reveal', percentage: 100 },
+      licenseKey: '36E1197B-89FE4BB2-B2C0B9E9-247C4CFD',
+      parallaxKey: 'dHIuYWZfMFlVY0dGeVlXeHNZWGc9cjJH',
+      fitToSectionDelay: 400,
+      autoScrolling: false,
+      controlArrows: true,
+      percentage: 100,
+      parallax: true,
+    });
+  });
+</script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="js/scripts.min.js"></script>
 <script type="text/javascript">
@@ -251,21 +257,5 @@
   });
 </script>
 
-  <script src="https://embed.small.chat/T036XP36SG514EQWDB.js" async></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

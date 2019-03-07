@@ -453,8 +453,8 @@ body {
   transform: rotate(-2deg);
   @extend .flex-center;
   transition: $bouncy;
-  margin-left: 30px;
-  img { width: 60px; }
+  margin-left: 34px;
+  img { width: 70px; }
   &:hover { transform: scale(1.06) rotate(-4deg); }
 }
 

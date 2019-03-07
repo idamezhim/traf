@@ -3,3 +3,6 @@ https://traf.netlify.com/* https://tr.af/:splat 301!
 
 # Link /live to youtube url
 /live https://www.youtube.com/user/jamestraf/live
+
+# Redirect /presets to /supply
+/presets /supply

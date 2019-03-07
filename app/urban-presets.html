@@ -88,14 +88,14 @@
           <script src="https://gumroad.com/js/gumroad-embed.js"></script>
           <div class="gumroad-product-embed" data-gumroad-product-id="urban-presets"><a href="https://gumroad.com/l/urban-presets">Loading...</a></div>
         </div>
+        <a href="/elemental-presets.html" class="card card-elemental">
+  <h2 class="card-title">Elemental Lightroom preset pack</h2>
+  <p class="card-subtitle">$16</p>
+</a>
         <a href="http://instagram.com/traf" target="_blank" class="card card-insta">
   <i class="card-icon" data-feather="instagram"></i>
   <h2 class="card-title">I share my best highlights &amp; moments on Instagram</h2>
   <button class="button hide-mobile">Join me</button>
-</a>
-        <a href="/elemental-presets.html" class="card card-elemental">
-  <h2 class="card-title">Elemental Lightroom preset pack</h2>
-  <p class="card-subtitle">$16</p>
 </a>
         <footer class="card card-footer">
   <h3 class="card-title">&copy; James Traf</h3>
@@ -176,16 +176,24 @@
   </div>
   <script>
   $(function(){
-    $('#fullpage').fullpage({
-      parallaxOptions: { property: 'translate', type: 'reveal', percentage: 100 },
-      licenseKey: '36E1197B-89FE4BB2-B2C0B9E9-247C4CFD',
-      parallaxKey: 'dHIuYWZfMFlVY0dGeVlXeHNZWGc9cjJH',
-      fitToSectionDelay: 400,
-      autoScrolling: false,
-      controlArrows: true,
-      percentage: 100,
-      parallax: true,
-    });
+
+    var isMobile = window.matchMedia("only screen and (max-width: 600px)").matches;
+
+    if(isMobile) {} else {
+
+      $('#fullpage').fullpage({
+        parallaxOptions: { property: 'translate', type: 'reveal', percentage: 100 },
+        licenseKey: '36E1197B-89FE4BB2-B2C0B9E9-247C4CFD',
+        parallaxKey: 'dHIuYWZfMFlVY0dGeVlXeHNZWGc9cjJH',
+        fitToSectionDelay: 400,
+        autoScrolling: false,
+        controlArrows: true,
+        percentage: 100,
+        parallax: true,
+      });
+
+    }
+
   });
 </script>
 
@@ -260,32 +268,35 @@
 </script>
 
   <script>
-    $(function(){
+  $(function(){
 
+    // Comparison Slider
+    $('.before-wrapper').on( "mousemove", function(e) {
+      var offsets = $(this).offset();
+      var fullWidth = $(this).width();
+      var mouseX = e.pageX - offsets.left;
+      if (mouseX < 0) { mouseX = 0; }
+      else if (mouseX > fullWidth) { mouseX = fullWidth }
+      $(this).parent().find('.comparison-slider').css({ left: mouseX, transition: 'none' });
+      $(this).find('.after-wrapper').css({ transform: 'translateX(' + (mouseX) + 'px)', transition: 'none' });
+      $(this).find('.after-image').css({ transform: 'translateX(' + (-1*mouseX) + 'px)', transition: 'none' });
+    });
+    $('.slider-wrapper').on( "mouseleave", function() {
+      $(this).parent().find('.comparison-slider').css({
+        left: '50%', transition: 'all .3s' });
+      $(this).find('.after-wrapper').css({
+        transform: 'translateX(50%)', transition: 'all .3s' });
+      $(this).find('.after-image').css({
+        transform: 'translateX(-50%)', transition: 'all .3s' });
+    });
+
+  });
+</script>
+  <script>
+    $(function(){
       // Change text on Insta card title
       $(".card-insta .card-title").text("See these presets in action on my Instagram feed");
       $(".card-insta .button").text("Check em' out");
-
-      // Comparison Slider
-      $('.before-wrapper').on( "mousemove", function(e) {
-        var offsets = $(this).offset();
-        var fullWidth = $(this).width();
-        var mouseX = e.pageX - offsets.left;
-        if (mouseX < 0) { mouseX = 0; }
-        else if (mouseX > fullWidth) { mouseX = fullWidth }
-        $(this).parent().find('.comparison-slider').css({ left: mouseX, transition: 'none' });
-        $(this).find('.after-wrapper').css({ transform: 'translateX(' + (mouseX) + 'px)', transition: 'none' });
-        $(this).find('.after-image').css({ transform: 'translateX(' + (-1*mouseX) + 'px)', transition: 'none' });
-      });
-      $('.slider-wrapper').on( "mouseleave", function() {
-        $(this).parent().find('.comparison-slider').css({
-          left: '50%', transition: 'all .3s' });
-        $(this).find('.after-wrapper').css({
-          transform: 'translateX(50%)', transition: 'all .3s' });
-        $(this).find('.after-image').css({
-          transform: 'translateX(-50%)', transition: 'all .3s' });
-      });
-
     });
   </script>
 </body>

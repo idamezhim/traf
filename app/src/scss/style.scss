@@ -238,7 +238,6 @@ body {
   @extend .flex-center;
   height: 100vh;
   width: 100%;
-  z-index: 2;
   padding: 0;
   .main {
     background: $black;
@@ -256,19 +255,61 @@ body {
     @extend .center;
     max-width: 90%;
     width: 600px;
+    z-index: 2;
     p {
       margin-top: 20px;
       font-size: 24px;
-      color: $grey;
+      opacity: 0.4;
     }
   }
   .timer {
     @extend .center;
     height: 360px;
     width: 360px;
+    z-index: 2;
   }
 }
 
+.flower {
+  pointer-events: none;
+  @extend .center;
+  height: 80vh;
+  width: 100%;
+  fill: $blue;
+  z-index: 1;
+}
+
+.rose {
+  -webkit-transform-origin: 500px 500px; transform-origin: 500px 500px;
+  -webkit-animation: turn 120s linear infinite; animation: turn 120s linear infinite;
+}
+
+circle {
+  -webkit-animation: breathe 10s cubic-bezier(0.65, 0.05, 0.36, 1) infinite; animation: breathe 10s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+  -webkit-transform: rotate(var(--angle)) translate(112.5px, 0); transform: rotate(var(--angle)) translate(112.5px, 0);
+  -webkit-transform-origin: 500px 500px; transform-origin: 500px 500px;
+  opacity: 0.2;
+}
+
+@-webkit-keyframes breathe {
+  0%, 100% { -webkit-transform: rotate(var(--angle)) translate(0px, 0); transform: rotate(var(--angle)) translate(0px, 0); }
+  45%, 55% { -webkit-transform: rotate(var(--angle)) translate(225px, 0); transform: rotate(var(--angle)) translate(225px, 0); }
+}
+
+@keyframes breathe {
+  0%, 100% { -webkit-transform: rotate(var(--angle)) translate(0px, 0); transform: rotate(var(--angle)) translate(0px, 0); }
+  45%, 55% { -webkit-transform: rotate(var(--angle)) translate(225px, 0); transform: rotate(var(--angle)) translate(225px, 0); }
+}
+
+@-webkit-keyframes turn {
+  0% { -webkit-transform: rotate(0); transform: rotate(0); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes turn {
+  0% { -webkit-transform: rotate(0); transform: rotate(0); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
 
 /*-------------------------------------------------------------------*/
 /* PAGE SPECIFIC ----------------------------------------------------*/

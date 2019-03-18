@@ -18,16 +18,9 @@
 <script>
   $(document).ready(function(){
 
-    if($(window).width() < 600){
-
-      // Fade hero contents on scroll
-      $(window).scroll(function(i){
-        var scrollVar = $(window).scrollTop();
-        $('.hero').css({'opacity':( 300-scrollVar )/300});
-      });
-
-    }
-    else {
+    var isMobile = window.matchMedia("only screen and (max-width: 600px)").matches;
+    if(isMobile) {
+    } else {
 
       // Fade hero contents on scroll
       $(window).scroll(function(i){

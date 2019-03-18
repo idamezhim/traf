@@ -231,6 +231,46 @@ body {
 }
 
 /*-------------------------------------------------------------------*/
+/* BREATHER ---------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+.hero.breather {
+  @extend .flex-center;
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  padding: 0;
+  .main {
+    background: $black;
+    height: 100vh;
+    width: 100%;
+  }
+  .done {
+    transition: $smooth;
+    background: $blue;
+    height: 100vh;
+    width: 100%;
+  }
+  .remaining {
+    pointer-events: none;
+    @extend .center;
+    max-width: 90%;
+    width: 600px;
+    p {
+      margin-top: 20px;
+      font-size: 24px;
+      color: $grey;
+    }
+  }
+  .timer {
+    @extend .center;
+    height: 360px;
+    width: 360px;
+  }
+}
+
+
+/*-------------------------------------------------------------------*/
 /* PAGE SPECIFIC ----------------------------------------------------*/
 /*-------------------------------------------------------------------*/
 
@@ -468,14 +508,24 @@ body {
   .nav-link {
     transform: translateY(-100px);
     @extend .flex-center;
+    font-family: $bold;
+    background: none;
+    font-size: 18px;
+    color: $white;
     opacity: 0.4;
     height: 100%;
     flex: 1;
-    &:nth-child(1) { transition-delay: .2s; }
-    &:nth-child(2) { transition-delay: .15s; }
-    &:nth-child(3) { transition-delay: .1s; }
-    &:nth-child(4) { transition-delay: .05s; }
-    &:nth-child(5) { transition-delay: 0s; }
+    .icon {
+      position: relative;
+      top: 2px;
+      left: 4px;
+    }
+    &:nth-child(1) { transition-delay: .25s; }
+    &:nth-child(2) { transition-delay: .2s; }
+    &:nth-child(3) { transition-delay: .15s; }
+    &:nth-child(4) { transition-delay: .1s; }
+    &:nth-child(5) { transition-delay: .05s; }
+    &:nth-child(6) { transition-delay: 0s; }
     &:hover {
       transition-delay: 0s !important;
       opacity: 1;
@@ -492,8 +542,21 @@ body {
     &:nth-child(3) { transition-delay: .1s; }
     &:nth-child(4) { transition-delay: .15s; }
     &:nth-child(5) { transition-delay: .2s; }
+    &:nth-child(6) { transition-delay: .25s; }
   }
 }
+
+// .nav-more {
+//   @extend .nav-links;
+//   @extend .center-x;
+//   opacity: 1 !important;
+//   position: fixed;
+//   border: 1px solid white;
+//   height: 100px;
+//   z-index: 4;
+//   top: 0;
+//   width: 100%;
+// }
 
 .nav-active {
   opacity: 1 !important;

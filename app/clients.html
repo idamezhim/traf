@@ -43,7 +43,13 @@
     <a href="/moments.html" class="nav-link">Moments</a>
     <a href="/thoughts.html" class="nav-link">Thoughts</a>
     <a href="/supply.html" class="nav-link">Supply</a>
+    <!-- <button class="nav-link">More <i class="icon" data-feather="chevron-down"></i></button> -->
   </div>
+  <!-- <div class="nav-more">
+    <a href="/beats.html" class="nav-link">Beats</a>
+    <a href="/5.html" class="nav-link">Take 5</a>
+    <button class="nav-link">Less <i class="icon" data-feather="chevron-up"></i></button>
+  </div> -->
   <button class="nav-toggle">
     <div class="lines">
       <span class="line line-1"></span>
@@ -201,16 +207,9 @@
 <script>
   $(document).ready(function(){
 
-    if($(window).width() < 600){
-
-      // Fade hero contents on scroll
-      $(window).scroll(function(i){
-        var scrollVar = $(window).scrollTop();
-        $('.hero').css({'opacity':( 300-scrollVar )/300});
-      });
-
-    }
-    else {
+    var isMobile = window.matchMedia("only screen and (max-width: 600px)").matches;
+    if(isMobile) {
+    } else {
 
       // Fade hero contents on scroll
       $(window).scroll(function(i){

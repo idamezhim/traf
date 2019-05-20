@@ -1006,6 +1006,9 @@ circle {
   width: 500px;
 }
 
+.card-title.narrow { width: 260px; }
+.card-title.wide { width:500px; }
+
 .card-subtitle {
   letter-spacing: -1px;
   margin: 4px auto 0;
@@ -1057,9 +1060,10 @@ a.card:active { transform: scale(1); transition: all .2s ease; }
 .card-castupon { background: url('/images/card-castupon.jpg') no-repeat center center; background-size: cover; }
 .card-deximal { background: url('/images/card-deximal.jpg') no-repeat center center; background-size: cover; }
 .card-finely { background: url('/images/card-finely.jpg') no-repeat center center; background-size: cover; }
-.card-boring { background: url('/images/card-boring.jpg') no-repeat center center; background-size: cover; }
 .card-typement { background: url('/images/card-typement.jpg') no-repeat center center; background-size: cover; }
 .card-configtree { background: url('/images/card-configtree.jpg') no-repeat center center; background-size: cover; }
+.card-boring { background: url('/images/card-boring.jpg') no-repeat center center; background-size: cover; }
+.card-swish { background: url('/images/card-swish.jpg') no-repeat center center; background-size: cover; }
 
 .card-dwelve { background: url('/images/card-clients.jpg') no-repeat center center; background-size: cover; }
 .card-mobydish { background: url('/images/card-mobydish.jpg') no-repeat center center; background-size: cover; }

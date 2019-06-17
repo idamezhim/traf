@@ -48,6 +48,17 @@ body {
   background: $blue;
 }
 
+a.buy-with-crypto,
+a.donate-with-crypto {
+  border-radius: $rounded !important;
+  font-family: $title !important;
+  transition: $smooth !important;
+  margin-top: 30px !important;
+  min-width: auto !important;
+  height: auto !important;
+
+}
+
 .button.buy {
   box-shadow: 0 20px 40px rgba($black, 0.4) !important;
   background-position: 50% 0 !important;

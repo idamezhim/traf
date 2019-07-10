@@ -19,6 +19,10 @@ body {
   color: $white;
 }
 
+.invisible {
+  display: none;
+}
+
 .button {
   box-shadow: 0 20px 30px -10px rgba($black, 0.04);
   background: rgba($white, 0.1);
@@ -851,6 +855,16 @@ circle {
 .client-squish-10 { background: url('/images/client-squish-10.jpg') no-repeat center center; background-size: cover; }
 .client-squish-11 { background: url('/images/client-squish-11.jpg') no-repeat center center; background-size: cover; }
 
+.client-krover-0 { background: url('/images/card-krover.jpg') no-repeat center center; background-size: cover; }
+.client-krover-1 { background: url('/images/client-krover-1.jpg') no-repeat center center; background-size: cover; }
+.client-krover-2 { background: url('/images/client-krover-2.jpg') no-repeat center center; background-size: cover; }
+.client-krover-3 { background: url('/images/client-krover-3.jpg') no-repeat center center; background-size: cover; }
+.client-krover-4 { background: url('/images/client-krover-4.jpg') no-repeat center center; background-size: cover; }
+.client-krover-5 { background: url('/images/client-krover-5.jpg') no-repeat center center; background-size: cover; }
+.client-krover-6 { background: url('/images/client-krover-6.jpg') no-repeat center center; background-size: cover; }
+.client-krover-7 { background: url('/images/client-krover-7.jpg') no-repeat center center; background-size: cover; }
+
+
 .moments-people-hero { background: url('/images/moments-people-hero.jpg') no-repeat center center; background-size: cover; }
 .moments-people-claudia { background: url('/images/moments-people-claudia.jpg') no-repeat center center; background-size: cover; }
 .moments-people-andria { background: url('/images/moments-people-andria.jpg') no-repeat center center; background-size: cover; }
@@ -1079,6 +1093,7 @@ a.card:active { transform: scale(1); transition: all .2s ease; }
 .card-dwelve { background: url('/images/card-clients.jpg') no-repeat center center; background-size: cover; }
 .card-mobydish { background: url('/images/card-mobydish.jpg') no-repeat center center; background-size: cover; }
 .card-squish { background: url('/images/card-squish.jpg') no-repeat center center; background-size: cover; }
+.card-krover { background: url('/images/card-krover.jpg') no-repeat center center; background-size: cover; }
 .card-logos { background: url('/images/card-logos.jpg') no-repeat center center; background-size: cover; }
 
 .card-people { background: url('/images/card-people.jpg') no-repeat center center; background-size: cover; }
@@ -1209,8 +1224,10 @@ a.card:active { transform: scale(1); transition: all .2s ease; }
   display: flex;
   height: 200px;
   .card-title {
+    @extend .flex-center;
     width: auto;
     margin: 0;
+    .nav-logo { margin-left: 0; }
   }
   .icons {
     @extend .flex-center;

@@ -1089,6 +1089,8 @@ a.card:active { transform: scale(1); transition: all .2s ease; }
 .card-configtree { background: url('/images/card-configtree.jpg') no-repeat center center; background-size: cover; }
 .card-boring { background: url('/images/card-boring.jpg') no-repeat center center; background-size: cover; }
 .card-swish { background: url('/images/card-swish.jpg') no-repeat center center; background-size: cover; }
+.card-tiny { background: url('/images/card-tiny.jpg') no-repeat center center; background-size: cover; }
+.card-tiny .card-title { width: 360px; }
 
 .card-dwelve { background: url('/images/card-clients.jpg') no-repeat center center; background-size: cover; }
 .card-mobydish { background: url('/images/card-mobydish.jpg') no-repeat center center; background-size: cover; }

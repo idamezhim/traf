@@ -6,8 +6,11 @@
   <div class="hero">
     <h1>Pay me</h1>
     <p class="card-subtitle">Need to send me money?</p>
-    <a class="button blue donate-with-crypto" href="https://commerce.coinbase.com/checkout/4e8b93f8-54aa-418b-b892-f5282360d7b4">Pay with Crypto</a>
-    <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807"></script>
+    <div class="buttons">
+      <a class="button paypal" href="https://paypal.me/traf" target="_blank">Pay with PayPal</a>
+      <a class="button blue donate-with-crypto" href="https://commerce.coinbase.com/checkout/4e8b93f8-54aa-418b-b892-f5282360d7b4">Pay with Crypto</a>
+      <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807"></script>
+    </div>
   </div>
   @@include('partials/scripts.html')
   @@include('partials/smallchat.html')

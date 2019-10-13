@@ -8,7 +8,6 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
-    imagemin = require('gulp-imagemin'),
     runSequence = require('run-sequence'),
     sourcemaps = require('gulp-sourcemaps'),
     fileinclude = require('gulp-file-include'),
@@ -60,10 +59,6 @@ gulp.task('useref', function(){
 // IMAGES
 gulp.task('images', function(){
   return gulp.src('app/img/**/*.+(png|jpg|jpeg|gif|svg)')
-  // Caching images that ran through imagemin
-  .pipe(cache(imagemin({
-      interlaced: true
-    })))
   .pipe(gulp.dest('dist/img'))
 });
 

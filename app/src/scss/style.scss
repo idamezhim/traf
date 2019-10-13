@@ -23,6 +23,15 @@ body {
   display: none;
 }
 
+.buttons {
+  flex-direction: column;
+  @extend .flex-center;
+  margin: 30px auto 0;
+  .button {
+    margin: 8px 0 !important;
+  }
+}
+
 .button {
   box-shadow: 0 20px 30px -10px rgba($black, 0.04);
   background: rgba($white, 0.1);
@@ -50,6 +59,18 @@ body {
 
 .button.blue {
   background: $blue;
+  &:hover {
+    background: darken($blue, 6%);
+    transform: none;
+  }
+}
+
+.button.paypal {
+  background: #009cde;
+  &:hover {
+    background: darken(#009cde, 6%);
+    transform: none;
+  }
 }
 
 a.buy-with-crypto,
@@ -60,7 +81,13 @@ a.donate-with-crypto {
   margin-top: 30px !important;
   min-width: auto !important;
   height: auto !important;
-
+  span {
+    letter-spacing: -0.5px !important;
+    font-family: $title !important;
+    text-shadow: none !important;
+    overflow: visible !important;
+    line-height: 1.6 !important;
+  }
 }
 
 .button.buy {

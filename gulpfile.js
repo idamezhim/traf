@@ -93,6 +93,12 @@ gulp.task('clean:public', function() {
   return del.sync('public');
 })
 
+// REDIRECTS
+gulp.task('redirects', function() {
+  return gulp.src('_redirects')
+  .pipe(gulp.dest('public'))
+})
+
 // LIVE RELOAD
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -125,13 +131,13 @@ gulp.task('watch', ['sass', 'scripts','fileinclude', 'browserSync'], function ()
 });
 
 // BUILD
-gulp.task('build', ['clean', 'sass-build', 'scripts-build', 'useref', 'images', 'fonts'], function (){
+gulp.task('build', ['clean', 'sass-build', 'scripts-build', 'useref', 'images', 'fonts', 'redirects'], function (){
   console.log('Building files');
 });
 
 gulp.task('build', function (callback) {
   runSequence('clean:public',
-    ['sass-build', 'scripts-build', 'useref', 'images', 'fonts'],
+    ['sass-build', 'scripts-build', 'useref', 'images', 'fonts', 'redirects'],
     callback
   )
 });

@@ -128,7 +128,7 @@ a {
 @media (max-width: $break-mobile) {
 
   h1 {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .logo {
@@ -146,8 +146,12 @@ a {
     height: 100px;
   }
 
+  .links {
+    display: none !important;
+  }
+
   .hero-title {
-    height: 240px;
+    height: 200px;
   }
 
   .break {

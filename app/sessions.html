@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Traf</title>
+  <meta name="title" content="Traf">
+  <meta name="description" content="Digital product designer & front-end developer.">
+  <meta name="keywords" content="james traf, traf">
+  <meta name="author" content="@traf">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Traf">
+  <meta property="og:description" content="Digital product designer & front-end developer.">
+  <meta property="og:image" content="https://tr.af/images/social.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:url" content="https://tr.af">
+  <meta name="twitter:site" content="@traf">
+  <meta name="twitter:card" content="summary">
+  <link href="images/favicon.png" rel="shortcut icon">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+  <body class="sessions">
+    <nav class="nav">
+    <a href="/" class="logo"><img src="./images/logo.svg" alt="logo"/></a>
+    <a href="https://twitter.com/traf" target="_blank" class="handle">@traf</a>
+</nav>
+    <div class="hero">
+        <div class="wheel">
+            <div class="wheel-circle"></div>
+            <div class="video" data-video="5qap5aO4i9A" data-autoplay="0" data-loop="1" id="youtube-audio"></div>
+            <img class="wheel-bg" src="./images/sessions.jpg" alt="lofi">
+        </div>
+        <div class="hero-footer">
+            <p>Sessions</p>
+            <p>Lofi — 01</p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/scripts.min.js"></script>
+<script>
+  $(function(){
+
+    // True 100vh
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
+    // Feather icons
+    feather.replace()
+
+  });
+</script>
+
+    <script>
+        $(function(){
+            // Spin wheel on click
+            $('.wheel').click(function(){
+                $(this).toggleClass('spinning');
+            })
+        });
+        // YouTube Audio
+        function onYouTubeIframeAPIReady() {
+            var e = document.getElementById("youtube-audio"),
+                t = document.createElement("img");
+            t.setAttribute("id", "youtube-icon"), t.style.cssText = "cursor:pointer;cursor:hand", e.appendChild(t);
+            var a = document.createElement("div");
+            a.setAttribute("id", "youtube-player"), e.appendChild(a);
+            var o = function(e) {
+                var a = e ? "pause.png" : "play.png";
+                t.setAttribute("src", "/images/icon-" + a)
+            };
+            e.onclick = function() {
+            r.getPlayerState() === YT.PlayerState.PLAYING
+            || r.getPlayerState() === YT.PlayerState.BUFFERING ? (r.pauseVideo(), o(!1)) : (r.playVideo(), o(!0))
+            };
+            var r = new YT.Player("youtube-player", {
+            height: "0",
+            width: "0",
+            videoId: e.dataset.video,
+            playerVars: {
+                autoplay: e.dataset.autoplay,
+                loop: e.dataset.loop
+            },
+            events: {
+                onReady: function(e) { r.setPlaybackQuality("small"), o(r.getPlayerState() !== YT.PlayerState.CUED) },
+                onStateChange: function(e) { e.data === YT.PlayerState.ENDED && o(!1) }
+            }
+            })
+        }
+    </script>
+  </body>
+</html>

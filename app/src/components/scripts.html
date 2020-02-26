@@ -1,0 +1,18 @@
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/scripts.min.js"></script>
+<script>
+  $(function(){
+
+    // True 100vh
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
+    // Feather icons
+    feather.replace()
+
+  });
+</script>

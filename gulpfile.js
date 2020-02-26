@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence');
 
 // SASS
+var publicAssets = 'src/css/';
 var sassOptions = { outputStyle: 'compressed' };
 var autoprefixerOptions = { browsers: ['last 2 versions', '> 1%', 'Firefox ESR', 'ie >= 9'] };
 gulp.task('sass', function () {

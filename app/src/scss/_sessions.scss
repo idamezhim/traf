@@ -1,0 +1,68 @@
+.sessions {
+    .hero {
+        align-items: center;
+    }
+}
+
+.wheel {
+    transform: scale(0.94);
+    @extend .flex-center;
+    transition: $smooth;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 280px !important;
+    width: 280px !important;
+    &:hover .wheel-bg { opacity: 1; }
+}
+
+.wheel-bg {
+    animation: spin 120s linear infinite;
+    animation-play-state: paused;
+    transition: $smooth;
+    position: absolute;
+    object-fit: cover;
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    top: 0;;
+}
+
+.wheel-circle {
+    box-shadow: 0 20px 40px rgba($black, 0.6);
+    border-radius: 50%;
+    background: $black;
+    @extend .center;
+    height: 80px;
+    z-index: -1;
+    width: 80px;
+}
+
+.wheel.spinning {
+    transform: scale(1);
+    .wheel-bg {
+        animation-play-state: running;
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.video {
+    @extend .flex-center;
+    height: 100%;
+    width: 100%;
+    img {
+        @extend .center;
+        height: 80px;
+        width: 80px;
+    }
+    iframe {
+        pointer-events: none;
+        opacity: 0;
+    }
+}

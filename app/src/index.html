@@ -1,56 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-@@include('partials/head.html', {"title": "Traf", "description": "Experimental design lover."})
-<body class="animsition">
-  @@include('partials/navigation.html')
-  <div class="hero unpadded">
-    <h1 class="shift clip">
-      <span class="word-shift">
-        <b class="is-visible">Experimental design lover&nbsp;</b>
-        <b>Dope website creator</b>
-        <b>Moment capturer</b>
-        <b>Cryptocurrency lover</b>
-        <b>Optimistic Nihilist</b>
-        <b>Sweating the details</b>
-        <b>Lifelong learner</b>
-        <b>Available for hire</b>
-      </span>
-    </h1>
-  </div>
-  <div class="content">
-    <div class="wrapper">
-      <a href="/projects.html" class="card card-projects">
-        <h2 class="card-title">Projects</h2>
-        <p class="card-subtitle">Ideas I've brought to life</p>
-      </a>
-      <a href="/clients.html" class="card card-clients">
-        <h2 class="card-title">Clients</h2>
-        <p class="card-subtitle">Things I've made for others</p>
-      </a>
-      <a href="/moments.html" class="card card-moments">
-        <h2 class="card-title">Moments</h2>
-        <p class="card-subtitle">Life behind the lens</p>
-      </a>
-      <a href="/thoughts.html" class="card card-thoughts">
-        <h2 class="card-title">Thoughts</h2>
-        <p class="card-subtitle">Ideas about life &amp; work</p>
-      </a>
-      <a href="/supply.html" class="card card-elemental">
-        <h2 class="card-title">Supply</h2>
-        <p class="card-subtitle">Shop digital goods &amp; freebies</p>
-      </a>
-      <a href="/beats.html" class="card card-beats hide-mobile">
-        <h2 class="card-title">Beats</h2>
-        <p class="card-subtitle">A constant flow of lofi music</p>
-      </a>
-      @@include('partials/cardEmail.html')
-      @@include('partials/cardFooter.html')
+  <html lang="en">
+  @@include('components/head.html')
+  <body>
+    @@include('components/nav.html')
+    <div class="hero">
+      <h1 class="hero-title">Digital product designer, front-end developer, <div class="break"></div><span class="typed"></span></h1>
+      <div class="hero-footer">
+        <div class="links">
+          <a href="/sessions" class="link">Sessions</a>
+          <a href="https://gumroad.com/traf" target="_blank" class="link">Presets</a>
+        </div>
+        <p>Now — <a href="https://joinvera.com" target="_blank" class="vera">Vera</a> &amp; <a href="https://super.so" target="_blank" class="super">Super</a></p>
+      </div>
     </div>
-  </div>
-  @@include('partials/scripts.html')
-  @@include('partials/smallchat.html')
-</body>
+    @@include('components/scripts.html')
+    <script>
+      // Typed headline
+      var options = {
+        strings: [
+          'practicing minimalist.',
+          'cryptocurrency lover.',
+          'lifelong learner.',
+          'detail fanatic.',
+          'co-founder of <a class="text-link vera" href="https://joinvera.com" target="_blank">Vera</a>.',
+          'building something <a class="text-link super" href="https://super.so" target="_blank">Super</a>.',
+          'coding up a new website...'
+        ],
+        backDelay: 1800,
+        backSpeed: 20,
+        typeSpeed: 40,
+      };
+      var typed = new Typed('.typed', options);
+    </script>
+  </body>
 </html>
-
-
-

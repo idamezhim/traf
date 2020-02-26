@@ -1,14 +1,8 @@
-.sessions {
-    .hero {
-        align-items: center;
-    }
-}
-
 .wheel {
+    border-radius: $rounded-circle;
     transform: scale(0.94);
     @extend .flex-center;
     transition: $smooth;
-    border-radius: 50%;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -32,7 +26,7 @@
 
 .wheel-circle {
     box-shadow: 0 20px 40px rgba($black, 0.6);
-    border-radius: 50%;
+    border-radius: $rounded-circle;
     background: $black;
     @extend .center;
     height: 80px;

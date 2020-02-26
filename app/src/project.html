@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+  <html lang="en">
+  @@include('components/head.html', {
+    "title": "Traf | @@projectName",
+    "subtitle": "@@projectTitle",
+    "social": "@@projectName",
+    "url": "@@projectName"
+  })
+  <body class="project">
+    <!-- @@include('components/nav.html') -->
+    <div class="nav">
+      <div class="container">
+        <a href="/#cards" class="button circle expand left"><i data-feather="arrow-left" class="icon"></i><span class="text">All projects</span></a>
+        <h3 class="project-name">@@projectName</h3>
+        <a href="https://@@projectURL" target="_blank" class="button circle expand right"><span class="text">@@projectURL</span><i data-feather="arrow-up-right" class="icon"></i></a>
+      </div>
+    </div>
+    <div class="hero full">
+      <div class="container">
+        <!-- <h1 class="hero-title">@@projectTitle</h1>  -->
+        <!-- <img src="@@webRoot/images/logo-@@projectName.svg" alt="@@projectName logo" class="lax" data-lax-preset="blurOut"> -->
+        <!-- <p class="hero-subtitle">@@projectSubtitle</p> -->
+      </div>
+      <!-- <div class="container down"><i data-feather="arrow-down" class="icon"></i></div> -->
+      <img src="@@webRoot/images/project-@@projectName-0.jpg" class="hero-bg" alt="hero">
+    </div>
+    <div class="project-content">
+      <div class="container">
+        <!-- <img src="@@webRoot/images/project-@@projectName-1.jpg" class="project-img"> -->
+        <img src="@@webRoot/images/project-@@projectName-2.jpg" class="project-img lax" data-lax-preset="fadeInOut blurOut">
+        <img src="@@webRoot/images/project-@@projectName-3.jpg" class="project-img lax" data-lax-preset="fadeInOut blurOut">
+        <img src="@@webRoot/images/project-@@projectName-4.jpg" class="project-img lax" data-lax-preset="fadeInOut blurOut">
+        <img src="@@webRoot/images/project-@@projectName-5.jpg" class="project-img lax" data-lax-preset="fadeInOut blurOut">
+        <img src="@@webRoot/images/project-@@projectName-6.jpg" class="project-img lax" data-lax-preset="fadeInOut blurOut">
+        <img src="@@webRoot/images/project-@@projectName-7.jpg" class="project-img lax" data-lax-preset="fadeInOut blurOut">
+        <img src="@@webRoot/images/project-@@projectName-8.jpg" class="project-img lax" data-lax-preset="fadeInOut blurOut">
+      </div>
+      @@include('components/footer.html')
+    </div>
+    @@include('components/scripts.html')
+  </body>
+</html>

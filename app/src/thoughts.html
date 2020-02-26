@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <html lang="en">
+  @@include('components/head.html', {
+    "title": "Traf | Thoughts",
+    "subtitle": "Simple ideas about life, work, and beyond.",
+    "social": "social",
+    "url": "thoughts"
+  })
+  <body class="thoughts">
+    @@include('components/nav.html')
+    <div class="hero mini">
+        <i data-feather="cloud" class="hero-icon icon lax" data-lax-preset="blurOut-20"></i>
+        <!-- <h1 class="h2 lax" data-lax-preset="blurOut-20">Thoughts</h1> -->
+        <!-- <div class="hero-footer">
+            <div class="container">
+                <p class="title"><span class="white">Thoughts</span><br/>Words — 6,024</p>
+                <i data-feather="chevron-down" class="icon"></i>
+            </div>
+        </div> -->
+    </div>
+    @@include('components/posts.html')
+    @@include('components/email.html')
+    @@include('components/footer.html')
+    @@include('components/scripts.html')
+    <script>
+        $(function(){
+            $('.nav-solo').addClass('hide');
+            $('.email-title').html('Get notified when I write something new &amp; note-worthy');
+        });
+    </script>
+  </body>
+</html>

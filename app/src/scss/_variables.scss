@@ -1,0 +1,41 @@
+// Full height
+$full: calc(var(--vh, 1vh) * 100);
+
+// Transitions
+$smooth: all .4s ease;
+$ease: all .4s cubic-bezier(0.8,0.04,0.4,1);
+$bouncy: all .4s cubic-bezier(0.4,2,0.68,1);
+
+// Border Radii
+$rounded-xs: 4px;
+$rounded-sm: 8px;
+$rounded-md: 12px;
+$rounded-lg: 16px;
+$rounded-xl: 24px;
+$rounded-circle: 50%;
+$rounded-pill: 100px;
+
+// Spacing
+$spacer-xs: 4px;
+$spacer-sm: 8px;
+$spacer-md: 12px;
+$spacer-lg: 16px;
+$spacer-xl: 24px;
+
+// Visibility
+.hide { display: none !important; }
+.show { display: block !important; }
+.invisible {
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+}
+
+// Breakpoints
+$break-mobile: 680px;
+$break-tablet: 1024px;
+.show-mobile { display: none; }
+@media (max-width: $break-mobile) {
+    .hide-mobile { display: none !important; }
+    .show-mobile { display: block !important; }
+}

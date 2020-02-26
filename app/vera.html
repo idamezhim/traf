@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Traf | Vera</title>
+  <meta name="title" content="Traf | Vera">
+  <meta name="description" content="Vera, a simple, reliable way to offset your plastic footprint.">
+  <meta name="keywords" content="james traf, traf">
+  <meta name="author" content="@traf">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Traf | Vera">
+  <meta property="og:description" content="Vera, a simple, reliable way to offset your plastic footprint.">
+  <meta property="og:image" content="https://tr-af.netlify.com/images/Vera.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:url" content="https://tr-af.netlify.com/Vera">
+  <meta name="twitter:site" content="@traf">
+  <meta name="twitter:card" content="summary">
+  <link href="images/thumbnail.jpg" rel="apple-touch-icon">
+  <link href="images/favicon.png" rel="shortcut icon">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+  <body class="project">
+    
+    <div class="nav">
+      <div class="container">
+        <a href="/#cards" class="button circle expand left"><i data-feather="arrow-left" class="icon"></i><span class="text">All projects</span></a>
+        <h3 class="project-name">Vera</h3>
+        <a href="https://joinvera.com" target="_blank" class="button circle expand right"><span class="text">joinvera.com</span><i data-feather="arrow-up-right" class="icon"></i></a>
+      </div>
+    </div>
+    <div class="hero full">
+      <div class="container">
+        <!-- <h1 class="hero-title">Vera, a simple, reliable way to offset your plastic footprint.</h1>  -->
+        <!-- <img src="./images/logo-Vera.svg" alt="Vera logo" class="lax" data-lax-preset="blurOut"> -->
+        <!-- <p class="hero-subtitle">Design & development.</p> -->
+      </div>
+      <!-- <div class="container down"><i data-feather="arrow-down" class="icon"></i></div> -->
+      <img src="./images/project-Vera-0.jpg" class="hero-bg" alt="hero">
+    </div>
+    <div class="project-content">
+      <div class="container">
+        <!-- <img src="./images/project-Vera-1.jpg" class="project-img"> -->
+        <img src="./images/project-Vera-2.jpg" class="project-img lax" data-lax-preset="fadeInOut blurOut">
+        <img src="./images/project-Vera-3.jpg" class="project-img lax" data-lax-preset="fadeInOut blurOut">
+        <img src="./images/project-Vera-4.jpg" class="project-img lax" data-lax-preset="fadeInOut blurOut">
+        <img src="./images/project-Vera-5.jpg" class="project-img lax" data-lax-preset="fadeInOut blurOut">
+        <img src="./images/project-Vera-6.jpg" class="project-img lax" data-lax-preset="fadeInOut blurOut">
+        <img src="./images/project-Vera-7.jpg" class="project-img lax" data-lax-preset="fadeInOut blurOut">
+        <img src="./images/project-Vera-8.jpg" class="project-img lax" data-lax-preset="fadeInOut blurOut">
+      </div>
+      <footer class="footer lax" data-lax-preset="zoomIn-0.96">
+    <div class="container">
+        <div class="footer-row">
+            <a href="/thoughts" class="nav-link">Thoughts</a>
+<a href="/stills" class="nav-link">Stills</a>
+<a href="/sessions" class="nav-link">Sessions</a>
+<a href="/presets" class="nav-link">Presets</a>
+<a href="/contact" class="nav-link">Contact</a>
+        </div>
+        <div class="footer-row">
+            <p class="copyright"><span class="symbol">&copy;</span> 2049</p>
+            <!-- Happy <span id="weekday"></span> -->
+            <div class="footer-logo">
+                <a href="/" class="logo"><img src="./images/logo.svg" alt="logo"/></a>
+                <i data-feather="heart" class="icon"></i>
+            </div>
+            <div class="social-links">
+                <a href="https://twitter.com/traf" target="_blank" class="social-link"><i class="icon" data-feather="twitter"></i></a>
+                <a href="https://instagram.com/traf" target="_blank" class="social-link"><i class="icon" data-feather="instagram"></i></a>
+                <a href="https://dribbble.com/traf" target="_blank" class="social-link dribbble"><img src="./images/icon-dribbble.svg" class="icon"/></a>
+                <a href="mailto:trafj@me.com" class="social-link"><i class="icon" data-feather="at-sign"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/scripts.min.js"></script>
+<script>
+  $(function(){
+
+    $(window).scroll(function(event){
+
+      // Shrink nav on scroll
+      var scroll = $(this).scrollTop();
+      if (scroll > 0){
+          $('.nav').addClass('nav-scrolled');
+      } else {
+          $('.nav').removeClass('nav-scrolled');
+      }
+
+      // Fade elements on scroll
+      var s = $(window).scrollTop(),
+      opacityVal = (s / 600);
+      // $(".hero-footer").css("opacity", 1 - (s / 200));
+      $(".down").css("opacity", 1 - opacityVal);
+
+    });
+
+    // Nav toggle
+    $('.nav-toggle').click(function(){
+      $(this).toggleClass('toggle');
+      $('.nav-more').toggleClass('nav-more-show');
+      $('.nav').toggleClass('nav-in-modal');
+    });
+    
+    // Hide active nav link
+    $('.nav-link[href$="/' + location.pathname.split("/")[1] + '"]').addClass('nav-active');
+
+    // Email form
+    $(".form").submit(function(e) {
+      e.preventDefault();
+      var $form = $(this);
+      $.post($form.attr("action"), $form.serialize()).then(function() {
+          $('.form-content').addClass('form-content-hide');
+          $('.form-success').addClass('form-success-show');
+      });
+    });
+
+    // Get weekday
+    // var d = new Date();
+    // var weekday = new Array(7);
+    // weekday[0] = "Sunday";
+    // weekday[1] = "Monday";
+    // weekday[2] = "Tuesday";
+    // weekday[3] = "Wednesday";
+    // weekday[4] = "Thursday";
+    // weekday[5] = "Friday";
+    // weekday[6] = "Saturday";
+    // var n = weekday[d.getDay()];
+    // document.getElementById("weekday").innerHTML = n;
+
+    // True 100vh
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
+    // Lax JS
+    window.onload = function() {
+	    lax.setup()
+	    const updateLax = () => {
+		    lax.update(window.scrollY)
+		    window.requestAnimationFrame(updateLax)
+	    }
+	    window.requestAnimationFrame(updateLax)
+    }
+
+    // Feather icons
+    feather.replace()
+
+  });
+</script>
+
+  </body>
+</html>
+
+<script>
+    $('.hero-subtitle').append(' Co-founded with <a href="https://lucamarra.co" target="_blank" class="text-link">Luca Marra</a>.');
+</script>

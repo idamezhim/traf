@@ -1,0 +1,105 @@
+.buttons {
+  @extend .flex-center;
+  &:first-child { margin-right: $spacer-md; }
+}
+
+.button {
+  border-radius: $rounded-md;
+  padding: 16px 30px 14px;
+  display: inline-block;
+  transition: $smooth;
+  background: $black;
+  text-align: center;
+  color: $white;
+  @extend .p;
+}
+
+.button.circle {
+  background: rgba($grey, 0.2);
+  @extend .flex-center;
+  border-radius: 30px;
+  position: relative;
+  color: $white;
+  height: 60px;
+  width: 60px;
+  opacity: 1;
+  padding: 0;
+  .icon { color: $white; margin: 0; }
+  &:hover { background: rgba($grey, 0.4); }
+}
+
+.button.expand {
+  background: none;
+  width: auto;
+  .text {
+    pointer-events: none;
+    transition: $smooth;
+    margin-top: -2px;
+    font-size: 14px;
+    opacity: 0;
+  }
+  &:after {
+    // background: $off-black;
+    background: rgba($black, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    transition: $smooth;
+    position: absolute;
+    height: 60px;
+    z-index: -1;
+    content: "";
+    width: 60px;
+  }
+  &:hover {
+    position: relative;
+    background: none;
+    .text { opacity: 1; }
+    &:after {
+      // background: lighten($off-black, 4%);
+      background: rgba($black, 0.2);
+      width: 100%;
+    }
+  }
+}
+
+.button.expand.left {
+  .text { padding: 0 24px 0 12px; }
+  .icon { margin-left: 20px; }
+  &:after { left: 0; }
+  &:hover { transform: translateX(-20px); }
+}
+
+.button.expand.right {
+  .text { padding: 0 12px 0 24px; }
+  .icon { margin-right: 20px; }
+  &:after { right: 0; }
+  &:hover { transform: translateX(20px); }
+}
+
+.text-link {
+  border-bottom: 1px solid $dark-grey;
+  font-family: inherit;
+  padding-bottom: 6px;
+  font-size: inherit;
+  display: inline;
+  color: inherit;
+  &:hover {
+    color: $white;
+    opacity: 1;
+  }
+}
+
+@media (max-width: $break-mobile) {
+
+  .button.expand {
+    width: 50px;
+    .text { display: none }
+    &:after {
+      opacity: 0;
+    }
+  }
+
+  .button.expand.left .icon,
+  .button.expand.right .icon { margin: 0; }
+
+}

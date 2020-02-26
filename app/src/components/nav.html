@@ -1,4 +1,15 @@
 <nav class="nav">
-    <a href="/" class="logo"><img src="@@webRoot/images/logo.svg" alt="logo"/></a>
-    <a href="https://twitter.com/traf" target="_blank" class="handle">@traf</a>
+    <div class="container">
+        @@include('logo.html')
+        <div class="nav-links">
+            <a href="/thoughts" class="nav-link nav-solo hide-mobile">Thoughts</a>
+            <button class="nav-toggle">
+                <div class="lines">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div class="nav-more">@@include('nav-links.html')</div>
 </nav>

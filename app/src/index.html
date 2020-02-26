@@ -1,18 +1,34 @@
 <!DOCTYPE html>
   <html lang="en">
-  @@include('components/head.html')
+  @@include('components/head.html', {
+    "title": "Traf — Designer",
+    "subtitle": "Digital product designer, front-end developer, practicing minimalist. Always creating.",
+    "social": "social",
+    "url": ""
+  })
   <body>
     @@include('components/nav.html')
     <div class="hero">
-      <h1 class="hero-title">Digital product designer, front-end developer, <div class="break"></div><span class="typed"></span></h1>
-      <div class="hero-footer">
-        <div class="links">
-          <a href="/sessions" class="link">Sessions</a>
-          <a href="https://gumroad.com/traf" target="_blank" class="link">Presets</a>
-        </div>
-        <p>Now — <a href="https://joinvera.com" target="_blank" class="vera">Vera</a> &amp; <a href="https://super.so" target="_blank" class="super">Super</a></p>
+      <div class="container lax" data-lax-preset="fadeOut">
+        <h1 class="hero-title">
+          Digital product designer, front-end developer,
+          <div class="break show-mobile"></div>
+          <span class="typed"></span>
+        </h1>
       </div>
+      <div class="container down" id="cards"><i data-feather="arrow-down" class="icon hide-mobile"></i></div>
     </div>
+    <div class="cards container">
+      @@loop('components/card.html', [
+        {"cardName": "vera", "cardTitle": "Vera", "cardSubtitle": "A simple, reliable way to offset your plastic footprint.", "cardSize": "bigger", "cardTheme": "light"},
+        {"cardName": "input", "cardTitle": "Input", "cardSubtitle": "A minimal email client for inbox-zero enthusiasts."},
+        {"cardName": "squish", "cardTitle": "Website redesign for a gourmet gummy company", "cardSubtitle": "Case study"},
+        {"cardName": "ryanrose", "cardTitle": "Design & development for a bespoke clothing brand", "cardSubtitle": "Case study"},
+        {"cardName": "mobydish", "cardTitle": "Design & development for online catering company", "cardSubtitle": "Case study"}
+      ])
+    </div>
+    @@include('components/email.html')
+    @@include('components/footer.html')
     @@include('components/scripts.html')
     <script>
       // Typed headline
@@ -22,9 +38,8 @@
           'cryptocurrency lover.',
           'lifelong learner.',
           'detail fanatic.',
-          'co-founder of <a class="text-link vera" href="https://joinvera.com" target="_blank">Vera</a>.',
-          'building something <a class="text-link super" href="https://super.so" target="_blank">Super</a>.',
-          'coding up a new website...'
+          'co-founder of <a class="text-link" href="https://joinvera.com" target="_blank">Vera</a>.',
+          'freelancer <a class="text-link" href="/contact">available</a> for hire.'
         ],
         backDelay: 1800,
         backSpeed: 20,

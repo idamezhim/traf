@@ -1,0 +1,62 @@
+h1, .h1,
+h2, .h2 {
+  letter-spacing: -1px;
+  font-family: $mono;
+  line-height: 1.8;
+  color: $white;
+}
+
+h1, .h1 { font-size: 32px; }
+h2, .h2 { font-size: 24px; }
+
+// h1.sans {
+//   font-family: $sans;
+//   font-weight: bold;
+//   letter-spacing: -0.5px;
+//   font-size: 80px;
+// }
+
+h3, .h3 {
+  font-family: $sans;
+  font-weight: bold;
+  line-height: 1.6;
+  font-size: 24px;
+}
+
+p, .p {
+  letter-spacing: -0.4px;
+  font-family: $mono;
+  font-size: 16px;
+  color: $grey;
+}
+
+a {
+  letter-spacing: inherit;
+  display: inline-block;
+  transition: $smooth;
+  font-family: $mono;
+  font-size: 14px;
+  color: $white;
+  &:hover { opacity: 0.4; }
+}
+
+@media (max-width: $break-mobile) {
+
+  h1, .h1 {
+    line-height: 1.6;
+    font-size: 28px;
+  }
+
+  h2, .h2 {
+    font-size: 20px;
+  }
+  
+  h3, .h3 {
+    line-height: 1.8;
+  }
+
+  p, .p, a {
+    font-size: 16px;
+  }
+
+}

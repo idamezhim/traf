@@ -1,0 +1,139 @@
+.nav {
+    transition: $smooth;
+    overflow: visible;
+    position: fixed;
+    height: 140px;
+    width: 100%;
+    z-index: 6;
+    top: 0;
+    .container { justify-content: space-between; }
+    .logo { z-index: 6; }
+    .logo, .container, .nav-links, .nav-link {
+        @extend .flex-center;
+        height: 100%;
+    }
+}
+
+.nav-scrolled {
+    box-shadow: 0 10px 20px -10px rgba($black, 0.4);
+    background: rgba($black, 0.8);
+    backdrop-filter: blur(24px);
+    height: 80px;
+}
+
+.nav-link {
+    padding: 0 4px;
+}
+
+.nav-active {
+    text-decoration: line-through;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.nav-toggle {
+    flex-direction: column;
+    @extend .flex-center;
+    margin-right: -30px;
+    position: relative;
+    background: none;
+    height: 100%;
+    width: 80px;
+    z-index: 6;
+    .lines {
+        flex-direction: column;
+        position: relative;
+        display: flex;
+        width: 20px;
+    }
+    .line {
+        border-top: 1px solid $white;
+        transition: $smooth;
+        display: block;
+        width: 100%;
+    }
+    .line-2 {
+        align-self: flex-end;
+        margin-top: 5px;
+        width: 68%;
+    }
+    &:hover {
+        .line { border-top: 1px solid $grey; }
+        .line-2 { width: 20px; }
+    }
+    &.toggle {
+        .line { transition: $ease; }
+        .line-1 { transform: translateY(3px); }
+        .line-2 { opacity: 0; }
+    }
+}
+
+.nav-more {
+    @extend .flex-center;
+    pointer-events: none;
+    transition: $smooth;
+    filter: blur(30px);
+    @extend .center-x;
+    height: 100%;
+    width: auto;
+    opacity: 0;
+    z-index: 8;
+    top: 0;
+    .nav-link {
+        padding: 0 24px;
+        &:hover { opacity: 1 !important; }
+    }
+    &:hover .nav-link { opacity: 0.4; }
+}
+
+.nav-more-show {
+    pointer-events: all;
+    filter: blur(0);
+    opacity: 1;
+}
+
+.nav-in-modal {
+    .nav-solo {
+        pointer-events: none;
+        filter: blur(30px);
+    }
+}
+  
+
+@media (max-width: $break-mobile) {
+
+    .nav {
+        height: 80px;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+    }
+
+    .nav-toggle { margin: 0; }
+
+    .nav-more {
+        background: rgba($black, 0.9);
+        flex-direction: column;
+        transform: none;
+        position: fixed;
+        height: $full;
+        width: 100%;
+        opacity: 0;
+        z-index: 4;
+        left: 0;
+        top: 0;
+        .nav-link {
+            text-align: center;
+            padding: 30px;
+            height: auto;
+            flex: none;
+        }
+    }
+
+    .nav-more-show {
+        opacity: 1;
+    }
+
+}

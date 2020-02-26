@@ -1,12 +1,15 @@
 {
   "name": "traf",
   "version": "1.0.0",
-  "description": "Digital product designer & front-end developer.",
+  "description": "traf",
   "main": "gulpfile.js",
   "author": "@traf",
   "private": true,
   "repository": {
     "url": "https://tr.af"
+  },
+  "scripts": {
+    "build": "gulp build"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",

@@ -1,0 +1,42 @@
+// @import url('https://rsms.me/inter/inter.css');
+
+// Colors
+$black: #000;
+$off-black: #131415;
+$white: #fff;
+$off-white: #f2f3f5;
+$light-grey: #a0adba;
+$grey: #808c99;
+$dark-grey: #27292b;
+$primary: #06f;
+
+// Color classes
+.black { color: $black; }
+.white { color: $white; }
+
+// Fonts
+@font-face {
+    font-family: 'space';
+    src: url('../fonts/space-bold.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'space';
+    src: url('../fonts/space-regular.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'space-mono';
+    src: url('../fonts/space-mono.woff') format('woff');
+    font-style: normal;
+}
+
+$sans: 'space', sans-serif;
+$mono: 'space-mono', monospace;
+
+// Highlight selection
+*::-webkit-selection { background-color: $primary; color: $white; }
+*::-moz-selection { background-color: $primary; color: $white; }
+*::selection { background-color: $primary; color: $white; }

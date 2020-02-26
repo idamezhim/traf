@@ -3,42 +3,196 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <title>Traf</title>
-  <meta name="title" content="Traf">
-  <meta name="description" content="Digital product designer & front-end developer.">
+  <title>Traf — Designer</title>
+  <meta name="title" content="Traf — Designer">
+  <meta name="description" content="Digital product designer, front-end developer, practicing minimalist. Always creating.">
   <meta name="keywords" content="james traf, traf">
   <meta name="author" content="@traf">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Traf">
-  <meta property="og:description" content="Digital product designer & front-end developer.">
-  <meta property="og:image" content="https://tr.af/images/social.jpg">
+  <meta property="og:title" content="Traf — Designer">
+  <meta property="og:description" content="Digital product designer, front-end developer, practicing minimalist. Always creating.">
+  <meta property="og:image" content="https://tr-af.netlify.com/images/social.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="1200">
-  <meta property="og:url" content="https://tr.af">
+  <meta property="og:url" content="https://tr-af.netlify.com/">
   <meta name="twitter:site" content="@traf">
   <meta name="twitter:card" content="summary">
+  <link href="images/thumbnail.jpg" rel="apple-touch-icon">
   <link href="images/favicon.png" rel="shortcut icon">
   <link href="css/styles.css" rel="stylesheet">
 </head>
   <body>
     <nav class="nav">
-    <a href="/" class="logo"><img src="./images/logo.svg" alt="logo"/></a>
-    <a href="https://twitter.com/traf" target="_blank" class="handle">@traf</a>
+    <div class="container">
+        <a href="/" class="logo"><img src="./images/logo.svg" alt="logo"/></a>
+        <div class="nav-links">
+            <a href="/thoughts" class="nav-link nav-solo hide-mobile">Thoughts</a>
+            <button class="nav-toggle">
+                <div class="lines">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div class="nav-more"><a href="/thoughts" class="nav-link">Thoughts</a>
+<a href="/stills" class="nav-link">Stills</a>
+<a href="/sessions" class="nav-link">Sessions</a>
+<a href="/presets" class="nav-link">Presets</a>
+<a href="/contact" class="nav-link">Contact</a></div>
 </nav>
     <div class="hero">
-      <h1 class="hero-title">Digital product designer, front-end developer, <div class="break"></div><span class="typed"></span></h1>
-      <div class="hero-footer">
-        <div class="links">
-          <a href="/sessions" class="link">Sessions</a>
-          <a href="https://gumroad.com/traf" target="_blank" class="link">Presets</a>
-        </div>
-        <p>Now — <a href="https://joinvera.com" target="_blank" class="vera">Vera</a> &amp; <a href="https://super.so" target="_blank" class="super">Super</a></p>
+      <div class="container lax" data-lax-preset="fadeOut">
+        <h1 class="hero-title">
+          Digital product designer, front-end developer,
+          <div class="break show-mobile"></div>
+          <span class="typed"></span>
+        </h1>
       </div>
+      <div class="container down" id="cards"><i data-feather="arrow-down" class="icon hide-mobile"></i></div>
     </div>
+    <div class="cards container">
+      <a href="/vera" class="card bigger light lax" data-lax-preset="fadeIn">
+    <div class="card-content">
+        <div><img src="./images/logo-vera.svg" class="card-logo" alt="vera logo"></div>
+        <div>
+            <h3 class="card-title">Vera</h3>
+            <p class="card-subtitle">A simple, reliable way to offset your plastic footprint.</p>
+        </div>
+    </div>
+    <img src="./images/card-vera.jpg" class="card-bg" alt="vera">
+</a><a href="/input" class="card @@cardSize @@cardTheme lax" data-lax-preset="fadeIn">
+    <div class="card-content">
+        <div><img src="./images/logo-input.svg" class="card-logo" alt="input logo"></div>
+        <div>
+            <h3 class="card-title">Input</h3>
+            <p class="card-subtitle">A minimal email client for inbox-zero enthusiasts.</p>
+        </div>
+    </div>
+    <img src="./images/card-input.jpg" class="card-bg" alt="input">
+</a><a href="/squish" class="card @@cardSize @@cardTheme lax" data-lax-preset="fadeIn">
+    <div class="card-content">
+        <div><img src="./images/logo-squish.svg" class="card-logo" alt="squish logo"></div>
+        <div>
+            <h3 class="card-title">Website redesign for a gourmet gummy company</h3>
+            <p class="card-subtitle">Case study</p>
+        </div>
+    </div>
+    <img src="./images/card-squish.jpg" class="card-bg" alt="squish">
+</a><a href="/ryanrose" class="card @@cardSize @@cardTheme lax" data-lax-preset="fadeIn">
+    <div class="card-content">
+        <div><img src="./images/logo-ryanrose.svg" class="card-logo" alt="ryanrose logo"></div>
+        <div>
+            <h3 class="card-title">Design & development for a bespoke clothing brand</h3>
+            <p class="card-subtitle">Case study</p>
+        </div>
+    </div>
+    <img src="./images/card-ryanrose.jpg" class="card-bg" alt="ryanrose">
+</a><a href="/mobydish" class="card @@cardSize @@cardTheme lax" data-lax-preset="fadeIn">
+    <div class="card-content">
+        <div><img src="./images/logo-mobydish.svg" class="card-logo" alt="mobydish logo"></div>
+        <div>
+            <h3 class="card-title">Design & development for online catering company</h3>
+            <p class="card-subtitle">Case study</p>
+        </div>
+    </div>
+    <img src="./images/card-mobydish.jpg" class="card-bg" alt="mobydish">
+</a>
+    </div>
+    <div class="email container small">
+    <h2 class="email-title lax" data-lax-preset="fadeIn">Get notified when I launch something <span class="hide-mobile">new &amp; note-worthy</span></h2>
+    <form class="form lax" name="traf" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-lax-preset="fadeIn">
+    <div class="form-success">
+        <p>You're in 🎉</p>
+    </div>
+    <div class="form-content">
+        <input class="invisible" name="bot-field"/>
+        <input class="input" placeholder="What's your email?" type="email" name="email" required/>
+        <span class="cursor hide-mobile"></span>
+        <button class="submit" type="submit"><i class="icon" data-feather="arrow-right"></i></button>
+    </div>
+</form>
+</div>
+    <footer class="footer lax" data-lax-preset="zoomIn-0.96">
+    <div class="container">
+        <div class="footer-row">
+            <a href="/thoughts" class="nav-link">Thoughts</a>
+<a href="/stills" class="nav-link">Stills</a>
+<a href="/sessions" class="nav-link">Sessions</a>
+<a href="/presets" class="nav-link">Presets</a>
+<a href="/contact" class="nav-link">Contact</a>
+        </div>
+        <div class="footer-row">
+            <p class="copyright"><span class="symbol">&copy;</span> 2049</p>
+            <!-- Happy <span id="weekday"></span> -->
+            <div class="footer-logo">
+                <a href="/" class="logo"><img src="./images/logo.svg" alt="logo"/></a>
+                <i data-feather="heart" class="icon"></i>
+            </div>
+            <div class="social-links">
+                <a href="https://twitter.com/traf" target="_blank" class="social-link"><i class="icon" data-feather="twitter"></i></a>
+                <a href="https://instagram.com/traf" target="_blank" class="social-link"><i class="icon" data-feather="instagram"></i></a>
+                <a href="https://dribbble.com/traf" target="_blank" class="social-link dribbble"><img src="./images/icon-dribbble.svg" class="icon"/></a>
+                <a href="mailto:trafj@me.com" class="social-link"><i class="icon" data-feather="at-sign"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="js/scripts.min.js"></script>
 <script>
   $(function(){
+
+    $(window).scroll(function(event){
+
+      // Shrink nav on scroll
+      var scroll = $(this).scrollTop();
+      if (scroll > 0){
+          $('.nav').addClass('nav-scrolled');
+      } else {
+          $('.nav').removeClass('nav-scrolled');
+      }
+
+      // Fade elements on scroll
+      var s = $(window).scrollTop(),
+      opacityVal = (s / 600);
+      // $(".hero-footer").css("opacity", 1 - (s / 200));
+      $(".down").css("opacity", 1 - opacityVal);
+
+    });
+
+    // Nav toggle
+    $('.nav-toggle').click(function(){
+      $(this).toggleClass('toggle');
+      $('.nav-more').toggleClass('nav-more-show');
+      $('.nav').toggleClass('nav-in-modal');
+    });
+    
+    // Hide active nav link
+    $('.nav-link[href$="/' + location.pathname.split("/")[1] + '"]').addClass('nav-active');
+
+    // Email form
+    $(".form").submit(function(e) {
+      e.preventDefault();
+      var $form = $(this);
+      $.post($form.attr("action"), $form.serialize()).then(function() {
+          $('.form-content').addClass('form-content-hide');
+          $('.form-success').addClass('form-success-show');
+      });
+    });
+
+    // Get weekday
+    // var d = new Date();
+    // var weekday = new Array(7);
+    // weekday[0] = "Sunday";
+    // weekday[1] = "Monday";
+    // weekday[2] = "Tuesday";
+    // weekday[3] = "Wednesday";
+    // weekday[4] = "Thursday";
+    // weekday[5] = "Friday";
+    // weekday[6] = "Saturday";
+    // var n = weekday[d.getDay()];
+    // document.getElementById("weekday").innerHTML = n;
 
     // True 100vh
     let vh = window.innerHeight * 0.01;
@@ -47,6 +201,16 @@
       let vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
+
+    // Lax JS
+    window.onload = function() {
+	    lax.setup()
+	    const updateLax = () => {
+		    lax.update(window.scrollY)
+		    window.requestAnimationFrame(updateLax)
+	    }
+	    window.requestAnimationFrame(updateLax)
+    }
 
     // Feather icons
     feather.replace()
@@ -62,9 +226,8 @@
           'cryptocurrency lover.',
           'lifelong learner.',
           'detail fanatic.',
-          'co-founder of <a class="text-link vera" href="https://joinvera.com" target="_blank">Vera</a>.',
-          'building something <a class="text-link super" href="https://super.so" target="_blank">Super</a>.',
-          'coding up a new website...'
+          'co-founder of <a class="text-link" href="https://joinvera.com" target="_blank">Vera</a>.',
+          'freelancer <a class="text-link" href="/contact">available</a> for hire.'
         ],
         backDelay: 1800,
         backSpeed: 20,

@@ -1,0 +1,59 @@
+// Container
+.container {
+  max-width: 88%;
+  margin: 0 auto;
+  width: 1280px;
+  transition: $smooth;
+}
+
+.container.large { width: 1000px !important; }
+.container.medium { width: 680px; }
+.container.small { width: 420px; }
+
+// Grid
+.row {
+  flex-direction: row;
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+}
+
+// Centering
+.flex-center {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.center {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%; top: 50%;
+  position: absolute;
+}
+
+.center-x {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+}
+
+.center-y {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+}
+
+@media (max-width: $break-mobile) {
+
+  .row {
+      flex-direction: column;
+  }
+
+}

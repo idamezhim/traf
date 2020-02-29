@@ -1,0 +1,121 @@
+.email {
+    padding: 200px 0 180px;
+    text-align: center;
+}
+
+.form {
+    margin: 30px auto 0;
+    position: relative;
+    height: 60px;
+    width: 250px;
+}
+
+.form-content {
+    transition: $smooth;
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    left: 10px;
+}
+
+.form-content-hide,
+.form-success {
+    pointer-events: none;
+    filter: blur(20px);
+    opacity: 0;
+}
+
+.form-success {
+    @extend .flex-center;
+    padding-bottom: 2px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    p {
+        font-size: 16px;
+        color: $white;
+    }
+}
+
+.form-success-show {
+    pointer-events: all;
+    filter: blur(0);
+    opacity: 1;
+}
+
+.input {
+    padding: 10px 0 10px 2px;
+    caret-color: $primary;
+    background: none;
+    height: 100%;
+    width: 190px;
+    &:focus + .cursor { opacity: 0; }
+    &::placeholder { color: $grey; }
+}
+
+.submit {
+    transition: $smooth;
+    height: 100%;
+    color: $grey;
+    width: 60px;
+    .icon { margin: -2px 0 0 0; }
+    &:hover {
+        transform: translateX(4px);
+        color: $white;
+    }
+}
+
+.cursor {
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+    pointer-events: none;
+    background: $primary;
+    position: absolute;
+    height: 24px;
+    width: 1px;
+    left: -6px;
+    top: 18px;
+}
+
+@keyframes blink { from, to { background: transparent; } 50% { background: $primary; } }
+@-moz-keyframes blink { from, to { background: transparent; } 50% { background: $primary; } }
+@-webkit-keyframes blink { from, to { background: transparent; } 50% { background: $primary; } }
+
+@media (max-width: $break-mobile) {
+
+    .email {
+        background: rgba($white, 0.06);
+        margin: 30px auto !important;
+        justify-content: center;
+        flex-direction: column;
+        width: 100% !important;
+        align-items: center;
+        padding: 0 40px;
+        display: flex;
+        height: 320px;
+    }
+
+    .form, .input, .submit {
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .form {
+        flex-direction: column;
+        margin: 20px auto 0;
+        left: auto;
+    }
+
+    .form-content {
+        flex-direction: column;
+        left: auto;
+    }
+
+    .submit {
+        margin: 20px auto 0;
+    }
+
+}

@@ -1,6 +1,5 @@
 .nav {
     transition: $smooth;
-    background: $black;
     position: fixed;
     height: 140px;
     width: 100%;
@@ -29,14 +28,21 @@
     &:last-child { padding-right: 0; }
 }
 
+.nav-inactive {
+    text-decoration: line-through;
+    pointer-events: none;
+    color: $grey;
+}
+
 .nav-scrolled {
+    background: $black;
     height: 100px;
 }
 
 @media (max-width: $break-mobile) {
 
     .nav {
-      height: 100px;
+      height: 80px;
     }
 
 }

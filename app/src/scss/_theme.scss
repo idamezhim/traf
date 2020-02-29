@@ -1,6 +1,6 @@
 // Colors
 $black: #000;
-$dark-grey: #27292b;
+$dark-grey: #18191B;
 $white: #fff;
 $grey: #808c99;
 $primary: #06f;
@@ -8,7 +8,21 @@ $primary: #06f;
 // Fonts
 @font-face {
     font-family: 'space';
-    src: url('../fonts/space.woff') format('woff');
+    src: url('../fonts/space-regular.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
-$font: 'space', monospace;
+@font-face {
+    font-family: 'space';
+    src: url('../fonts/space-bold.woff') format('woff');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'space-mono';
+    src: url('../fonts/space-mono.woff') format('woff');
+    font-style: normal;
+}
+
+$font: 'space', sans-serif;
+$font-mono: 'space-mono', monospace;

@@ -5,8 +5,8 @@
 
     // Shrink nav on scroll
     $(window).scroll(function(event){
-      var scroll = $(this).scrollTop();
-      if (scroll > 0){
+      var s = $(window).scrollTop();
+      if (s > 0){
           $('.nav').addClass('nav-scrolled');
       } else {
           $('.nav').removeClass('nav-scrolled');
@@ -16,13 +16,23 @@
     // Active nav link
     $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('hide');
 
+    // Email form
+    // $(".form").submit(function(e) {
+    //   e.preventDefault();
+    //   var $form = $(this);
+    //   $.post($form.attr("action"), $form.serialize()).then(function() {
+    //       $('.form-content').addClass('form-content-hide');
+    //       $('.form-success').addClass('form-success-show');
+    //   });
+    // });
+
     // True 100vh
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-    window.addEventListener('resize', () => {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    });
+    // let vh = window.innerHeight * 0.01;
+    // document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // window.addEventListener('resize', () => {
+    //   let vh = window.innerHeight * 0.01;
+    //   document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // });
 
     // Lax JS
     window.onload = function() {

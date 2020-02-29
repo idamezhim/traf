@@ -6,17 +6,15 @@
   <title>Traf — Thoughts</title>
   <meta name="title" content="Traf — Thoughts">
   <meta name="description" content="Digital product designer & front-end developer.">
-  <meta name="keywords" content="james traf, traf">
+  <meta name="keywords" content="james traf, traf, design, designer">
   <meta name="author" content="@traf">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Traf — Thoughts">
   <meta property="og:description" content="Digital product designer & front-end developer.">
   <meta property="og:image" content="https://tr.af/images/social.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="1200">
   <meta property="og:url" content="https://tr.af/thoughts">
   <meta name="twitter:site" content="@traf">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <link href="images/favicon.png" rel="shortcut icon">
   <link href="css/styles.css" rel="stylesheet">
 </head>
@@ -25,9 +23,9 @@
     <div class="container">
         <a href="/" class="logo"><img src="./images/logo.svg" alt="traf"/></a>
         <div class="nav-links">
-            <a href="/thoughts" class="nav-link">Thoughts</a>
-            <a href="/sessions" class="nav-link">Sessions</a>
-            <a href="https://twitter.com/traf" class="nav-link handle" target="_blank">@traf</a>
+            <a href="/thoughts" class="nav-link nav-inactive">Thoughts</a>
+            <a href="/sessions" class="nav-link hide-mobile">Sessions</a>
+            <a href="https://twitter.com/traf" class="nav-link" target="_blank">@traf</a>
         </div>
     </div>
 </nav>
@@ -81,8 +79,8 @@
 
     // Shrink nav on scroll
     $(window).scroll(function(event){
-      var scroll = $(this).scrollTop();
-      if (scroll > 0){
+      var s = $(window).scrollTop();
+      if (s > 0){
           $('.nav').addClass('nav-scrolled');
       } else {
           $('.nav').removeClass('nav-scrolled');
@@ -92,13 +90,23 @@
     // Active nav link
     $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('hide');
 
+    // Email form
+    // $(".form").submit(function(e) {
+    //   e.preventDefault();
+    //   var $form = $(this);
+    //   $.post($form.attr("action"), $form.serialize()).then(function() {
+    //       $('.form-content').addClass('form-content-hide');
+    //       $('.form-success').addClass('form-success-show');
+    //   });
+    // });
+
     // True 100vh
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-    window.addEventListener('resize', () => {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    });
+    // let vh = window.innerHeight * 0.01;
+    // document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // window.addEventListener('resize', () => {
+    //   let vh = window.innerHeight * 0.01;
+    //   document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // });
 
     // Lax JS
     window.onload = function() {

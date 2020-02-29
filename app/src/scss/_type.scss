@@ -1,11 +1,18 @@
 h1, p, a {
-    font-family: $font;
+    font-family: $font-mono;
     line-height: 1.8;
 }
 
 h1 {
     letter-spacing: -1px;
     font-size: 30px;
+    color: $white;
+}
+
+h2 {
+    font-family: $font;
+    font-size: 24px;
+    font-weight: bold;
     color: $white;
 }
 
@@ -34,10 +41,21 @@ a {
     &:hover { color: $white; }
 }
 
+.link-icon {
+    @extend .flex-center;
+    color: $grey;
+    .icon {
+        margin: 2px 0 0 10px;
+        height: 18px;
+        width: 18px;
+    }
+    &:hover { color: $white; }
+}
+
 @media (max-width: $break-mobile) {
 
     h1 {
-      font-size: 20px;
+      font-size: 22px;
     }
     
 }

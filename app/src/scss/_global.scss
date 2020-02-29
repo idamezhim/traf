@@ -4,7 +4,12 @@ $ease: all .4s cubic-bezier(0.8,0.04,0.4,1);
 $bouncy: all .4s cubic-bezier(0.4,2,0.68,1);
 
 // 100vh height
-$full: calc(var(--vh, 1vh) * 100);
+// $full: calc(var(--vh, 1vh) * 100);
+
+// Border Radii
+$rounded-sm: 4px;
+$rounded-md: 8px;
+$rounded-lg: 12px;
 
 // Centering
 .flex-center {
@@ -39,3 +44,6 @@ $full: calc(var(--vh, 1vh) * 100);
 
 // Media queries
 $break-mobile: 600px;
+@media (max-width: $break-mobile) {
+    .hide-mobile { display: none !important; }
+}

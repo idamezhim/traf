@@ -3,15 +3,17 @@
     @@include('components/head.html', { "title": "Traf — Sessions", "url": "/sessions" })
     <body class="sessions animsition">
         @@include('components/nav.html')
-        <div class="hero">
-            <div class="wheel">
-                <div class="wheel-circle"></div>
-                <div class="video" data-video="5qap5aO4i9A" data-autoplay="0" data-loop="1" id="youtube-audio"></div>
-                <img class="wheel-bg" src="@@webRoot/images/sessions.jpg" alt="lofi">
-            </div>
-            <div class="hero-footer">
-                <p>Sessions</p>
-                <p>Lofi — 01</p>
+        <div class="hero centered">
+            <div class="container">
+                <div class="wheel">
+                    <div class="wheel-circle"></div>
+                    <div class="video" data-video="5qap5aO4i9A" data-autoplay="0" data-loop="1" id="youtube-audio"></div>
+                    <img class="wheel-bg" src="@@webRoot/images/sessions.jpg" alt="lofi">
+                </div>
+                <div class="hero-footer">
+                    <p>Lofi — 01</p>
+                    <a href="https://youtu.be/5qap5aO4i9A" target="_blank" class="link-icon">Source <i data-feather="arrow-up-right" class="icon"></i></a>
+                </div>
             </div>
         </div>
         @@include('components/scripts.html')

@@ -6,17 +6,15 @@
   <title>Traf</title>
   <meta name="title" content="Traf">
   <meta name="description" content="Digital product designer & front-end developer.">
-  <meta name="keywords" content="james traf, traf">
+  <meta name="keywords" content="james traf, traf, design, designer">
   <meta name="author" content="@traf">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Traf">
   <meta property="og:description" content="Digital product designer & front-end developer.">
   <meta property="og:image" content="https://tr.af/images/social.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="1200">
   <meta property="og:url" content="https://tr.af/">
   <meta name="twitter:site" content="@traf">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <link href="images/favicon.png" rel="shortcut icon">
   <link href="css/styles.css" rel="stylesheet">
 </head>
@@ -25,23 +23,77 @@
     <div class="container">
         <a href="/" class="logo"><img src="./images/logo.svg" alt="traf"/></a>
         <div class="nav-links">
-            <a href="/thoughts" class="nav-link">Thoughts</a>
-            <a href="/sessions" class="nav-link">Sessions</a>
-            <a href="https://twitter.com/traf" class="nav-link handle" target="_blank">@traf</a>
+            <a href="/thoughts" class="nav-link nav-inactive">Thoughts</a>
+            <a href="/sessions" class="nav-link hide-mobile">Sessions</a>
+            <a href="https://twitter.com/traf" class="nav-link" target="_blank">@traf</a>
         </div>
     </div>
 </nav>
     <div class="hero">
-      <div class="container">
-        <h1 class="hero-title">Digital product designer, front-end developer, <div class="break"></div><span class="typed"></span></h1>
+      <div class="container lax">
+        <h1 class="hero-title lax" data-lax-preset="fadeOut">Digital product designer, front-end developer, <div class="break"></div><span class="typed"></span></h1>
         <div class="hero-footer">
           <p>Projects <i data-feather="chevron-down" class="icon"></i></p>
-          <!-- <p>Now — <a href="https://joinvera.com" target="_blank" class="vera">Vera</a> &amp; <a href="https://super.so" target="_blank" class="super">Super</a></p> -->
         </div>
       </div>
     </div>
-    <div class="content">
-
+    <div class="projects">
+      <a href="https://joinvera.com" target="_blank" class="project project-Vera">
+    <div class="container lax" data-lax-preset="fadeIn zoomIn-0.94">
+        <div class="project-text">
+            <h2 class="project-title">Vera</h2>
+            <p class="project-subtitle">A simple, reliable way to offset your plastic footprint.</p>
+        </div>
+        <div class="project-logo">
+            <i data-feather="arrow-up-right" class="project-icon icon"></i>
+            <img class="project-img" src="./images/logo-Vera.svg" alt="Vera">
+        </div>
+    </div>
+</a><a href="https://super.so" target="_blank" class="project project-Super">
+    <div class="container lax" data-lax-preset="fadeIn zoomIn-0.94">
+        <div class="project-text">
+            <h2 class="project-title">Super</h2>
+            <p class="project-subtitle">Easily add custom domains & analytics to your Notion docs.</p>
+        </div>
+        <div class="project-logo">
+            <i data-feather="arrow-up-right" class="project-icon icon"></i>
+            <img class="project-img" src="./images/logo-Super.svg" alt="Super">
+        </div>
+    </div>
+</a><a href="https://exodus-redesign.netlify.com" target="_blank" class="project project-Exodus">
+    <div class="container lax" data-lax-preset="fadeIn zoomIn-0.94">
+        <div class="project-text">
+            <h2 class="project-title">Exodus</h2>
+            <p class="project-subtitle">Unofficial redesign of the exodus.io website.</p>
+        </div>
+        <div class="project-logo">
+            <i data-feather="arrow-up-right" class="project-icon icon"></i>
+            <img class="project-img" src="./images/logo-Exodus.svg" alt="Exodus">
+        </div>
+    </div>
+</a><a href="https://ryanandrose.com" target="_blank" class="project project-R&R">
+    <div class="container lax" data-lax-preset="fadeIn zoomIn-0.94">
+        <div class="project-text">
+            <h2 class="project-title">R&R</h2>
+            <p class="project-subtitle">Brand & website for modern bespoke brand.</p>
+        </div>
+        <div class="project-logo">
+            <i data-feather="arrow-up-right" class="project-icon icon"></i>
+            <img class="project-img" src="./images/logo-R&R.svg" alt="R&R">
+        </div>
+    </div>
+</a><a href="https://configtree.co" target="_blank" class="project project-ConfigTree">
+    <div class="container lax" data-lax-preset="fadeIn zoomIn-0.94">
+        <div class="project-text">
+            <h2 class="project-title">ConfigTree</h2>
+            <p class="project-subtitle">Brand & website for configuration management software.</p>
+        </div>
+        <div class="project-logo">
+            <i data-feather="arrow-up-right" class="project-icon icon"></i>
+            <img class="project-img" src="./images/logo-ConfigTree.svg" alt="ConfigTree">
+        </div>
+    </div>
+</a>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="js/scripts.min.js"></script>
@@ -50,8 +102,8 @@
 
     // Shrink nav on scroll
     $(window).scroll(function(event){
-      var scroll = $(this).scrollTop();
-      if (scroll > 0){
+      var s = $(window).scrollTop();
+      if (s > 0){
           $('.nav').addClass('nav-scrolled');
       } else {
           $('.nav').removeClass('nav-scrolled');
@@ -61,13 +113,23 @@
     // Active nav link
     $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('hide');
 
+    // Email form
+    // $(".form").submit(function(e) {
+    //   e.preventDefault();
+    //   var $form = $(this);
+    //   $.post($form.attr("action"), $form.serialize()).then(function() {
+    //       $('.form-content').addClass('form-content-hide');
+    //       $('.form-success').addClass('form-success-show');
+    //   });
+    // });
+
     // True 100vh
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-    window.addEventListener('resize', () => {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    });
+    // let vh = window.innerHeight * 0.01;
+    // document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // window.addEventListener('resize', () => {
+    //   let vh = window.innerHeight * 0.01;
+    //   document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // });
 
     // Lax JS
     window.onload = function() {

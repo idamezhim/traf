@@ -4,16 +4,21 @@
   <body class="animsition">
     @@include('components/nav.html')
     <div class="hero">
-      <div class="container">
-        <h1 class="hero-title">Digital product designer, front-end developer, <div class="break"></div><span class="typed"></span></h1>
+      <div class="container lax">
+        <h1 class="hero-title lax" data-lax-preset="fadeOut">Digital product designer, front-end developer, <div class="break"></div><span class="typed"></span></h1>
         <div class="hero-footer">
           <p>Projects <i data-feather="chevron-down" class="icon"></i></p>
-          <!-- <p>Now — <a href="https://joinvera.com" target="_blank" class="vera">Vera</a> &amp; <a href="https://super.so" target="_blank" class="super">Super</a></p> -->
         </div>
       </div>
     </div>
-    <div class="content">
-
+    <div class="projects">
+      @@loop('components/project.html', [
+        { "name": "Vera", "text": "A simple, reliable way to offset your plastic footprint.", "url": "joinvera.com" },
+        { "name": "Super", "text": "Easily add custom domains & analytics to your Notion docs.", "url": "super.so" },
+        { "name": "Exodus", "text": "Unofficial redesign of the exodus.io website.", "url": "exodus-redesign.netlify.com" },
+        { "name": "R&R", "text": "Brand & website for modern bespoke brand.", "url": "ryanandrose.com" },
+        { "name": "ConfigTree", "text": "Brand & website for configuration management software.", "url": "configtree.co" }
+      ])
     </div>
     @@include('components/scripts.html')
     <script>

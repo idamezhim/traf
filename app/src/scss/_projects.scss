@@ -1,0 +1,89 @@
+.project {
+    border-bottom: 1px solid $dark-grey;
+    transition: background .4s ease;
+    position: relative;
+    display: block;
+    height: 240px;
+    width: 100%;
+    .container {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        height: 100%;
+    }
+    &:first-child { border-top: 1px solid $dark-grey; }
+    &:hover {
+        background: rgba($grey, 0.1);
+        .project-logo {
+            .project-icon {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            .project-img {
+                transform: scale(0);
+            }
+        }
+    }
+}
+
+.project-title {
+    margin-bottom: 10px;
+    transition: $smooth;
+}
+
+.project-logo {
+    @extend .flex-center;
+    .project-icon {
+        transform: translate(-30px, 20px) scale(0);
+        pointer-events: none;
+        transition: $smooth;
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        opacity: 0;
+    }
+    .project-img {
+        transition: $smooth;
+    }
+}
+
+.project-Vera:hover { .project-title, .project-icon { color: #37b8d0; } }
+.project-Super:hover { .project-title, .project-icon { color: #f0bd66; } }
+.project-Exodus:hover { .project-title, .project-icon { color: #4849ff; } }
+.project-R\&R:hover { .project-title, .project-icon { color: #ca5c62; } }
+.project-ConfigTree:hover { .project-title, .project-icon { color: #008092; } }
+
+@media (max-width: $break-mobile) {
+
+    .project {
+        height: 340px;
+        .container {
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    .project-text {
+        margin-top: 40px;
+        order: 2;
+    }
+
+    .project-subtitle {
+        max-width: 80%;
+    }
+
+    .project-icon,
+    .project-img {
+        transform: none !important;
+    }
+
+    .project-icon {
+        height: 20px !important;
+        width: 20px !important;
+        opacity: 1 !important;
+        color: $grey;
+        top: 30px;
+        right: 0;
+    }
+    
+}

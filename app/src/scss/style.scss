@@ -1,8 +1,11 @@
 @import 'reset';
 @import 'theme';
 @import 'global';
+@import 'email';
+@import 'footer';
 @import 'hero';
 @import 'nav';
+@import 'projects';
 @import 'sessions';
 @import 'thoughts';
 @import 'type';
@@ -25,14 +28,6 @@ body {
   width: 1280px;
 }
 
-.content {
-  background: $black;
-  position: relative;
-  width: 100%;
-  top: $full;
-  height: 2000px;
-}
-
 .break {
   display: none;
 }
@@ -48,6 +43,10 @@ body {
 }
 
 @media (max-width: $break-mobile) {
+
+  .container {
+    max-width: 85%;
+  }
 
   .logo {
     width: 60px;

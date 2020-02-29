@@ -3,6 +3,19 @@
 <script>
   $(function(){
 
+    // Shrink nav on scroll
+    $(window).scroll(function(event){
+      var scroll = $(this).scrollTop();
+      if (scroll > 0){
+          $('.nav').addClass('nav-scrolled');
+      } else {
+          $('.nav').removeClass('nav-scrolled');
+      }
+    });
+
+    // Active nav link
+    $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('hide');
+
     // True 100vh
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -11,8 +24,25 @@
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
 
+    // Lax JS
+    window.onload = function() {
+      lax.setup()
+      const updateLax = () => {
+        lax.update(window.scrollY)
+        window.requestAnimationFrame(updateLax)
+      }
+      window.requestAnimationFrame(updateLax)
+    }
+
     // Feather icons
     feather.replace()
+
+    // Animsition
+    $(".animsition").animsition({
+        linkElement: 'a:not([target="_blank"]):not([href^="#"])',
+        outDuration: 600,
+        inDuration: 600,
+    });
 
   });
 </script>

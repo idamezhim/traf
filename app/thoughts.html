@@ -3,24 +3,24 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <title>Traf</title>
-  <meta name="title" content="Traf">
+  <title>Traf — Thoughts</title>
+  <meta name="title" content="Traf — Thoughts">
   <meta name="description" content="Digital product designer & front-end developer.">
   <meta name="keywords" content="james traf, traf">
   <meta name="author" content="@traf">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Traf">
+  <meta property="og:title" content="Traf — Thoughts">
   <meta property="og:description" content="Digital product designer & front-end developer.">
   <meta property="og:image" content="https://tr.af/images/social.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="1200">
-  <meta property="og:url" content="https://tr.af/">
+  <meta property="og:url" content="https://tr.af/thoughts">
   <meta name="twitter:site" content="@traf">
   <meta name="twitter:card" content="summary">
   <link href="images/favicon.png" rel="shortcut icon">
   <link href="css/styles.css" rel="stylesheet">
 </head>
-  <body class="animsition">
+  <body class="thoughts">
     <nav class="nav">
     <div class="container">
         <a href="/" class="logo"><img src="./images/logo.svg" alt="traf"/></a>
@@ -31,18 +31,49 @@
         </div>
     </div>
 </nav>
-    <div class="hero">
-      <div class="container">
-        <h1 class="hero-title">Digital product designer, front-end developer, <div class="break"></div><span class="typed"></span></h1>
-        <div class="hero-footer">
-          <p>Projects <i data-feather="chevron-down" class="icon"></i></p>
-          <!-- <p>Now — <a href="https://joinvera.com" target="_blank" class="vera">Vera</a> &amp; <a href="https://super.so" target="_blank" class="super">Super</a></p> -->
-        </div>
-      </div>
+    <div class="hero small">
+        <i data-feather="cloud" class="hero-icon icon lax" data-lax-preset="blurOut-20"></i>
+        <!-- <h1 class="h2 lax" data-lax-preset="blurOut-20">Thoughts</h1> -->
+        <!-- <div class="hero-footer">
+            <div class="container">
+                <p class="title"><span class="white">Thoughts</span><br/>Words — 6,024</p>
+                <i data-feather="chevron-down" class="icon"></i>
+            </div>
+        </div> -->
     </div>
-    <div class="content">
-
-    </div>
+    <div class="posts container">
+    <a href="/@@postURL" class="post-item lax" data-lax-preset="fadeInOut zoomInOut-0.9">
+    <p class="post-item-title">Side projects 101</p>
+    <div class="line"></div>
+    <p class="post-item-date">February 02, 2020</p>
+</a><a href="/@@postURL" class="post-item lax" data-lax-preset="fadeInOut zoomInOut-0.9">
+    <p class="post-item-title">Why I started writing</p>
+    <div class="line"></div>
+    <p class="post-item-date">January 12, 2020</p>
+</a><a href="/@@postURL" class="post-item lax" data-lax-preset="fadeInOut zoomInOut-0.9">
+    <p class="post-item-title">Happiness in 5 minutes</p>
+    <div class="line"></div>
+    <p class="post-item-date">January 10, 2020</p>
+</a><a href="/@@postURL" class="post-item lax" data-lax-preset="fadeInOut zoomInOut-0.9">
+    <p class="post-item-title">Ergonofis desk review</p>
+    <div class="line"></div>
+    <p class="post-item-date">January 09, 2020</p>
+</a><a href="/@@postURL" class="post-item lax" data-lax-preset="fadeInOut zoomInOut-0.9">
+    <p class="post-item-title">The art of nothingness</p>
+    <div class="line"></div>
+    <p class="post-item-date">January 06, 2020</p>
+</a><a href="/@@postURL" class="post-item lax" data-lax-preset="fadeInOut zoomInOut-0.9">
+    <p class="post-item-title">Digital minimalism</p>
+    <div class="line"></div>
+    <p class="post-item-date">January 02, 2020</p>
+</a><a href="/@@postURL" class="post-item lax" data-lax-preset="fadeInOut zoomInOut-0.9">
+    <p class="post-item-title">2020 workspace setup</p>
+    <div class="line"></div>
+    <p class="post-item-date">January 01, 2020</p>
+</a>
+</div>
+    
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="js/scripts.min.js"></script>
 <script>
@@ -92,15 +123,11 @@
   });
 </script>
 
-    <script>
-      // Typed headline
-      var options = {
-        strings: ['practicing minimalist.', 'cryptocurrency lover.', 'lifelong learner.', 'co-founder of <a class="link vera" href="https://joinvera.com" target="_blank">Vera</a>.', 'building something <a class="link super" href="https://super.so" target="_blank">Super</a>.', 'coding up a new website...'],
-        backDelay: 1800,
-        backSpeed: 20,
-        typeSpeed: 40,
-      };
-      var typed = new Typed('.typed', options);
-    </script>
+    <!-- <script>
+        $(function(){
+            $('.nav-solo').addClass('hide');
+            $('.email-title').html('Get notified when I write something new &amp; note-worthy');
+        });
+    </script> -->
   </body>
 </html>

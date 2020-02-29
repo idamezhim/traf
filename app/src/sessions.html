@@ -1,56 +1,56 @@
 <!DOCTYPE html>
-  <html lang="en">
-  @@include('components/head.html')
-  <body class="sessions">
-    @@include('components/nav.html')
-    <div class="hero">
-        <div class="wheel">
-            <div class="wheel-circle"></div>
-            <div class="video" data-video="5qap5aO4i9A" data-autoplay="0" data-loop="1" id="youtube-audio"></div>
-            <img class="wheel-bg" src="@@webRoot/images/sessions.jpg" alt="lofi">
+    <html lang="en">
+    @@include('components/head.html', { "title": "Traf — Sessions", "url": "/sessions" })
+    <body class="sessions animsition">
+        @@include('components/nav.html')
+        <div class="hero">
+            <div class="wheel">
+                <div class="wheel-circle"></div>
+                <div class="video" data-video="5qap5aO4i9A" data-autoplay="0" data-loop="1" id="youtube-audio"></div>
+                <img class="wheel-bg" src="@@webRoot/images/sessions.jpg" alt="lofi">
+            </div>
+            <div class="hero-footer">
+                <p>Sessions</p>
+                <p>Lofi — 01</p>
+            </div>
         </div>
-        <div class="hero-footer">
-            <p>Sessions</p>
-            <p>Lofi — 01</p>
-        </div>
-    </div>
-    @@include('components/scripts.html')
-    <script>
-        $(function(){
-            // Spin wheel on click
-            $('.wheel').click(function(){
-                $(this).toggleClass('spinning');
-            })
-        });
-        // YouTube Audio
-        function onYouTubeIframeAPIReady() {
-            var e = document.getElementById("youtube-audio"),
-                t = document.createElement("img");
-            t.setAttribute("id", "youtube-icon"), t.style.cssText = "cursor:pointer;cursor:hand", e.appendChild(t);
-            var a = document.createElement("div");
-            a.setAttribute("id", "youtube-player"), e.appendChild(a);
-            var o = function(e) {
-                var a = e ? "pause.png" : "play.png";
-                t.setAttribute("src", "/images/icon-" + a)
-            };
-            e.onclick = function() {
-            r.getPlayerState() === YT.PlayerState.PLAYING
-            || r.getPlayerState() === YT.PlayerState.BUFFERING ? (r.pauseVideo(), o(!1)) : (r.playVideo(), o(!0))
-            };
-            var r = new YT.Player("youtube-player", {
-            height: "0",
-            width: "0",
-            videoId: e.dataset.video,
-            playerVars: {
-                autoplay: e.dataset.autoplay,
-                loop: e.dataset.loop
-            },
-            events: {
-                onReady: function(e) { r.setPlaybackQuality("small"), o(r.getPlayerState() !== YT.PlayerState.CUED) },
-                onStateChange: function(e) { e.data === YT.PlayerState.ENDED && o(!1) }
+        @@include('components/scripts.html')
+        <script>
+            $(function(){
+                // Spin wheel on click
+                $('.wheel').click(function(){
+                    $(this).toggleClass('spinning');
+                })
+            });
+            // YouTube Audio
+            function onYouTubeIframeAPIReady() {
+                var e = document.getElementById("youtube-audio"),
+                    t = document.createElement("img");
+                t.setAttribute("id", "youtube-icon"), t.style.cssText = "cursor:pointer;cursor:hand", e.appendChild(t);
+                var a = document.createElement("div");
+                a.setAttribute("id", "youtube-player"), e.appendChild(a);
+                var o = function(e) {
+                    var a = e ? "pause.png" : "play.png";
+                    t.setAttribute("src", "/images/icon-" + a)
+                };
+                e.onclick = function() {
+                r.getPlayerState() === YT.PlayerState.PLAYING
+                || r.getPlayerState() === YT.PlayerState.BUFFERING ? (r.pauseVideo(), o(!1)) : (r.playVideo(), o(!0))
+                };
+                var r = new YT.Player("youtube-player", {
+                height: "0",
+                width: "0",
+                videoId: e.dataset.video,
+                playerVars: {
+                    autoplay: e.dataset.autoplay,
+                    loop: e.dataset.loop
+                },
+                events: {
+                    onReady: function(e) { r.setPlaybackQuality("small"), o(r.getPlayerState() !== YT.PlayerState.CUED) },
+                    onStateChange: function(e) { e.data === YT.PlayerState.ENDED && o(!1) }
+                }
+                })
             }
-            })
-        }
-    </script>
-  </body>
+        </script>
+    </body>
 </html>

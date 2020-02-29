@@ -1,0 +1,47 @@
+.hero {
+    position: fixed;
+    height: $full;
+    width: 100%;
+    left: 0;
+    top: 0;
+    .container {
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        height: 100%;
+    }
+}
+
+.hero-title {
+    max-width: 100%;
+    width: 780px;
+    .typed { padding-bottom: 4px; color: $grey; }
+    .typed-cursor { opacity: 0.4 !important; }
+}
+
+.hero-footer {
+    justify-content: space-between;
+    @extend .flex-center;
+    position: absolute;
+    height: 140px;
+    width: 100%;
+    bottom: 0;
+}
+
+.hero.centered {
+    align-items: center;
+    text-align: center;
+    .hero-footer { justify-content: center; }
+}
+
+@media (max-width: $break-mobile) {
+
+    .hero-title {
+        height: 200px;
+    }
+
+    .hero-footer {
+        height: 100px;
+    }
+
+}

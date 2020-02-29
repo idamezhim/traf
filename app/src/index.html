@@ -1,32 +1,25 @@
 <!DOCTYPE html>
   <html lang="en">
-  @@include('components/head.html')
-  <body>
+  @@include('components/head.html', { "title": "Traf", "url": "/" })
+  <body class="animsition">
     @@include('components/nav.html')
     <div class="hero">
-      <h1 class="hero-title">Digital product designer, front-end developer, <div class="break"></div><span class="typed"></span></h1>
-      <div class="hero-footer">
-        <div class="links">
-          <a href="/sessions" class="link">Sessions</a>
-          <a href="https://gumroad.com/traf" target="_blank" class="link">Presets</a>
-          <a href="/thoughts" class="link">Thoughts</a>
+      <div class="container">
+        <h1 class="hero-title">Digital product designer, front-end developer, <div class="break"></div><span class="typed"></span></h1>
+        <div class="hero-footer">
+          <p>Projects <i data-feather="chevron-down" class="icon"></i></p>
+          <!-- <p>Now — <a href="https://joinvera.com" target="_blank" class="vera">Vera</a> &amp; <a href="https://super.so" target="_blank" class="super">Super</a></p> -->
         </div>
-        <p>Now — <a href="https://joinvera.com" target="_blank" class="vera">Vera</a> &amp; <a href="https://super.so" target="_blank" class="super">Super</a></p>
       </div>
+    </div>
+    <div class="content">
+
     </div>
     @@include('components/scripts.html')
     <script>
       // Typed headline
       var options = {
-        strings: [
-          'practicing minimalist.',
-          'cryptocurrency lover.',
-          'lifelong learner.',
-          'detail fanatic.',
-          'co-founder of <a class="text-link vera" href="https://joinvera.com" target="_blank">Vera</a>.',
-          'building something <a class="text-link super" href="https://super.so" target="_blank">Super</a>.',
-          'coding up a new website...'
-        ],
+        strings: ['practicing minimalist.', 'cryptocurrency lover.', 'lifelong learner.', 'co-founder of <a class="link vera" href="https://joinvera.com" target="_blank">Vera</a>.', 'building something <a class="link super" href="https://super.so" target="_blank">Super</a>.', 'coding up a new website...'],
         backDelay: 1800,
         backSpeed: 20,
         typeSpeed: 40,

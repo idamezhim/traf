@@ -1,0 +1,14 @@
+// Colors
+$black: #000;
+$dark-grey: #27292b;
+$white: #fff;
+$grey: #808c99;
+$primary: #06f;
+
+// Fonts
+@font-face {
+    font-family: 'space';
+    src: url('../fonts/space.woff') format('woff');
+    font-style: normal;
+}
+$font: 'space', monospace;

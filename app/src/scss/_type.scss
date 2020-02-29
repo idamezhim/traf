@@ -1,0 +1,43 @@
+h1, p, a {
+    font-family: $font;
+    line-height: 1.8;
+}
+
+h1 {
+    letter-spacing: -1px;
+    font-size: 30px;
+    color: $white;
+}
+
+p, a {
+    letter-spacing: -0.4px;
+    font-size: 14px;
+}
+
+p {
+    color: $grey;
+}
+
+a {
+    transition: $smooth;
+    color: $white;
+    &:hover { color: $grey; }
+}
+
+.link {
+    border-bottom: 1px solid $dark-grey;
+    font-family: inherit;
+    padding-bottom: 4px;
+    font-size: inherit;
+    display: inline;
+    color: inherit;
+    &:hover { color: $white; }
+}
+
+@media (max-width: $break-mobile) {
+
+    h1 {
+      font-size: 20px;
+    }
+    
+}

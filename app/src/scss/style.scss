@@ -1,115 +1,36 @@
-// Imports
 @import 'reset';
+@import 'theme';
 @import 'global';
+@import 'hero';
+@import 'nav';
 @import 'sessions';
 @import 'thoughts';
+@import 'type';
 
-// Main
 body {
   font-family: $font;
   background: $black;
   color: $white;
 }
 
-h1, p, a {
-  font-family: $font;
-  line-height: 1.8;
-}
-
-h1 {
-  letter-spacing: -1px;
-  font-size: 30px;
-}
-
-p {
-  letter-spacing: -0.4px;
-  font-size: 14px;
-  color: $grey;
-}
-
-a {
-  letter-spacing: -0.4px;
-  transition: $smooth;
-  font-size: 14px;
-  color: $white;
+.logo {
+  img { transform: rotate(-2deg); }
   &:hover { opacity: 0.4; }
 }
 
-.nav {
-  justify-content: space-between;
-  align-items: center;
-  background: $black;
-  position: fixed;
-  display: flex;
-  padding: 0 6%;
-  height: 140px;
-  width: 100%;
-  z-index: 2;
-  top: 0;
-  .logo {
-    @extend .flex-center;
-    height: 100%;
-    img { transform: rotate(-2deg); }
-    &:hover { opacity: 0.4; }
-  }
-  .handle {
-    @extend .flex-center;
-    height: 100%;
-  }
-}
-
-.text-link {
-  border-bottom: 1px solid rgba($white, 0.2);
-  font-family: inherit;
-  padding-bottom: 6px;
-  font-size: inherit;
-  display: inline;
-  color: inherit;
-  &:hover {
-    color: $white;
-    opacity: 1;
-  }
-}
-
-.hero {
-  justify-content: center;
-  flex-direction: column;
+.container {
   position: relative;
-  padding: 0 6%;
-  display: flex;
-  height: $full;
+  max-width: 90%;
+  margin: 0 auto;
+  width: 1280px;
+}
+
+.content {
+  background: $black;
+  position: relative;
   width: 100%;
-  .hero-title {
-    max-width: 100%;
-    width: 780px;
-    .typed { padding-bottom: 4px; color: $grey; }
-    .typed-cursor { opacity: 0.4 !important; }
-  }
-  .hero-footer {
-    justify-content: space-between;
-    @extend .flex-center;
-    position: absolute;
-    padding: 0 6%;
-    height: 140px;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    p { color: $grey; }
-    .links {
-      @extend .flex-center;
-      height: 100%;
-    }
-    .link {
-      @extend .flex-center;
-      flex-direction: row;
-      padding: 0 16px;
-      height: 100%;
-      color: $grey;
-      .icon { margin-top: -1px; }
-      &:hover { color: $white; opacity: 1; }
-      &:first-child { padding-left: 0; margin-left: 0; }
-    }
-  }
+  top: $full;
+  height: 2000px;
 }
 
 .break {
@@ -128,31 +49,12 @@ a {
 
 @media (max-width: $break-mobile) {
 
-  h1 {
-    font-size: 20px;
-  }
-
   .logo {
     width: 60px;
   }
 
-  .nav,
-  .hero,
-  .hero .hero-footer {
-    padding: 0 10%;
-  }
-
-  .nav,
-  .hero .hero-footer {
-    height: 100px;
-  }
-
   .links {
     display: none !important;
-  }
-
-  .hero-title {
-    height: 200px;
   }
 
   .break {

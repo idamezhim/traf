@@ -1,4 +1,10 @@
 <nav class="nav">
-    <a href="/" class="logo"><img src="@@webRoot/images/logo.svg" alt="logo"/></a>
-    <a href="https://twitter.com/traf" target="_blank" class="handle">@traf</a>
+    <div class="container">
+        @@include('logo.html')
+        <div class="nav-links">
+            <a href="/thoughts" class="nav-link">Thoughts</a>
+            <a href="/sessions" class="nav-link">Sessions</a>
+            <a href="https://twitter.com/traf" class="nav-link handle" target="_blank">@traf</a>
+        </div>
+    </div>
 </nav>

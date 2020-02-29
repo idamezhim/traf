@@ -1,0 +1,42 @@
+.nav {
+    transition: $smooth;
+    background: $black;
+    position: fixed;
+    height: 140px;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    .container {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        height: 100%;
+        .logo {
+            @extend .flex-center;
+            height: 100%;
+        }
+    }
+}
+
+.nav-links,
+.nav-link {
+    @extend .flex-center;
+    height: 100%;
+}
+
+.nav-link {
+    padding: 0 20px;
+    &:last-child { padding-right: 0; }
+}
+
+.nav-scrolled {
+    height: 100px;
+}
+
+@media (max-width: $break-mobile) {
+
+    .nav {
+      height: 100px;
+    }
+
+}

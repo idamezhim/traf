@@ -1,14 +1,12 @@
 .email {
     width: 400px !important;
-    padding: 160px 0;
     text-align: center;
     @extend .container;
+    padding: 160px 0;
     .icon {
         margin-bottom: 40px;
         transition: $smooth;
         color: $primary;
-        height: 24px;
-        width: 24px;
     }
 }
 

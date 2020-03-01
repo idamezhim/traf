@@ -3,7 +3,7 @@
     position: fixed;
     height: 140px;
     width: 100%;
-    z-index: 2;
+    z-index: 4;
     top: 0;
     .container {
         justify-content: space-between;
@@ -41,8 +41,7 @@
 
 @media (max-width: $break-mobile) {
 
-    .nav {
-      height: 80px;
-    }
+    .nav { height: 80px; }
+    .nav-link { padding: 0 14px; }
 
 }

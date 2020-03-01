@@ -14,7 +14,10 @@
     display: block;
     height: 180px;
     width: 100%;
-    &:last-child { border-bottom: 1px solid $dark-grey !important; }
+    &:last-child {
+        border-bottom: 1px solid $dark-grey !important;
+        &:hover { border: 1px solid rgba($dark-grey, 0) !important; }
+    }
     &:hover {
         border: 1px solid rgba($dark-grey, 0);
         transform: scale(1.02, 1.06);

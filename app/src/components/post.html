@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <html lang="en">
+  @@include('head.html', {
+      "title": "@@title",
+      "description": "@@description",
+      "url": "@@url"
+  })
+  <body class="animsition">
+    @@include('nav.html')
+    <div class="hero tiny">
+        <i data-feather="cloud" class="hero-icon lax" data-lax-preset="blurOut-20"></i>
+    </div>
+    <div class="content">
+        <p>How do I set goals that motivate me but aren’t too big that they’re intimidating?</p>
+        <p>In my experience — the brain is always subconsciously looking for proof before it’ll gear up to help you chase whatever it is you’re after.</p>
+        <p>In the case described above, the larger your “goals”, the less proof you have that you could get anywhere near executing them, and the more intimidated you feel.</p>
+        <p>If you have big long-term goals, make your short-term goals smaller.</p>
+        <p>If you can’t make small things happen, thinking big is a waste of time and energy.</p>
+    </div>
+    @@include('posts.html')
+    @@include('email.html')
+    @@include('footer.html')
+    @@include('scripts.html')
+    <script>$(function(){ $('.email-title').html('Get notified when I write something new<span class="hide-mobile"> &amp; note-worthy</span>'); });</script>
+  </body>
+</html>

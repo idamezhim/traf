@@ -146,6 +146,7 @@
     // Email form
     $(".form").submit(function(e) {
       e.preventDefault();
+      fathom('trackGoal', 'AEHIIOYC', 0);
       var $form = $(this);
       $.post($form.attr("action"), $form.serialize()).then(function() {
           $('.form-content').addClass('form-content-hide');

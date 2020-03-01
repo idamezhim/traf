@@ -36,6 +36,7 @@
 .form-success {
     @extend .flex-center;
     padding-bottom: 2px;
+    transition: $smooth;
     position: absolute;
     height: 100%;
     width: 100%;

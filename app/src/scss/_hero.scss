@@ -34,6 +34,11 @@
     }
 }
 
+.hero.fullscreen {
+    color: $white;
+    @extend .flex-center;
+}
+
 @media (max-width: $break-mobile) {
 
     .hero { height: calc(100vh - 120px); }

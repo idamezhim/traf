@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>404</title>
+  <meta name="title" content="404">
+  <meta name="description" content="Nothing much happening here...">
+  <meta name="keywords" content="james traf, traf, design, designer">
+  <meta name="author" content="@traf">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="404">
+  <meta property="og:description" content="Nothing much happening here...">
+  <meta property="og:image" content="https://tr.af/images/social-404.jpg">
+  <meta property="og:url" content="https://tr.af/404">
+  <meta name="twitter:site" content="@traf">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="images/thumbnail.png" rel="apple-touch-icon">
+  <link href="images/favicon.png" rel="shortcut icon">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+    <body class="animsition">
+        <a href="/" class="hero fullscreen">404</a>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/scripts.min.js"></script>
+<script>
+  $(function(){
+
+    // Shrink nav on scroll
+    $(window).scroll(function(event){
+      var s = $(window).scrollTop();
+      if (s > 0){
+          $('.nav').addClass('nav-scrolled');
+      } else {
+          $('.nav').removeClass('nav-scrolled');
+      }
+    });
+
+    // Active nav link
+    $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('hide');
+
+    // Email form
+    $(".form").submit(function(e) {
+      e.preventDefault();
+      var $form = $(this);
+      $.post($form.attr("action"), $form.serialize()).then(function() {
+          $('.form-content').addClass('form-content-hide');
+          $('.form-success').addClass('form-success-show');
+      });
+    });
+
+    // Lax JS
+    window.onload = function() {
+      lax.setup()
+      const updateLax = () => {
+        lax.update(window.scrollY)
+        window.requestAnimationFrame(updateLax)
+      }
+      window.requestAnimationFrame(updateLax)
+    }
+
+    // Feather icons
+    feather.replace()
+
+    // Animsition
+    $(".animsition").animsition({
+        linkElement: 'a:not([target="_blank"]):not([href^="#"])',
+        outDuration: 600,
+        inDuration: 600,
+    });
+
+  });
+</script>
+
+    </body>
+</html>

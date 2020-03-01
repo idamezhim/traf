@@ -1,23 +1,28 @@
+h1, h2, h3, a {
+    color: $white;
+}
+
 h1 {
     font-family: $font-mono;
     letter-spacing: -1px;
     font-size: 32px;
     line-height: 2;
-    color: $white;
 }
 
-h2, h3 {
-    letter-spacing: -1px;
+h2 {
+    letter-spacing: -0.5px;
     font-family: $font;
     font-weight: bold;
     line-height: 1.8;
-    font-size: 24px;
-    color: $white;
+    font-size: 22px;
 }
 
 h3 {
     font-family: $font-mono;
+    letter-spacing: -1px;
     font-weight: normal;
+    line-height: 1.8;
+    font-size: 24px;
 }
 
 p, .p, a {
@@ -33,7 +38,6 @@ p, .p {
 
 a {
     transition: $smooth;
-    color: $white;
     &:hover { color: $grey; }
 }
 

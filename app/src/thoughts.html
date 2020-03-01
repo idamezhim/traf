@@ -1,30 +1,19 @@
 <!DOCTYPE html>
   <html lang="en">
   @@include('components/head.html', {
-    "title": "Traf — Thoughts",
-    "url": "/thoughts"
+      "title": "Traf — Thoughts",
+      "description": "Ideas about life, work, and beyond.",
+      "url": "thoughts"
   })
-  <body class="thoughts">
+  <body class="thoughts animsition">
     @@include('components/nav.html')
-    <div class="hero small">
-        <i data-feather="cloud" class="hero-icon icon lax" data-lax-preset="blurOut-20"></i>
-        <!-- <h1 class="h2 lax" data-lax-preset="blurOut-20">Thoughts</h1> -->
-        <!-- <div class="hero-footer">
-            <div class="container">
-                <p class="title"><span class="white">Thoughts</span><br/>Words — 6,024</p>
-                <i data-feather="chevron-down" class="icon"></i>
-            </div>
-        </div> -->
+    <div class="hero tiny">
+        <i data-feather="cloud" class="hero-icon lax" data-lax-preset="blurOut-20"></i>
     </div>
     @@include('components/posts.html')
-    <!-- @@include('components/email.html') -->
-    <!-- @@include('components/footer.html') -->
+    @@include('components/email.html')
+    @@include('components/footer.html')
     @@include('components/scripts.html')
-    <!-- <script>
-        $(function(){
-            $('.nav-solo').addClass('hide');
-            $('.email-title').html('Get notified when I write something new &amp; note-worthy');
-        });
-    </script> -->
+    <script>$(function(){ $('.email-title').html('Get notified when I write something new<span class="hide-mobile"> &amp; note-worthy</span>'); });</script>
   </body>
 </html>

@@ -1,6 +1,11 @@
-.projects:hover .project { opacity: 0.8; }
+.posts {
+    .block:hover .block-img { transform: translate(40px, 0) scale(0.6) !important; }
+    .block-icon { transform: translate(-40px, 0) scale(0.6); height: 30px; width: 30px; }
+}
 
-.project {
+.blocks:hover .block { opacity: 0.8; }
+
+.block {
     border: 1px solid $dark-grey;
     border-bottom: none;
     background: $black;
@@ -17,14 +22,20 @@
         opacity: 1 !important;
         border-bottom: none;
         z-index: 2;
-        .project-logo {
-            .project-icon { transform: translate(0) scale(0.99); opacity: 1; }
-            .project-img { transform: scale(0); }
+        .block-logo {
+            .block-icon {
+                transform: translate(0) scale(0.99);
+                opacity: 1;
+            }
+            .block-img {
+                transform: translate(30px, -30px) scale(0.6);
+                opacity: 0;
+            }
         }
     }
 }
 
-.project-inner {
+.block-inner {
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -32,18 +43,18 @@
     width: 100%;
 }
 
-.project-title {
-    margin-bottom: 6px;
+.block-title {
     transition: $smooth;
+    margin-bottom: 6px;
 }
 
-.project-logo {
+.block-logo {
     @extend .flex-center;
+    pointer-events: none;
 }
 
-.project-icon {
-    transform: translate(-30px, 20px) scale(0);
-    pointer-events: none;
+.block-icon {
+    transform: translate(-30px, 30px) scale(0.6);
     transition: $smooth;
     position: absolute;
     color: $white;
@@ -52,21 +63,22 @@
     opacity: 0;
 }
 
-.project-img {
+.block-img {
+    pointer-events: none;
     transition: $smooth;
 }
 
 @media (max-width: $break-mobile) {
 
-    .project,
-    .project-inner,
-    .project-icon,
-    .project-img {
+    .block,
+    .block-inner,
+    .block-icon,
+    .block-img {
         transform: none !important;
         opacity: 1 !important;
     }
 
-    .project {
+    .block {
         border: 1px solid $dark-grey !important;
         background: $black !important;
         margin-bottom: 30px;
@@ -74,22 +86,23 @@
         height: 320px;
     }
 
-    .project-inner {
-        justify-content: center;
-        flex-direction: column;
+    .block-inner {
+        justify-content: space-around;
         align-items: flex-start;
+        flex-direction: column;
+        padding: 10px 0;;
     }
 
-    .project-text {
-        margin-top: 100px;
+    .block-text {
+        margin-top: 80px;
         order: 2;
     }
 
-    .project-img {
+    .block-img {
         width: 24px;
     }
 
-    .project-icon {
+    .block-icon {
         border-bottom: 1px solid $dark-grey;
         border-left: 1px solid $dark-grey;
         height: 60px !important;

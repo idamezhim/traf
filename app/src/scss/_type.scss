@@ -1,27 +1,33 @@
-h1, p, a {
-    font-family: $font-mono;
-    line-height: 1.8;
-}
-
 h1 {
+    font-family: $font-mono;
     letter-spacing: -1px;
+    line-height: 1.8;
     font-size: 30px;
     color: $white;
 }
 
-h2 {
+h2, h3 {
+    letter-spacing: -1px;
     font-family: $font;
-    font-size: 24px;
     font-weight: bold;
+    line-height: 1.8;
+    font-size: 24px;
     color: $white;
 }
 
-p, a {
+h3 {
+    font-family: $font-mono;
+    font-weight: normal;
+}
+
+p, .p, a {
+    font-family: $font-mono;
     letter-spacing: -0.4px;
+    line-height: 1.8;
     font-size: 14px;
 }
 
-p {
+p, .p {
     color: $grey;
 }
 
@@ -54,8 +60,7 @@ a {
 
 @media (max-width: $break-mobile) {
 
-    h1 {
-      font-size: 22px;
-    }
+    h1 { font-size: 22px; }
+    h3 { font-size: 20px; }
     
 }

@@ -1,89 +1,103 @@
+.projects:hover .project { opacity: 0.8; }
+
 .project {
-    border-bottom: 1px solid $dark-grey;
-    transition: background .4s ease;
+    border: 1px solid $dark-grey;
+    border-bottom: none;
+    background: $black;
     position: relative;
+    padding: 0 80px;
     display: block;
-    height: 240px;
+    height: 180px;
     width: 100%;
-    .container {
-        justify-content: space-between;
-        align-items: center;
-        display: flex;
-        height: 100%;
-    }
-    &:first-child { border-top: 1px solid $dark-grey; }
+    &:last-child { border-bottom: 1px solid $dark-grey !important; }
     &:hover {
-        background: rgba($grey, 0.1);
+        border: 1px solid rgba($dark-grey, 0);
+        transform: scale(1.02, 1.06);
+        background: $off-black;
+        opacity: 1 !important;
+        border-bottom: none;
+        z-index: 2;
         .project-logo {
-            .project-icon {
-                transform: translate(0, 0) scale(1);
-                opacity: 1;
-            }
-            .project-img {
-                transform: scale(0);
-            }
+            .project-icon { transform: translate(0) scale(0.99); opacity: 1; }
+            .project-img { transform: scale(0); }
         }
     }
 }
 
+.project-inner {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
 .project-title {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     transition: $smooth;
 }
 
 .project-logo {
     @extend .flex-center;
-    .project-icon {
-        transform: translate(-30px, 20px) scale(0);
-        pointer-events: none;
-        transition: $smooth;
-        position: absolute;
-        height: 40px;
-        width: 40px;
-        opacity: 0;
-    }
-    .project-img {
-        transition: $smooth;
-    }
 }
 
-.project-Vera:hover { .project-title, .project-icon { color: #37b8d0; } }
-.project-Super:hover { .project-title, .project-icon { color: #f0bd66; } }
-.project-Exodus:hover { .project-title, .project-icon { color: #4849ff; } }
-.project-R\&R:hover { .project-title, .project-icon { color: #ca5c62; } }
-.project-ConfigTree:hover { .project-title, .project-icon { color: #008092; } }
+.project-icon {
+    transform: translate(-30px, 20px) scale(0);
+    pointer-events: none;
+    transition: $smooth;
+    position: absolute;
+    color: $white;
+    height: 40px;
+    width: 40px;
+    opacity: 0;
+}
+
+.project-img {
+    transition: $smooth;
+}
 
 @media (max-width: $break-mobile) {
 
-    .project {
-        height: 340px;
-        .container {
-            justify-content: center;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-    }
-    .project-text {
-        margin-top: 40px;
-        order: 2;
-    }
-
-    .project-subtitle {
-        max-width: 80%;
-    }
-
+    .project,
+    .project-inner,
     .project-icon,
     .project-img {
         transform: none !important;
+        opacity: 1 !important;
+    }
+
+    .project {
+        border: 1px solid $dark-grey !important;
+        background: $black !important;
+        margin-bottom: 30px;
+        padding: 0 34px;
+        height: 320px;
+    }
+
+    .project-inner {
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-text {
+        margin-top: 100px;
+        order: 2;
+    }
+
+    .project-img {
+        width: 24px;
     }
 
     .project-icon {
-        height: 20px !important;
-        width: 20px !important;
-        opacity: 1 !important;
+        border-bottom: 1px solid $dark-grey;
+        border-left: 1px solid $dark-grey;
+        height: 60px !important;
+        width: 60px !important;
+        padding: 18px;
         color: $grey;
-        top: 30px;
         right: 0;
+        top: 0;
     }
     
 }

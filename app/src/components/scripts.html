@@ -17,22 +17,14 @@
     $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('hide');
 
     // Email form
-    // $(".form").submit(function(e) {
-    //   e.preventDefault();
-    //   var $form = $(this);
-    //   $.post($form.attr("action"), $form.serialize()).then(function() {
-    //       $('.form-content').addClass('form-content-hide');
-    //       $('.form-success').addClass('form-success-show');
-    //   });
-    // });
-
-    // True 100vh
-    // let vh = window.innerHeight * 0.01;
-    // document.documentElement.style.setProperty('--vh', `${vh}px`);
-    // window.addEventListener('resize', () => {
-    //   let vh = window.innerHeight * 0.01;
-    //   document.documentElement.style.setProperty('--vh', `${vh}px`);
-    // });
+    $(".form").submit(function(e) {
+      e.preventDefault();
+      var $form = $(this);
+      $.post($form.attr("action"), $form.serialize()).then(function() {
+          $('.form-content').addClass('form-content-hide');
+          $('.form-success').addClass('form-success-show');
+      });
+    });
 
     // Lax JS
     window.onload = function() {

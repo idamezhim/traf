@@ -23,10 +23,10 @@
     <div class="container">
         <a href="/" class="logo"><img src="./images/logo.svg" alt="traf"/></a>
         <div class="nav-links">
-            <a href="/thoughts" class="nav-link nav-inactive">Thoughts</a>
-            <a href="/sessions" class="nav-link hide-mobile">Sessions</a>
-            <a href="https://twitter.com/traf" class="nav-link" target="_blank">@traf</a>
-        </div>
+    <a href="/thoughts" class="nav-link nav-inactive">Thoughts</a>
+    <a href="/sessions" class="nav-link hide-mobile">Sessions</a>
+    <a href="https://twitter.com/traf" class="nav-link" target="_blank">@traf</a>
+</div>
     </div>
 </nav>
     <div class="hero">
@@ -37,9 +37,9 @@
         </div>
       </div>
     </div>
-    <div class="projects">
-      <a href="https://joinvera.com" target="_blank" class="project project-Vera">
-    <div class="container lax" data-lax-preset="fadeIn zoomIn-0.94">
+    <div class="projects container">
+      <a href="https://joinvera.com" target="_blank" class="project">
+    <div class="project-inner lax" data-lax-preset="zoomInOut-0.96 fadeInOut">
         <div class="project-text">
             <h2 class="project-title">Vera</h2>
             <p class="project-subtitle">A simple, reliable way to offset your plastic footprint.</p>
@@ -49,8 +49,8 @@
             <img class="project-img" src="./images/logo-Vera.svg" alt="Vera">
         </div>
     </div>
-</a><a href="https://super.so" target="_blank" class="project project-Super">
-    <div class="container lax" data-lax-preset="fadeIn zoomIn-0.94">
+</a><a href="https://super.so" target="_blank" class="project">
+    <div class="project-inner lax" data-lax-preset="zoomInOut-0.96 fadeInOut">
         <div class="project-text">
             <h2 class="project-title">Super</h2>
             <p class="project-subtitle">Easily add custom domains & analytics to your Notion docs.</p>
@@ -60,19 +60,19 @@
             <img class="project-img" src="./images/logo-Super.svg" alt="Super">
         </div>
     </div>
-</a><a href="https://exodus-redesign.netlify.com" target="_blank" class="project project-Exodus">
-    <div class="container lax" data-lax-preset="fadeIn zoomIn-0.94">
+</a><a href="https://exodus-redesign.netlify.com" target="_blank" class="project">
+    <div class="project-inner lax" data-lax-preset="zoomInOut-0.96 fadeInOut">
         <div class="project-text">
             <h2 class="project-title">Exodus</h2>
-            <p class="project-subtitle">Unofficial redesign of the exodus.io website.</p>
+            <p class="project-subtitle">Unofficial redesign of the exodus.io website</p>
         </div>
         <div class="project-logo">
             <i data-feather="arrow-up-right" class="project-icon icon"></i>
             <img class="project-img" src="./images/logo-Exodus.svg" alt="Exodus">
         </div>
     </div>
-</a><a href="https://ryanandrose.com" target="_blank" class="project project-R&R">
-    <div class="container lax" data-lax-preset="fadeIn zoomIn-0.94">
+</a><a href="https://ryanandrose.com" target="_blank" class="project">
+    <div class="project-inner lax" data-lax-preset="zoomInOut-0.96 fadeInOut">
         <div class="project-text">
             <h2 class="project-title">R&R</h2>
             <p class="project-subtitle">Brand & website for modern bespoke brand.</p>
@@ -82,8 +82,8 @@
             <img class="project-img" src="./images/logo-R&R.svg" alt="R&R">
         </div>
     </div>
-</a><a href="https://configtree.co" target="_blank" class="project project-ConfigTree">
-    <div class="container lax" data-lax-preset="fadeIn zoomIn-0.94">
+</a><a href="https://configtree.co" target="_blank" class="project">
+    <div class="project-inner lax" data-lax-preset="zoomInOut-0.96 fadeInOut">
         <div class="project-text">
             <h2 class="project-title">ConfigTree</h2>
             <p class="project-subtitle">Brand & website for configuration management software.</p>
@@ -95,6 +95,35 @@
     </div>
 </a>
     </div>
+    <div class="email lax" data-lax-preset="fadeIn">
+    <i data-feather="triangle" class="icon"></i>
+    <h3 class="email-title lax" data-lax-preset="fadeIn">Get notified when I launch something new<span class="hide-mobile"> &amp; note-worthy</span></h3>
+    <form class="form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <div class="form-success">
+        <p class="done">Done <span class="icon">⚡️</span></p>
+    </div>
+    <div class="form-content">
+        <input class="invisible" name="bot-field"/>
+        <input placeholder="What's your email?" type="email" name="email" required/>
+        <span class="cursor hide-mobile"></span>
+        <button class="submit" type="submit"><i class="icon" data-feather="arrow-right"></i></button>
+    </div>
+</form>
+</div>
+    <footer class="footer lax" data-lax-preset="zoomIn-0.96">
+    <div class="container">
+        <div class="footer-row">
+            <p class="copyright"><span class="symbol">&copy;</span> 2049</p>
+            <a href="/" class="logo"><img src="./images/logo.svg" alt="traf"/></a>
+            <div class="social-links">
+                <a href="https://twitter.com/traf" target="_blank" class="social-link"><i class="icon" data-feather="twitter"></i></a>
+                <a href="https://instagram.com/traf" target="_blank" class="social-link"><i class="icon" data-feather="instagram"></i></a>
+                <a href="https://dribbble.com/traf" target="_blank" class="social-link dribbble"><img src="./images/icon-dribbble.svg" class="icon"/></a>
+                <a href="mailto:trafj@me.com" class="social-link"><i class="icon" data-feather="at-sign"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="js/scripts.min.js"></script>
 <script>
@@ -114,22 +143,14 @@
     $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('hide');
 
     // Email form
-    // $(".form").submit(function(e) {
-    //   e.preventDefault();
-    //   var $form = $(this);
-    //   $.post($form.attr("action"), $form.serialize()).then(function() {
-    //       $('.form-content').addClass('form-content-hide');
-    //       $('.form-success').addClass('form-success-show');
-    //   });
-    // });
-
-    // True 100vh
-    // let vh = window.innerHeight * 0.01;
-    // document.documentElement.style.setProperty('--vh', `${vh}px`);
-    // window.addEventListener('resize', () => {
-    //   let vh = window.innerHeight * 0.01;
-    //   document.documentElement.style.setProperty('--vh', `${vh}px`);
-    // });
+    $(".form").submit(function(e) {
+      e.preventDefault();
+      var $form = $(this);
+      $.post($form.attr("action"), $form.serialize()).then(function() {
+          $('.form-content').addClass('form-content-hide');
+          $('.form-success').addClass('form-success-show');
+      });
+    });
 
     // Lax JS
     window.onload = function() {

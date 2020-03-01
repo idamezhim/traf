@@ -3,9 +3,6 @@ $smooth: all .4s ease;
 $ease: all .4s cubic-bezier(0.8,0.04,0.4,1);
 $bouncy: all .4s cubic-bezier(0.4,2,0.68,1);
 
-// 100vh height
-// $full: calc(var(--vh, 1vh) * 100);
-
 // Border Radii
 $rounded-sm: 4px;
 $rounded-md: 8px;
@@ -26,6 +23,20 @@ $rounded-lg: 12px;
     top: 50%;
 }
 
+.center-x {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+}
+
+.center-y {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+}
+
 // Icon
 .icon {
     vertical-align: middle;
@@ -41,6 +52,12 @@ $rounded-lg: 12px;
 
 // Visibility
 .hide { display: none; }
+.invisible {
+    pointer-events: none;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+}
 
 // Media queries
 $break-mobile: 600px;

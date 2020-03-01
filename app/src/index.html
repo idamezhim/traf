@@ -11,15 +11,17 @@
         </div>
       </div>
     </div>
-    <div class="projects">
+    <div class="projects container">
       @@loop('components/project.html', [
         { "name": "Vera", "text": "A simple, reliable way to offset your plastic footprint.", "url": "joinvera.com" },
         { "name": "Super", "text": "Easily add custom domains & analytics to your Notion docs.", "url": "super.so" },
-        { "name": "Exodus", "text": "Unofficial redesign of the exodus.io website.", "url": "exodus-redesign.netlify.com" },
+        { "name": "Exodus", "text": "Unofficial redesign of the exodus.io website", "url": "exodus-redesign.netlify.com" },
         { "name": "R&R", "text": "Brand & website for modern bespoke brand.", "url": "ryanandrose.com" },
         { "name": "ConfigTree", "text": "Brand & website for configuration management software.", "url": "configtree.co" }
       ])
     </div>
+    @@include('components/email.html')
+    @@include('components/footer.html')
     @@include('components/scripts.html')
     <script>
       // Typed headline

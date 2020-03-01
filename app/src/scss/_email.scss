@@ -1,6 +1,15 @@
 .email {
-    padding: 200px 0 180px;
+    width: 400px !important;
+    padding: 160px 0;
     text-align: center;
+    @extend .container;
+    .icon {
+        margin-bottom: 40px;
+        transition: $smooth;
+        color: $primary;
+        height: 24px;
+        width: 24px;
+    }
 }
 
 .form {
@@ -35,6 +44,7 @@
     p {
         font-size: 16px;
         color: $white;
+        .icon { font-size: 20px; }
     }
 }
 
@@ -44,12 +54,14 @@
     opacity: 1;
 }
 
-.input {
+input {
     padding: 10px 0 10px 2px;
     caret-color: $primary;
     background: none;
+    font-size: 16px !important;
     height: 100%;
     width: 190px;
+    @extend p;
     &:focus + .cursor { opacity: 0; }
     &::placeholder { color: $grey; }
 }
@@ -57,12 +69,15 @@
 .submit {
     transition: $smooth;
     height: 100%;
-    color: $grey;
     width: 60px;
-    .icon { margin: -2px 0 0 0; }
+    .icon {
+        margin: -2px 0 0 0;
+        color: $grey;
+    }
     &:hover {
         transform: translateX(4px);
-        color: $white;
+        color: $white !important;
+        .icon { color: $white; }
     }
 }
 
@@ -86,8 +101,7 @@
 @media (max-width: $break-mobile) {
 
     .email {
-        background: rgba($white, 0.06);
-        margin: 30px auto !important;
+        margin: 60px auto !important;
         justify-content: center;
         flex-direction: column;
         width: 100% !important;
@@ -97,7 +111,7 @@
         height: 320px;
     }
 
-    .form, .input, .submit {
+    .form, input, .submit {
         text-align: center;
         width: 100%;
         height: auto;

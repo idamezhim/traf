@@ -1,27 +1,28 @@
 <!DOCTYPE html>
   <html lang="en">
   @@include('components/head.html', {
-    "title": "Traf",
+    "title": "Traf — Designer",
     "description": "Digital product designer, front-end developer, practicing minimalist.",
     "url": ""
   })
   <body class="animsition">
     @@include('components/nav.html')
     <div class="hero">
-      <div class="container lax">
+      <div class="container">
         <h1 class="hero-title lax" data-lax-preset="fadeOut">Digital product designer, front-end developer, <div class="break"></div><span class="typed"></span></h1>
-        <div class="hero-footer">
-          <p>Projects <i data-feather="chevron-down" class="icon"></i></p>
+        <div class="hero-footer lax" data-lax-preset="fadeOut">
+          <!-- <p>Projects <i data-feather="chevron-down" class="icon"></i></p> -->
+          <i data-feather="chevron-down" class="icon"></i>
         </div>
       </div>
     </div>
     <div class="projects blocks container">
       @@loop('components/block-project.html', [
-        { "name": "Vera", "text": "A simple, reliable way to offset your plastic footprint.", "url": "joinvera.com" },
-        { "name": "Super", "text": "Easily add custom domains & analytics to your Notion docs.", "url": "super.so" },
-        { "name": "Exodus", "text": "Unofficial redesign of the exodus.io website", "url": "exodus-redesign.netlify.com" },
+        { "name": "Vera", "text": "A simple way to offset your plastic footprint.", "url": "joinvera.com" },
+        { "name": "Super", "text": "Add custom domains & analytics to your Notion docs.", "url": "super.so" },
+        { "name": "Exodus", "text": "Unofficial redesign of the exodus.io website.", "url": "exodus-redesign.netlify.com" },
         { "name": "R&R", "text": "Brand & website for modern bespoke brand.", "url": "ryanandrose.com" },
-        { "name": "ConfigTree", "text": "Brand & website for configuration management software.", "url": "configtree.co" }
+        { "name": "ConfigTree", "text": "Brand & website for configuration platform.", "url": "configtree.co" }
       ])
     </div>
     @@include('components/email.html')

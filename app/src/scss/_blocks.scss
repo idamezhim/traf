@@ -51,6 +51,10 @@
     margin-bottom: 6px;
 }
 
+.block-subtitle {
+    color: rgba($white, 0.6);
+}
+
 .block-logo {
     @extend .flex-center;
     pointer-events: none;

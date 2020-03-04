@@ -5,8 +5,8 @@ h1, h2, h3, a {
 h1 {
     font-family: $font-mono;
     letter-spacing: -1px;
+    line-height: 1.8;
     font-size: 32px;
-    line-height: 2;
 }
 
 h2 {
@@ -42,7 +42,7 @@ a {
 }
 
 .link {
-    border-bottom: 1px solid $dark-grey;
+    border-bottom: 1px solid rgba($grey, 0.4);
     font-family: inherit;
     padding-bottom: 4px;
     font-size: inherit;

@@ -5,4 +5,4 @@ https://traf.netlify.com/*  https://tr.af/:splat 301!
 https://tr.af/live          https://youtube.com/user/jamestraf
 
 # Redirect /presets to Gumroad
-https://tr.af/live          https://gumroad.com/traf
+https://tr.af/presets       https://gumroad.com/traf

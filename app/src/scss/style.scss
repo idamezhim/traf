@@ -15,6 +15,13 @@ body {
   color: $white;
 }
 
+.post {
+  padding: 0 0 200px;
+  .container {
+    width: 680px;
+  }
+}
+
 .logo {
   img { transform: rotate(-2deg); }
   &:hover { opacity: 0.4; }

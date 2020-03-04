@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
     fileinclude = require('gulp-file-include'),
+    markdown = require('markdown'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
     del = require('del'),
@@ -114,16 +115,20 @@ gulp.task('fileinclude', function() {
   gulp.src(['app/src/*.html'])
     .pipe(fileinclude({
       prefix: '@@',
-      basepath: '@file'
+      basepath: '@file',
+      filters: {
+        markdown: markdown.parse
+      }
     }))
     .pipe(gulp.dest('app/'))
     .pipe(browserSync.reload({
           stream: true
-        }));
+    }));
 });
 
 // WATCH
 gulp.task('watch', ['sass', 'scripts','fileinclude', 'browserSync'], function (){
+  gulp.watch('app/src/posts/*.md', ['fileinclude']);
   gulp.watch('app/src/scss/**/*.scss', ['sass']);
   gulp.watch('app/src/js/**/*.js', ['scripts']);
   gulp.watch('app/src/**/*.html', ['fileinclude']);

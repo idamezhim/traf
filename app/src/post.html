@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <html lang="en">
+  @@include('components/head.html', {
+      "title": "@@title",
+      "description": "@@description",
+      "url": "@@url"
+  })
+  <body class="animsition">
+    @@include('components/nav.html')
+    <div class="hero tiny">
+        <i data-feather="cloud" class="hero-icon lax" data-lax-preset="blurOut-20"></i>
+    </div>
+    <div class="post">
+      <div class="container">
+        @@include(markdown('posts/flow-state.md'))
+      </div>
+    </div>
+    @@include('components/posts.html')
+    @@include('components/email.html')
+    @@include('components/footer.html')
+    @@include('components/scripts.html')
+    <script>$(function(){ $('.email-title').html('Get notified when I write something new<span class="hide-mobile"> &amp; note-worthy</span>'); });</script>
+  </body>
+</html>

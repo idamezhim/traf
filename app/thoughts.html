@@ -24,8 +24,8 @@
     <div class="container">
         <a href="/" class="logo"><img src="./images/logo.svg" alt="traf"/></a>
         <div class="nav-links">
-    <!-- <a href="/thoughts" class="nav-link nav-inactive">Thoughts</a> -->
-    <!-- <a href="/sessions" class="nav-link hide-mobile">Sessions</a> -->
+    <a href="/thoughts" class="nav-link">Thoughts</a>
+    <a href="/sessions" class="nav-link hide-mobile">Sessions</a>
     <a href="https://twitter.com/traf" class="nav-link" target="_blank">@traf</a>
 </div>
     </div>
@@ -34,37 +34,15 @@
         <i data-feather="cloud" class="hero-icon lax" data-lax-preset="blurOut-20"></i>
     </div>
     <div class="posts blocks container">
-    <a href="/nothingness" class="block">
+    <a href="/time-vs-value" class="block">
     <div class="block-inner lax" data-lax-preset="zoomInOut-0.96 fadeInOut">
         <div class="block-text">
-            <h2 class="block-title">The art of nothingness</h2>
-            <p class="block-subtitle">January 06 — 2020</p>
+            <h2 class="block-title">Time vs. Value</h2>
+            <p class="block-subtitle">April 01 — 2020</p>
         </div>
         <div class="block-logo">
             <i data-feather="arrow-right" class="block-icon icon"></i>
-            <i class="block-img" data-feather="circle"></i>
-        </div>
-    </div>
-</a><a href="/minimalism" class="block">
-    <div class="block-inner lax" data-lax-preset="zoomInOut-0.96 fadeInOut">
-        <div class="block-text">
-            <h2 class="block-title">Digital minimalism</h2>
-            <p class="block-subtitle">January 02 — 2020</p>
-        </div>
-        <div class="block-logo">
-            <i data-feather="arrow-right" class="block-icon icon"></i>
-            <i class="block-img" data-feather="smartphone"></i>
-        </div>
-    </div>
-</a><a href="/flow-state" class="block">
-    <div class="block-inner lax" data-lax-preset="zoomInOut-0.96 fadeInOut">
-        <div class="block-text">
-            <h2 class="block-title">Failure isn't failure</h2>
-            <p class="block-subtitle">March 01 — 2020</p>
-        </div>
-        <div class="block-logo">
-            <i data-feather="arrow-right" class="block-icon icon"></i>
-            <i class="block-img" data-feather="triangle"></i>
+            <i class="block-img" data-feather="minimize-2"></i>
         </div>
     </div>
 </a>
@@ -116,6 +94,9 @@
 
     // Active nav link
     $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('hide');
+
+    // Hide active post link
+    $('.posts a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('hide');
 
     // Email form
     $(".form").submit(function(e) {

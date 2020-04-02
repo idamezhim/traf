@@ -1,20 +1,15 @@
 <!DOCTYPE html>
   <html lang="en">
   @@include('components/head.html', {
-      "title": "@@title",
-      "description": "@@description",
-      "url": "@@url"
+      "title": "Time vs. Value",
+      "description": "Most people have been taught to exchange their time for money.",
+      "url": "time-vs-value",
+      "social": "thoughts"
   })
   <body class="animsition">
     @@include('components/nav.html')
-    <div class="hero tiny">
-        <i data-feather="cloud" class="hero-icon lax" data-lax-preset="blurOut-20"></i>
-    </div>
-    <div class="post">
-      <div class="container">
-        @@include(markdown('posts/flow-state.md'))
-      </div>
-    </div>
+    <div class="hero tiny"><i data-feather="minimize-2" class="hero-icon lax" data-lax-preset="blurOut-20"></i></div>
+    <div class="post"><div class="container">@@include(markdown('posts/time-vs-value.md'))</div></div>
     @@include('components/posts.html')
     @@include('components/email.html')
     @@include('components/footer.html')

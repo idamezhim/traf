@@ -39,6 +39,9 @@
     // Active nav link
     $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('hide');
 
+    // Hide active post link
+    $('.posts a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('hide');
+
     // Email form
     $(".form").submit(function(e) {
       e.preventDefault();

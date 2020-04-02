@@ -24,9 +24,9 @@
     &:hover ~ .block-border { opacity: 1; }
 }
 
-@for $i from -1 through 10 {
+@for $i from 1 through 10 {
     .block:nth-child(#{$i}):hover ~ .block-border {
-        transform: translateY(180px * $i);
+        transform: translateY(180px * $i - 180px);
     }
 }
 
@@ -38,11 +38,11 @@
     background: none;
     height: 180px;
     width: 100%;
-    top: -180px;
     opacity: 0;
     z-index: 2;
     right: 0;
     left: 0;
+    top: 0;
 }
 
 .block-inner {

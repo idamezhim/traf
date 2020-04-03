@@ -51,7 +51,7 @@ $rounded-lg: 12px;
 *::selection { background-color: $primary; color: $white; }
 
 // Visibility
-.hide { display: none; }
+.hide { display: none !important; }
 .invisible {
     pointer-events: none;
     visibility: hidden;

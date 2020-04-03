@@ -1,6 +1,6 @@
 Tiny habits can compound into massive changes if you stay consistent.
 
-Desires that are too big can overwhelm you, and can seem out of reach. If you want to move them within reach, make them smaller. Much smaller.
+Desires that are too big can overwhelm you and seem out of reach. If you want to move them within reach, make them smaller. Much smaller.
 
 - Want to start saving money? Move $5 into your savings account.
 - Want to read more? Start with one page before bed.

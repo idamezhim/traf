@@ -13,6 +13,12 @@
       }
     });
 
+    // Nav toggle
+    $('.nav-toggle').click(function(){
+      $(this).toggleClass('nav-toggled');
+      $('.nav-links').toggleClass('nav-links-show');
+    });
+
     // Active nav link
     $('.nav-links a[href$="/' + location.pathname.split("/")[1] + '"]').addClass('hide');
 

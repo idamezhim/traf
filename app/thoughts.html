@@ -23,16 +23,32 @@
     <nav class="nav">
     <div class="container">
         <a href="/" class="logo"><img src="./images/logo.svg" alt="traf"/></a>
-        <div class="nav-links">
+        <div class="nav-right">
+            <div class="nav-links">
     <a href="/thoughts" class="nav-link">Thoughts</a>
     <a href="/sessions" class="nav-link hide-mobile">Sessions</a>
+    <a href="https://gumroad.com/traf" class="nav-link" target="_blank">Presets</a>
+    <a href="/course" class="nav-link nav-inactive hide-mobile">Courses</a>
     <a href="https://twitter.com/traf" class="nav-link" target="_blank">@traf</a>
 </div>
+            <button class="nav-toggle"><span></span><span></span></button>
+        </div>
     </div>
 </nav>
-    <div class="hero tiny"><i data-feather="cloud" class="hero-icon lax" data-lax-preset="blurOut-20"></i></div>
+    <div class="hero tiny"><i data-feather="more-horizontal" class="hero-icon lax" data-lax-preset="blurOut-20"></i></div>
     <div class="posts blocks container">
-    <a href="/value" class="block">
+    <a href="/small" class="block">
+    <div class="block-inner lax" data-lax-preset="zoomInOut-0.96 fadeInOut">
+        <div class="block-text">
+            <h2 class="block-title">Starting Small</h2>
+            <p class="block-subtitle">April 03 — 2020</p>
+        </div>
+        <div class="block-logo">
+            <i data-feather="arrow-right" class="block-icon icon"></i>
+            <i class="block-img" data-feather="bar-chart"></i>
+        </div>
+    </div>
+</a><a href="/value" class="block">
     <div class="block-inner lax" data-lax-preset="zoomInOut-0.96 fadeInOut">
         <div class="block-text">
             <h2 class="block-title">Time vs. Value</h2>
@@ -40,7 +56,7 @@
         </div>
         <div class="block-logo">
             <i data-feather="arrow-right" class="block-icon icon"></i>
-            <i class="block-img" data-feather="minimize-2"></i>
+            <i class="block-img" data-feather="maximize-2"></i>
         </div>
     </div>
 </a>
@@ -48,7 +64,7 @@
 </div>
     <div class="email lax" data-lax-preset="fadeIn">
     <i class="icon" data-feather="feather"></i>
-    <h3 class="email-title lax" data-lax-preset="fadeIn">Get notified when I launch something new<span class="hide-mobile"> &amp; note-worthy</span></h3>
+    <h3 class="email-title lax" data-lax-preset="fadeIn">Get notified when I write something new<span class="hide-mobile"> &amp; note-worthy</span></h3>
     <form class="form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
     <div class="form-success">
         <p class="done">Done <span class="icon">⚡️</span></p>
@@ -61,8 +77,17 @@
     </div>
 </form>
 </div>
-    <footer class="footer lax" data-lax-preset="zoomIn-0.96">
+    <footer class="footer">
     <div class="container">
+        <div class="footer-row hide-mobile">
+            <div class="nav-links">
+    <a href="/thoughts" class="nav-link">Thoughts</a>
+    <a href="/sessions" class="nav-link hide-mobile">Sessions</a>
+    <a href="https://gumroad.com/traf" class="nav-link" target="_blank">Presets</a>
+    <a href="/course" class="nav-link nav-inactive hide-mobile">Courses</a>
+    <a href="https://twitter.com/traf" class="nav-link" target="_blank">@traf</a>
+</div>
+        </div>
         <div class="footer-row">
             <p class="copyright"><span class="symbol">&copy;</span> 2049</p>
             <a href="/" class="logo"><img src="./images/logo.svg" alt="traf"/></a>
@@ -88,6 +113,12 @@
       } else {
           $('.nav').removeClass('nav-scrolled');
       }
+    });
+
+    // Nav toggle
+    $('.nav-toggle').click(function(){
+      $(this).toggleClass('nav-toggled');
+      $('.nav-links').toggleClass('nav-links-show');
     });
 
     // Active nav link
@@ -130,6 +161,5 @@
   });
 </script>
 
-    <script>$(function(){ $('.email-title').html('Get notified when I write something new<span class="hide-mobile"> &amp; note-worthy</span>'); });</script>
   </body>
 </html>

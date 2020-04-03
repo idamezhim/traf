@@ -1,5 +1,3 @@
-# Time vs. Value
-
 Most people have been taught to exchange their time for money.
 
 The people instilling that idea grew up in a very different world, without a key ingredient that could make that notion obsolete — the internet.

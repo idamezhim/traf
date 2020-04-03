@@ -15,17 +15,14 @@ body {
   color: $white;
 }
 
+.post-title { font-size: 24px; }
 .post {
   padding: 0 0 120px;
   .container { width: 680px; }
   * { font-family: $font; letter-spacing: 0;}
   h1 { font-weight: bold; }
   h1, p { margin-bottom: 24px; font-size: 18px; }
-  a {
-    font-family: $font-mono;
-    letter-spacing: -0.5px;
-    font-size: 90%;
-  }
+  a { font-family: $font-mono; letter-spacing: -0.5px; font-size: 90%; }
   blockquote {
     background: rgba($grey, 0.12);
     border-radius: $rounded-sm;
@@ -56,7 +53,7 @@ body {
   position: relative;
   max-width: 90%;
   margin: 0 auto;
-  width: 1240px;
+  width: 1280px;
 }
 
 .break {

@@ -14,6 +14,18 @@
         height: 16px;
         width: 16px;
     }
+    .nav-links {
+        pointer-events: all !important;
+        filter: blur(0) !important;
+        opacity: 1 !important;
+        width: 100%;
+        .nav-link {
+            border-right: 1px solid $dark-grey;
+            padding: 0;
+            flex: 1;
+            &:last-child { border-right: none; }
+        }
+    }
 }
 
 .footer-row {
@@ -24,15 +36,15 @@
     overflow: hidden;
     display: flex;
     height: 120px;
-    &:hover:first-child .nav-link { color: rgba($white, 0.4); }
+    // &:hover:first-child .nav-link { color: rgba($white, 0.4); }
 }
 
 .copyright {
     border-right: 1px solid $dark-grey;
+    width: calc(100% / 3);
     @extend .flex-center;
     padding-bottom: 6px;
     height: 100%;
-    width: 400px;
     .symbol {
         margin: 0 4px 0 -8px;
         position: relative;
@@ -43,10 +55,10 @@
 
 .social-links {
     border-left: 1px solid $dark-grey;
+    width: calc(100% / 3);
     @extend .flex-center;
     padding-bottom: 6px;
     height: 100%;
-    width: 400px;
     .social-link {
         @extend .flex-center;
         flex-direction: row;

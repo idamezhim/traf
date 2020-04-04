@@ -64,7 +64,10 @@ a {
 
 @media (max-width: $break-mobile) {
 
-    h1 { font-size: 28px; }
+    h1 {
+        line-height: 1.8;
+        font-size: 24px;
+    }
     h3 { font-size: 20px; }
     
 }

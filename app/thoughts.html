@@ -112,14 +112,6 @@
 <script>
   $(function(){
 
-    // True 100vh
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-    window.addEventListener('resize', () => {
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    });
-
     // Shrink nav on scroll
     $(window).scroll(function(event){
       var s = $(window).scrollTop();

@@ -35,8 +35,17 @@
         </div>
     </div>
 </nav>
-    <div class="hero tiny"><h1 class="post-title lax" data-lax-preset="fadeOut">Time vs. Value</h1></div>
-    <div class="post"><div class="container"><p>Most people have been taught to exchange their time for money.</p>
+    <div class="hero">
+      <div class="container">
+        <div class="hero-footer lax" data-lax-preset="fadeOut">
+          <h1 class="post-title">Time vs. Value</h1>
+          <i data-feather="chevron-down" class="icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="post">
+      <div class="container lax" data-lax-preset="fadeIn">
+        <p>Most people have been taught to exchange their time for money.</p>
 
 <p>The people instilling that idea grew up in a very different world, without a key ingredient that could make that notion obsolete — the internet.</p>
 
@@ -58,7 +67,9 @@
 
 <p>Paralysis by analysis is real, so try not to get stuck in a decision loop that prevents you from taking action. The best way to start is to start small. Really small. You&#39;ll discover more as you go along.</p>
 
-<p><em>To value creation,</em><br/>— <a href="https://twitter.com/traf">@traf</a></p></div></div>
+<p><em>To value creation,</em><br/>— <a href="https://twitter.com/traf">@traf</a></p>
+      </div>
+    </div>
     <div class="posts blocks container">
     <a href="/small" class="block">
     <div class="block-inner lax" data-lax-preset="zoomInOut-0.96 fadeInOut">
@@ -127,6 +138,14 @@
 <script src="js/scripts.min.js"></script>
 <script>
   $(function(){
+
+    // True 100vh
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
 
     // Shrink nav on scroll
     $(window).scroll(function(event){

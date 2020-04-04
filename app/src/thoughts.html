@@ -8,7 +8,14 @@
   })
   <body class="animsition">
     @@include('components/nav.html')
-    <div class="hero tiny"><i data-feather="more-horizontal" class="hero-icon lax" data-lax-preset="blurOut-20"></i></div>
+    <div class="hero">
+      <div class="container">
+        <div class="hero-footer lax" data-lax-preset="fadeOut">
+          <h1 class="post-title">Thoughts</h1>
+          <i data-feather="chevron-down" class="icon"></i>
+        </div>
+      </div>
+    </div>
     @@include('components/posts.html')
     @@include('components/email-thoughts.html')
     @@include('components/footer.html')

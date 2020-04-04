@@ -5,8 +5,8 @@ h1, h2, h3, a {
 h1 {
     font-family: $font-mono;
     letter-spacing: -1px;
-    line-height: 1.8;
-    font-size: 32px;
+    font-size: 30px;
+    line-height: 2;
 }
 
 h2 {
@@ -64,7 +64,7 @@ a {
 
 @media (max-width: $break-mobile) {
 
-    h1 { font-size: 22px; }
+    h1 { font-size: 28px; }
     h3 { font-size: 20px; }
     
 }

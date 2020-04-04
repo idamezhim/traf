@@ -8,8 +8,19 @@
   })
   <body class="animsition">
     @@include('components/nav.html')
-    <div class="hero tiny"><h1 class="post-title lax" data-lax-preset="fadeOut">Time vs. Value</h1></div>
-    <div class="post"><div class="container">@@include(markdown('posts/value.md'))</div></div>
+    <div class="hero">
+      <div class="container">
+        <div class="hero-footer lax" data-lax-preset="fadeOut">
+          <h1 class="post-title">Time vs. Value</h1>
+          <i data-feather="chevron-down" class="icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="post">
+      <div class="container lax" data-lax-preset="fadeIn">
+        @@include(markdown('posts/value.md'))
+      </div>
+    </div>
     @@include('components/posts.html')
     @@include('components/email-thoughts.html')
     @@include('components/footer.html')

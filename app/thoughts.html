@@ -35,7 +35,14 @@
         </div>
     </div>
 </nav>
-    <div class="hero tiny"><i data-feather="more-horizontal" class="hero-icon lax" data-lax-preset="blurOut-20"></i></div>
+    <div class="hero">
+      <div class="container">
+        <div class="hero-footer lax" data-lax-preset="fadeOut">
+          <h1 class="post-title">Thoughts</h1>
+          <i data-feather="chevron-down" class="icon"></i>
+        </div>
+      </div>
+    </div>
     <div class="posts blocks container">
     <a href="/small" class="block">
     <div class="block-inner lax" data-lax-preset="zoomInOut-0.96 fadeInOut">
@@ -104,6 +111,14 @@
 <script src="js/scripts.min.js"></script>
 <script>
   $(function(){
+
+    // True 100vh
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
 
     // Shrink nav on scroll
     $(window).scroll(function(event){

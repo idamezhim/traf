@@ -91,21 +91,19 @@
 @media (max-width: $break-mobile) {
 
     .nav { height: 80px; }
-    .nav-link { padding: 0 14px; }
     
     .nav-links {
+        justify-content: space-between;
         padding-bottom: 20px;
         background: $black;
         position: fixed;
+        padding: 0 26px;
         height: 60px;
-        z-index: -1;
         width: 100%;
+        z-index: -1;
         left: 0;
         top: 0;
-        .nav-link {
-            padding: 0;
-            flex: 1;
-        }
+        .nav-link { padding: 0; }
     }
 
     .nav-links-show {

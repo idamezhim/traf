@@ -6,6 +6,7 @@
 @import 'footer';
 @import 'hero';
 @import 'nav';
+@import 'presets';
 @import 'sessions';
 @import 'type';
 
@@ -75,10 +76,7 @@ body {
       height: 20px;
       width: 20px;
   }
-  .cta-subtitle {
-    margin-top: 10px; 
-    font-size: 18px;
-  }
+  .cta-subtitle { margin-top: 10px; }
   .cta-link {
     border: 1px solid $dark-grey;
     margin-top: 40px !important;

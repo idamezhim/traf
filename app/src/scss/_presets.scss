@@ -1,0 +1,166 @@
+.presets {
+    padding-top: 40px;
+}
+
+.preset {
+    margin-bottom: 80px;
+    height: 680px;
+    width: 100%;
+    &:last-child { margin: 0; }
+}
+
+.preset-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.before-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    width: auto;
+}
+
+.before-wrapper:before {
+    display: block;
+    height: 100%;
+    width: 100%;
+    content: '';
+}
+
+.after-wrapper {
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.after {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: relative;
+    display: block;
+    height: 100%;
+    width: auto;
+}
+
+.comparison-slider {
+    background: $white;
+    @extend .center;
+    height: 100%;
+    width: 1px;
+}
+  
+.preset-01-b { background: url('../../images/preset-01-b.jpg') no-repeat center center; background-size: cover; }
+.preset-01-a { background: url('../../images/preset-01-a.jpg') no-repeat center center; background-size: cover; }
+
+.preset-02-b { background: url('../../images/preset-02-b.jpg') no-repeat center center; background-size: cover; }
+.preset-02-a { background: url('../../images/preset-02-a.jpg') no-repeat center center; background-size: cover; }
+
+.preset-03-b { background: url('../../images/preset-03-b.jpg') no-repeat center center; background-size: cover; }
+.preset-03-a { background: url('../../images/preset-03-a.jpg') no-repeat center center; background-size: cover; }
+
+.preset-04-b { background: url('../../images/preset-04-b.jpg') no-repeat center center; background-size: cover; }
+.preset-04-a { background: url('../../images/preset-04-a.jpg') no-repeat center center; background-size: cover; }
+
+.preset-05-b { background: url('../../images/preset-05-b.jpg') no-repeat center center; background-size: cover; }
+.preset-05-a { background: url('../../images/preset-05-a.jpg') no-repeat center center; background-size: cover; }
+
+.preset-06-b { background: url('../../images/preset-06-b.jpg') no-repeat center center; background-size: cover; }
+.preset-06-a { background: url('../../images/preset-06-a.jpg') no-repeat center center; background-size: cover; }
+
+.preset-07-b { background: url('../../images/preset-07-b.jpg') no-repeat center center; background-size: cover; }
+.preset-07-a { background: url('../../images/preset-07-a.jpg') no-repeat center center; background-size: cover; }
+
+.preset-08-b { background: url('../../images/preset-08-b.jpg') no-repeat center center; background-size: cover; }
+.preset-08-a { background: url('../../images/preset-08-a.jpg') no-repeat center center; background-size: cover; }
+
+
+// a.gumroad-button {
+//     background-color: #000 !important;
+//     background: #000 !important;
+//     border-radius: 0 !important;
+//     position: fixed !important;
+//     @extend .center-x;
+//     height: 80px !important;
+//     width: 200px !important;
+//     z-index: 2 !important;
+//     padding: 0 !important;
+//     bottom: 0 !important;
+//     color: black !important;
+//     .gumroad-button-logo {
+//         margin-left: -100px !important;
+//         @extend .center;
+//     }
+//     p {
+//         font-size: 16px;
+//         @extend .center;
+//         color: $white;
+//     }
+//     &:before {
+//         @extend .flex-center;
+//         position: absolute;
+//         background: #000;
+//         height: 100%;
+//         width: 100%;
+//         content: "";
+//         z-index: -1;
+//         top: 2px;
+//         left: 0;
+//     }
+// }
+
+a.gumroad-button {
+    position: absolute;
+    right: 50px;
+    z-index: 4;
+    .text {
+        font-family: $font-mono;
+        transition: $smooth;
+        font-size: 14px;
+        color: $grey;
+    }
+    &:hover .text { color: $white; }
+    &:before {
+        @extend .flex-center;
+        position: absolute;
+        background: #000;
+        height: 100%;
+        width: 102%;
+        content: "";
+        z-index: -1;
+        left: -1px;
+        top: 0;
+    }
+}
+
+.gumroad-loading-indicator {
+    -webkit-box-shadow: 0 20px 40px rgba(0,0,0,0.4) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4) !important;
+    background: #000 !important;
+}
+
+.embed {
+    margin: 80px auto 20px;
+    iframe {
+        width: 480px !important;
+    }
+}
+
+@media (max-width: $break-mobile) {
+
+    .preset {
+        margin-bottom: 30px;
+        height: 220px;
+    }
+
+    .embed { margin: 30px 12px 0; }
+    a.gumroad-button { right: 40px; }
+
+}

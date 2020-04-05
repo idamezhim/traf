@@ -58,6 +58,9 @@
     pointer-events: none;
     transition: $smooth;
     filter: blur(20px);
+    background: $black;
+    position: relative;
+    z-index: 6;
     opacity: 0;
 }
 

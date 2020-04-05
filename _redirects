@@ -4,8 +4,5 @@ https://traf.netlify.com/*  https://tr.af/:splat 301!
 # Redirect /live to YouTube
 https://tr.af/live          https://youtube.com/user/jamestraf
 
-# Redirect /presets to Gumroad
-https://tr.af/presets       https://gumroad.com/traf
-
 # Redirect old value page to new
 https://tr.af/time-vs-value       https://tr.af/value

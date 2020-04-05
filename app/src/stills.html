@@ -27,7 +27,13 @@
             <img src="@@webRoot/images/still-14.jpg" class="lax" data-lax-preset="fadeIn zoomInOut-0.9" alt="Still">
         </div>
     </div>
-    @@include('components/cta.html')
+    @@include('components/cta.html', {
+      "icon": "sliders",
+      "title": "Master Preset Collection",
+      "subtitle": "Level up your photography game",
+      "url": "/presets",
+      "button": "View Presets"
+    })
     @@include('components/footer.html')
     @@include('components/scripts.html')
   </body>

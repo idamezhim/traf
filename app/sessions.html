@@ -27,8 +27,8 @@
             <div class="nav-links">
     <a href="/thoughts" class="nav-link">Thoughts</a>
     <a href="/stills" class="nav-link">Stills</a>
+    <a href="/presets" class="nav-link">Presets</a>
     <a href="/sessions" class="nav-link hide-mobile">Sessions</a>
-    <a href="https://gumroad.com/traf" class="nav-link" target="_blank">Presets</a>
     <a href="https://twitter.com/traf" class="nav-link" target="_blank">@traf</a>
 </div>
             <button class="nav-toggle"><span></span><span></span></button>
@@ -52,6 +52,29 @@
 <script src="js/scripts.min.js"></script>
 <script>
   $(function(){
+
+    // Before/After Presets
+    $('.before-wrapper').on("mousemove", function (e) {
+      var offsets = $(this).offset();
+      var fullWidth = $(this).width();
+      var mouseX = e.pageX - offsets.left;
+      if (mouseX < 0) { mouseX = 0; }
+      else if (mouseX > fullWidth) { mouseX = fullWidth }
+      $(this).parent().find('.comparison-slider').css({ left: mouseX, transition: 'none' });
+      $(this).find('.after-wrapper').css({ transform: 'translateX(' + (mouseX) + 'px)', transition: 'none' });
+      $(this).find('.after').css({ transform: 'translateX(' + (-1 * mouseX) + 'px)', transition: 'none' });
+    });
+    $('.preset-wrapper').on("mouseleave", function () {
+      $(this).parent().find('.comparison-slider').css({
+        left: '50%', transition: 'all .3s'
+      });
+      $(this).find('.after-wrapper').css({
+        transform: 'translateX(50%)', transition: 'all .3s'
+      });
+      $(this).find('.after').css({
+        transform: 'translateX(-50%)', transition: 'all .3s'
+      });
+    });
 
     // Shrink nav on scroll
     $(window).scroll(function(event){

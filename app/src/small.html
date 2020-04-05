@@ -8,14 +8,7 @@
   })
   <body class="animsition">
     @@include('components/nav.html')
-    <div class="hero">
-      <div class="container">
-        <div class="hero-footer lax" data-lax-preset="fadeOut">
-          <h1 class="post-title">Starting Small</h1>
-          <i data-feather="chevron-down" class="icon"></i>
-        </div>
-      </div>
-    </div>
+    @@include('components/hero.html', { "title": "Starting Small" })
     <div class="post">
       <div class="container lax" data-lax-preset="fadeIn">
         @@include(markdown('posts/small.md'))

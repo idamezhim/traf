@@ -15,7 +15,6 @@ body {
   color: $white;
 }
 
-.post-title { font-size: 22px; }
 .post {
   padding: 40px 0 80px;
   .container { width: 680px; }
@@ -44,6 +43,14 @@ body {
   }
 }
 
+.stills {
+  margin-bottom: -30px;
+  img {
+    margin-bottom: 80px;
+    &:last-child { margin: 0; }
+  }
+}
+
 .logo {
   img { transform: rotate(-2deg); }
   &:hover { opacity: 0.4; }
@@ -55,6 +62,35 @@ body {
   margin: 0 auto;
   width: 1280px;
 }
+
+.cta {
+  width: 400px !important;
+  text-align: center;
+  @extend .container;
+  padding: 160px 0;
+  .cta-icon {
+      margin-bottom: 40px;
+      transition: $smooth;
+      color: $primary;
+      height: 20px;
+      width: 20px;
+  }
+  .cta-subtitle {
+    margin-top: 10px; 
+    font-size: 18px;
+  }
+  .cta-link {
+    border: 1px solid $dark-grey;
+    margin-top: 40px !important;
+    display: inline-block;
+    padding: 12px 24px;
+    &:hover {
+      border: 1px solid $grey;
+      color: $white;
+    }
+  }
+}
+
 
 .break {
   display: none;
@@ -84,6 +120,26 @@ body {
   .post {
     padding: 20px 0 40px;
     h1, p, ul li { font-size: 16px; }
+  }
+
+  .cta {
+    margin: 60px auto !important;
+    justify-content: center;
+    flex-direction: column;
+    width: 100% !important;
+    align-items: center;
+    padding: 0 30px;
+    display: flex;
+    height: 320px;
+  }
+
+
+  .stills {
+    margin-bottom: 0;
+    img {
+      margin-bottom: 30px;
+      &:last-child { margin: 0; }
+    }
   }
 
 }

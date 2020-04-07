@@ -4,9 +4,20 @@
 
 .preset {
     margin-bottom: 80px;
+    position: relative;
     height: 680px;
     width: 100%;
     &:last-child { margin: 0; }
+}
+
+.preset-title {
+    pointer-events: none;
+    position: absolute;
+    font-size: 16px;
+    color: $white;
+    bottom: 30px;
+    right: 40px;
+    z-index: 2;
 }
 
 .preset-wrapper {

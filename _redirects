@@ -6,3 +6,6 @@ https://tr.af/live          https://youtube.com/user/jamestraf
 
 # Redirect old value page to new
 https://tr.af/time-vs-value       https://tr.af/value
+
+# Redirect sessions to mixtapes
+https://tr.af/sessions       https://tr.af/mixtapes

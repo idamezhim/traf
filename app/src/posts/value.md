@@ -24,7 +24,7 @@ The how depends on both your skills & interests, but here are a few simple quest
 - What comes easy to you but not to others?
 - What do you enjoy doing that others don't?
 
-Paralysis by analysis is real, so try not to get stuck in a decision loop that prevents you from taking action. The best way to start is to start small. Really small. You'll discover more as you go along.
+Paralysis by analysis is real, so try not to get stuck in a decision loop that prevents you from taking action. The best way to start is to [start small](/small). You'll discover more as you go along.
 
 *To value creation,*  
 — [@traf](https://twitter.com/traf)

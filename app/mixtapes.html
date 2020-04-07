@@ -138,6 +138,8 @@
                 $('.wheel').click(function(){
                     $(this).toggleClass('spinning');
                 })
+                // Open all links on this page in new tabs
+                $("a").attr("target", "_blank");
             });
             // YouTube Audio
             function onYouTubeIframeAPIReady() {

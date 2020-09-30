@@ -41,7 +41,7 @@
 
 .copyright {
     border-right: 1px solid $dark-grey;
-    width: calc(100% / 2);
+    width: calc(100% / 3);
     @extend .flex-center;
     padding-bottom: 6px;
     height: 100%;
@@ -55,7 +55,7 @@
 
 .social-links {
     border-left: 1px solid $dark-grey;
-    width: calc(100% / 2);
+    width: calc(100% / 3);
     @extend .flex-center;
     padding-bottom: 6px;
     height: 100%;

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('components/head.html', {
+      "title": "Six Figures in 6 Days",
+      "description": "Insights on earning over $100,000 in less than a week.",
+      "social": "thoughts",
+      "url": "6"
+  })
+  <body class="animsition">
+    @@include('components/nav.html')
+    <div class="post">
+      <h1>Six Figures in 6 days</h1>
+      <div class="container lax" data-lax-preset="fadeIn">
+        @@include(markdown('posts/6.md'))
+      </div>
+    </div>
+    @@include('components/email-thoughts.html')
+    @@include('components/footer.html')
+    @@include('components/scripts.html')
+  </body>
+</html>

@@ -1,14 +1,7 @@
-# Redirect default Netlify subdomain to primary domain
 https://traf.netlify.com/*  https://tr.af/:splat 301!
-
-# Redirect /live to YouTube
-https://tr.af/live          https://youtube.com/user/jamestraf
-
-# Redirect old value page to new
-https://tr.af/time-vs-value       https://tr.af/value
-
-# Redirect sessions to mixtapes
-https://tr.af/sessions       https://tr.af/mixtapes
-
-# Sunday FM
-https://tr.af/mixtapes       https://sunday.fm
+https://tr.af/live https://youtube.com/user/jamestraf
+https://tr.af/time-vs-value https://tr.af/value
+https://tr.af/sessions https://tr.af/mixtapes
+https://tr.af/mixtapes https://sunday.fm
+https://tr.af/ih https://www.indiehackers.com/podcast/179-james-traf-of-super
+https://mkbhd.tr.af https://icons.tr.af
